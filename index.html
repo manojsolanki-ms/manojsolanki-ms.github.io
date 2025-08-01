@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name=generator content="Hugo 0.92.0"><meta charset=utf-8>
+<meta name="author" content="Manoj Solanki">
+<link rel="canonical" href="https://thivinanandh.github.io">
+<meta name="keywords" content="Manoj Solanki, Scientific Machine learning">
+<!-- add favicon -->
+<!-- Multiple sizes for different devices -->
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-32x32.png">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<!-- add favicon -->
+<!-- Multiple sizes for different devices -->
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-32x32.png">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<meta name="description" content="Manoj Solanki's personal website showcasing teaching and research in Scientific Machine Learning">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta http-equiv=x-ua-compatible content="ie=edge">
+    <meta http-equiv=accept-ch content="DPR, Viewport-Width, Width">
+    <link rel=icon href=/fav.png type=image/gif>
+    <link rel=preconnect href=https://fonts.googleapis.com>
+    <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+    <link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+    <link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" media=print onload="this.media='all'">
+    <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel=stylesheet>
+    </noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel=stylesheet href=/css/font.css media=all>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ESBYP30VKF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ESBYP30VKF');
+</script>
+    <meta property="og:title" content="Manoj Solanki">
+    <meta property="og:description" content="Portfolio: Manoj Solanki">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thivinanandh.github.io"><meta property="og:site_name" content="Manoj Solanki">
+    <meta name=twitter:card content="summary">
+    <meta name=twitter:title content="Manoj Solanki">
+    <meta name=twitter:description content="Portfolio: Manoj Solanki">
+    <link rel=stylesheet href=/bootstrap-5/css/bootstrap.min.css media=all><link rel=stylesheet href=/css/header.css media=all>
+    <link rel=stylesheet href=/css/footer.css media=all>
+    <link rel=stylesheet href=/css/theme.css media=all>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>:root{--text-color:#343a40;--text-secondary-color:#6c757d;--text-link-color:#007bff;--background-color:#eaedf0;--secondary-background-color:#64ffda1a;--primary-color:#007bff;--secondary-color:#f8f9fa;--text-color-dark:#e4e6eb;--text-secondary-color-dark:#b0b3b8;--text-link-color-dark:#5465ce;--background-color-dark:#040404;--secondary-background-color-dark:#0c0c0c;--primary-color-dark:#5465ce;--secondary-color-dark:#0c0c0c}body{font-size:1rem;font-weight:400;line-height:1.5;text-align:left}html{background-color:var(--background-color)!important}body::-webkit-scrollbar{height:0;width:8px;background-color:var(--background-color)}::-webkit-scrollbar-track{border-radius:1rem}::-webkit-scrollbar-thumb{border-radius:1rem;background:#b0b0b0;outline:1px solid var(--background-color)}#search-content::-webkit-scrollbar{width:.5em;height:.1em;background-color:var(--background-color)}</style>
+    <meta name=description content="Portfolio: Manoj Solanki">
+    <link rel=stylesheet href=/css/index.css media=all>
+    <link rel=stylesheet href=/css/projects.css media=all>
+    <script defer src=/fontawesome-6/all-6.4.2.js></script>
+    <title>
+    Manoj Solanki
+    </title>
+</head>
+<body class=light>
+<script>
+let localStorageValue = localStorage.getItem("pref-theme");
+if (localStorageValue === "dark") {
+    document.body.classList.add('dark');
+} else {
+    document.body.classList.remove('dark');
+    localStorage.setItem("pref-theme", 'light');
+}
+</script>    <script>var prevScrollPos=window.pageYOffset;window.addEventListener("scroll",function(){let c=document.getElementById("profileHeader"),a=window.pageYOffset,b=!1,d=!0,e=d?prevScrollPos>a:a>0;e?c.classList.add("showHeaderOnTop"):b=!0,a===0&&(b=!0),b&&c.classList.remove("showHeaderOnTop"),prevScrollPos=a})</script>
+  
+
+<header id=profileHeader>
+       <nav class="pt-3 navbar navbar-expand-lg animate">
+          <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+             <a class="navbar-brand primary-font text-wrap" href="/">
+             <img src=src/logo.png width=30 height=30 class="d-inline-block align-top">
+             Manoj Solanki
+             </a>
+             <div>
+                <input id=search autocomplete=off class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k to Search..." aria-label=Search oninput=searchOnChange(event)>
+             </div>
+             <button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarContent aria-controls=navbarContent aria-expanded=false aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" width="24" data-view-component="true">
+                   <path fill-rule="evenodd" d="M1 2.75A.75.75.0 011.75 2h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 2.75zm0 5A.75.75.0 011.75 7h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 7.75zM1.75 12a.75.75.0 100 1.5h12.5a.75.75.0 100-1.5H1.75z"/>
+                </svg>
+             </button>
+             <div class="collapse navbar-collapse text-wrap primary-font" id=navbarContent>
+                <ul class="navbar-nav ms-auto text-center">
+                   <li class="nav-item navbar-text d-block d-md-none">
+                      <div class=nav-link>
+                         <input id=search autocomplete=off class="form-control mr-sm-2" placeholder="Ctrl + k to Search..." aria-label=Search oninput=searchOnChange(event)>
+                      </div>
+                   </li>
+                   <li class="nav-item navbar-text">
+                     <a class=nav-link href=/#education aria-label=education>
+                     Education
+                     </a>
+                  </li>
+                   <li class="nav-item navbar-text">
+                      <a class=nav-link href=/#publications_section aria-label=experience>
+                      Publications
+                      </a>
+                   </li>
+                   
+                   <li class="nav-item navbar-text">
+                     <a class=nav-link href="/teaching.html" aria-label=education>
+                     Teaching
+                     </a>
+                  </li>
+                   <li class="nav-item navbar-text">
+                      <a class=nav-link href=/#projects aria-label=projects>
+                      Projects
+                      </a>
+                   </li>
+                   <li class="nav-item navbar-text">
+                      <a class=nav-link href=/#achievements aria-label=achievements>
+                      Achievements
+                      </a>
+                   </li>
+                   <li class="nav-item navbar-text">
+                     <a class=nav-link href=/events.html aria-label=contact>
+                     Events
+                     </a>
+                  </li>
+                   <li class="nav-item navbar-text">
+                     <a class=nav-link href=/#certifications aria-label=contact>
+                     Certifications
+                     </a>
+                  </li>
+                   <li class="nav-item navbar-text">
+                      <a class=nav-link href=/#contact aria-label=contact>
+                      Contact
+                      </a>
+                   </li>
+                  
+                   
+                   <!-- <li class="nav-item navbar-text">
+                      <a class=nav-link href=/blogs title="Blog posts">
+                      Blog
+                      </a>
+                   </li>
+                   <li class="nav-item navbar-text">
+                      <a class=nav-link href=/gallery title="Blog posts">
+                      Gallery
+                      </a>
+                   </li> -->
+                   <!-- <li class="nav-item navbar-text">
+                      <div class=text-center>
+                         <button id=theme-toggle>
+                            <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                               <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+                            </svg>
+                            <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                               <circle cx="12" cy="12" r="5"/>
+                               <line x1="12" y1="1" x2="12" y2="3"/>
+                               <line x1="12" y1="21" x2="12" y2="23"/>
+                               <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                               <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                               <line x1="1" y1="12" x2="3" y2="12"/>
+                               <line x1="21" y1="12" x2="23" y2="12"/>
+                               <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                               <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                            </svg>
+                         </button>
+                      </div>
+                   </li> -->
+                </ul>
+             </div>
+          </div>
+       </nav>
+    </header>
+    <div id=content>
+       <section id=hero class="py-5 align-middle">
+          <div class="container px-3 px-sm-5 px-md-5 px-lg-5 pt-lg-3">
+             <div class=row>
+                <div class="col-sm-12 col-md-12 col-lg-8 content animate" id=primary-font>
+                   <span class=subtitle>
+                   Hi, my name is
+                   </span>
+                   <h2>
+                      Manoj Solanki
+                   </h2>
+                   <h3>
+                      PhD Student
+                   </h3>
+                   <h4>
+                    SciML | MLOPs | CFD | FEM | HPC
+                   </h4>
+                   <p class=hero-content>
+                     A researcher exploring the intersection of Scientific Machine Learning, Computational Science, and High Performance Computing to solve complex problems in physics. I'm passionate about developing solutions that bridge traditional scientific computing with modern machine learning, focused on creating practical implementations that can tackle real-world challenges.
+                  </p>
+                   <div class=row>
+                      <div class="col-auto h-100" >
+                        <a href="src/Thivin_Anandh_CV.pdf" class="btn" target="_blank" rel="noopener noreferrer">
+                           Download CV
+                       </a>
+                      </div>
+                    <!-- ... existing code ... -->
+<div class="col-auto px-0 h-100">
+   <span class="social-icons-container">
+      <a href="https://github.com/thivinanandh" target="_blank" class="btn social-icon github">
+         <i class="fab fa-github"></i>
+         <span class="icon-text">GitHub</span>
+      </a>
+      <a href="https://twitter.com/thivinthegreat" target="_blank" class="btn social-icon twitter">
+         <i class="fab fa-x-twitter"></i>
+         <span class="icon-text">Twitter</span>
+      </a>
+      <a href="https://linkedin.com/in/thivinanandh" target="_blank" class="btn social-icon linkedin">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+         </svg>
+         <span class="icon-text">LinkedIn</span>
+      </a>
+      <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" class="btn social-icon google-scholar">
+         <svg height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <g fill="none" fill-rule="evenodd">
+               <path d="M256 411.12L0 202.667 256 0z" fill="#4285f4"/>
+               <path d="M256 411.12l256-208.453L256 0z" fill="#356ac3"/>
+               <circle cx="256" cy="362.667" fill="#a0c3ff" r="149.333"/>
+               <path d="M121.037 298.667c23.968-50.453 75.392-85.334 134.963-85.334s110.995 34.881 134.963 85.334H121.037z" fill="#76a7fa"/>
+            </g>
+         </svg>
+         <span class="icon-text">Google Scholar</span>
+      </a>
+      <a href="https://stackoverflow.com/users/14759548/thivinanandh" target="_blank" class="btn social-icon stackoverflow">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M18.986 21.865v-6.404h2.134V24H1.844v-8.539h2.13v6.404h15.012zM6.111 19.731H16.85v-2.137H6.111v2.137zm.259-4.852l10.48 2.189.451-2.07-10.478-2.187-.453 2.068zm1.359-5.056l9.705 4.53.903-1.95-9.706-4.53-.902 1.95zm2.715-4.785l8.217 6.855 1.359-1.62-8.216-6.853-1.36 1.618zM15.751 0l-1.746 1.294 6.405 8.604 1.746-1.294L15.751 0z"/>
+         </svg>
+         <span class="icon-text">Stack Overflow</span>
+      </a>
+      <a href="https://scicomp.stackexchange.com/users/39579/thivinanandh" target="_blank" class="btn social-icon comp-stackexchange">
+         <img src="https://camo.githubusercontent.com/d865e204a6e24eaeffa07fd97a8df1e433e5d864525dc152b488e865d456f3a1/68747470733a2f2f656e637279707465642d74626e302e677374617469632e636f6d2f696d616765733f713d74626e3a414e643947635161635133466d352d61756177434e3479676b357358783432366a717876715f5152516677642d4c6c436f324d58496d73446e3369772d5534544f78574c2d4971506a6d6726757371703d434155" alt="Computational Stack Exchange" width="24" height="24">
+         <span class="icon-text">Comp. Stack Exchange</span>
+      </a>
+   </span>
+</div>
+<!-- ... rest of the code ... -->
+                   </div>
+                </div>
+                <div class="col-sm-16 col-md-16 col-lg-4">
+                   <div class="row justify-content-center">
+                      <div class="col-sm-12 col-md-12 pt-5 image animate px-5 px-md-5 px-lg-0 text-center">
+                         <img src=src/profile.jpeg class="img-thumbnail mx-auto" alt>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div class="hero-bottom-svg d-md-block d-lg-block d-none">
+             <svg xmlns="http://www.w3.org/2000/svg" width="201" height="201" viewBox="0 0 201 201">
+                <g id="Group_1168" data-name="Group 1168" transform="translate(-384 -1392)">
+                   <rect id="Rectangle_2206" data-name="Rectangle 2206" width="12" height="2" rx="1" transform="translate(391 1392) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2271" data-name="Rectangle 2271" width="12" height="2" rx="1" transform="translate(391 1500) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2238" data-name="Rectangle 2238" width="12" height="2" rx="1" transform="translate(391 1446) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2278" data-name="Rectangle 2278" width="12" height="2" rx="1" transform="translate(391 1554) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2222" data-name="Rectangle 2222" width="12" height="2" rx="1" transform="translate(391 1419) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2272" data-name="Rectangle 2272" width="12" height="2" rx="1" transform="translate(391 1527) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2241" data-name="Rectangle 2241" width="12" height="2" rx="1" transform="translate(391 1473) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2288" data-name="Rectangle 2288" width="12" height="2" rx="1" transform="translate(391 1581) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2214" data-name="Rectangle 2214" width="12" height="2" rx="1" transform="translate(499 1392) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2289" data-name="Rectangle 2289" width="12" height="2" rx="1" transform="translate(499 1500) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2256" data-name="Rectangle 2256" width="12" height="2" rx="1" transform="translate(499 1446) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2290" data-name="Rectangle 2290" width="12" height="2" rx="1" transform="translate(499 1554) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2231" data-name="Rectangle 2231" width="12" height="2" rx="1" transform="translate(499 1419) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2291" data-name="Rectangle 2291" width="12" height="2" rx="1" transform="translate(499 1527) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2257" data-name="Rectangle 2257" width="12" height="2" rx="1" transform="translate(499 1473) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2292" data-name="Rectangle 2292" width="12" height="2" rx="1" transform="translate(499 1581) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2210" data-name="Rectangle 2210" width="12" height="2" rx="1" transform="translate(445 1392) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2279" data-name="Rectangle 2279" width="12" height="2" rx="1" transform="translate(445 1500) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2248" data-name="Rectangle 2248" width="12" height="2" rx="1" transform="translate(445 1446) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2280" data-name="Rectangle 2280" width="12" height="2" rx="1" transform="translate(445 1554) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2226" data-name="Rectangle 2226" width="12" height="2" rx="1" transform="translate(445 1419) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2281" data-name="Rectangle 2281" width="12" height="2" rx="1" transform="translate(445 1527) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2249" data-name="Rectangle 2249" width="12" height="2" rx="1" transform="translate(445 1473) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2293" data-name="Rectangle 2293" width="12" height="2" rx="1" transform="translate(445 1581) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2219" data-name="Rectangle 2219" width="12" height="2" rx="1" transform="translate(553 1392) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2310" data-name="Rectangle 2310" width="12" height="2" rx="1" transform="translate(553 1500) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2262" data-name="Rectangle 2262" width="12" height="2" rx="1" transform="translate(553 1446) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2311" data-name="Rectangle 2311" width="12" height="2" rx="1" transform="translate(553 1554) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2232" data-name="Rectangle 2232" width="12" height="2" rx="1" transform="translate(553 1419) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2312" data-name="Rectangle 2312" width="12" height="2" rx="1" transform="translate(553 1527) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2263" data-name="Rectangle 2263" width="12" height="2" rx="1" transform="translate(553 1473) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2313" data-name="Rectangle 2313" width="12" height="2" rx="1" transform="translate(553 1581) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2209" data-name="Rectangle 2209" width="12" height="2" rx="1" transform="translate(418 1392) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2273" data-name="Rectangle 2273" width="12" height="2" rx="1" transform="translate(418 1500) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2242" data-name="Rectangle 2242" width="12" height="2" rx="1" transform="translate(418 1446) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2282" data-name="Rectangle 2282" width="12" height="2" rx="1" transform="translate(418 1554) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2223" data-name="Rectangle 2223" width="12" height="2" rx="1" transform="translate(418 1419) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2274" data-name="Rectangle 2274" width="12" height="2" rx="1" transform="translate(418 1527) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2243" data-name="Rectangle 2243" width="12" height="2" rx="1" transform="translate(418 1473) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2294" data-name="Rectangle 2294" width="12" height="2" rx="1" transform="translate(418 1581) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2217" data-name="Rectangle 2217" width="12" height="2" rx="1" transform="translate(526 1392) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2314" data-name="Rectangle 2314" width="12" height="2" rx="1" transform="translate(526 1500) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2258" data-name="Rectangle 2258" width="12" height="2" rx="1" transform="translate(526 1446) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2315" data-name="Rectangle 2315" width="12" height="2" rx="1" transform="translate(526 1554) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2233" data-name="Rectangle 2233" width="12" height="2" rx="1" transform="translate(526 1419) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2316" data-name="Rectangle 2316" width="12" height="2" rx="1" transform="translate(526 1527) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2259" data-name="Rectangle 2259" width="12" height="2" rx="1" transform="translate(526 1473) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2317" data-name="Rectangle 2317" width="12" height="2" rx="1" transform="translate(526 1581) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2211" data-name="Rectangle 2211" width="12" height="2" rx="1" transform="translate(472 1392) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2295" data-name="Rectangle 2295" width="12" height="2" rx="1" transform="translate(472 1500) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2250" data-name="Rectangle 2250" width="12" height="2" rx="1" transform="translate(472 1446) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2296" data-name="Rectangle 2296" width="12" height="2" rx="1" transform="translate(472 1554) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2227" data-name="Rectangle 2227" width="12" height="2" rx="1" transform="translate(472 1419) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2297" data-name="Rectangle 2297" width="12" height="2" rx="1" transform="translate(472 1527) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2251" data-name="Rectangle 2251" width="12" height="2" rx="1" transform="translate(472 1473) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2298" data-name="Rectangle 2298" width="12" height="2" rx="1" transform="translate(472 1581) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2221" data-name="Rectangle 2221" width="12" height="2" rx="1" transform="translate(580 1392) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2318" data-name="Rectangle 2318" width="12" height="2" rx="1" transform="translate(580 1500) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2264" data-name="Rectangle 2264" width="12" height="2" rx="1" transform="translate(580 1446) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2319" data-name="Rectangle 2319" width="12" height="2" rx="1" transform="translate(580 1554) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2236" data-name="Rectangle 2236" width="12" height="2" rx="1" transform="translate(580 1419) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2320" data-name="Rectangle 2320" width="12" height="2" rx="1" transform="translate(580 1527) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2265" data-name="Rectangle 2265" width="12" height="2" rx="1" transform="translate(580 1473) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2321" data-name="Rectangle 2321" width="12" height="2" rx="1" transform="translate(580 1581) rotate(90)" fill="#282f49"/>
+                   <rect id="Rectangle_2207" data-name="Rectangle 2207" width="12" height="2" rx="1" transform="translate(396 1399) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2270" data-name="Rectangle 2270" width="12" height="2" rx="1" transform="translate(396 1507) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2239" data-name="Rectangle 2239" width="12" height="2" rx="1" transform="translate(396 1453) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2283" data-name="Rectangle 2283" width="12" height="2" rx="1" transform="translate(396 1561) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2224" data-name="Rectangle 2224" width="12" height="2" rx="1" transform="translate(396 1426) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2275" data-name="Rectangle 2275" width="12" height="2" rx="1" transform="translate(396 1534) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2244" data-name="Rectangle 2244" width="12" height="2" rx="1" transform="translate(396 1480) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2299" data-name="Rectangle 2299" width="12" height="2" rx="1" transform="translate(396 1588) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2215" data-name="Rectangle 2215" width="12" height="2" rx="1" transform="translate(504 1399) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2300" data-name="Rectangle 2300" width="12" height="2" rx="1" transform="translate(504 1507) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2252" data-name="Rectangle 2252" width="12" height="2" rx="1" transform="translate(504 1453) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2301" data-name="Rectangle 2301" width="12" height="2" rx="1" transform="translate(504 1561) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2228" data-name="Rectangle 2228" width="12" height="2" rx="1" transform="translate(504 1426) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2302" data-name="Rectangle 2302" width="12" height="2" rx="1" transform="translate(504 1534) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2253" data-name="Rectangle 2253" width="12" height="2" rx="1" transform="translate(504 1480) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2303" data-name="Rectangle 2303" width="12" height="2" rx="1" transform="translate(504 1588) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2212" data-name="Rectangle 2212" width="12" height="2" rx="1" transform="translate(450 1399) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2284" data-name="Rectangle 2284" width="12" height="2" rx="1" transform="translate(450 1507) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2245" data-name="Rectangle 2245" width="12" height="2" rx="1" transform="translate(450 1453) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2285" data-name="Rectangle 2285" width="12" height="2" rx="1" transform="translate(450 1561) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2229" data-name="Rectangle 2229" width="12" height="2" rx="1" transform="translate(450 1426) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2286" data-name="Rectangle 2286" width="12" height="2" rx="1" transform="translate(450 1534) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2246" data-name="Rectangle 2246" width="12" height="2" rx="1" transform="translate(450 1480) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2304" data-name="Rectangle 2304" width="12" height="2" rx="1" transform="translate(450 1588) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2218" data-name="Rectangle 2218" width="12" height="2" rx="1" transform="translate(558 1399) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2322" data-name="Rectangle 2322" width="12" height="2" rx="1" transform="translate(558 1507) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2266" data-name="Rectangle 2266" width="12" height="2" rx="1" transform="translate(558 1453) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2323" data-name="Rectangle 2323" width="12" height="2" rx="1" transform="translate(558 1561) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2234" data-name="Rectangle 2234" width="12" height="2" rx="1" transform="translate(558 1426) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2324" data-name="Rectangle 2324" width="12" height="2" rx="1" transform="translate(558 1534) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2267" data-name="Rectangle 2267" width="12" height="2" rx="1" transform="translate(558 1480) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2325" data-name="Rectangle 2325" width="12" height="2" rx="1" transform="translate(558 1588) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2208" data-name="Rectangle 2208" width="12" height="2" rx="1" transform="translate(423 1399) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2276" data-name="Rectangle 2276" width="12" height="2" rx="1" transform="translate(423 1507) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2240" data-name="Rectangle 2240" width="12" height="2" rx="1" transform="translate(423 1453) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2287" data-name="Rectangle 2287" width="12" height="2" rx="1" transform="translate(423 1561) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2225" data-name="Rectangle 2225" width="12" height="2" rx="1" transform="translate(423 1426) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2277" data-name="Rectangle 2277" width="12" height="2" rx="1" transform="translate(423 1534) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2247" data-name="Rectangle 2247" width="12" height="2" rx="1" transform="translate(423 1480) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2305" data-name="Rectangle 2305" width="12" height="2" rx="1" transform="translate(423 1588) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2216" data-name="Rectangle 2216" width="12" height="2" rx="1" transform="translate(531 1399) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2326" data-name="Rectangle 2326" width="12" height="2" rx="1" transform="translate(531 1507) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2260" data-name="Rectangle 2260" width="12" height="2" rx="1" transform="translate(531 1453) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2327" data-name="Rectangle 2327" width="12" height="2" rx="1" transform="translate(531 1561) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2235" data-name="Rectangle 2235" width="12" height="2" rx="1" transform="translate(531 1426) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2328" data-name="Rectangle 2328" width="12" height="2" rx="1" transform="translate(531 1534) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2261" data-name="Rectangle 2261" width="12" height="2" rx="1" transform="translate(531 1480) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2329" data-name="Rectangle 2329" width="12" height="2" rx="1" transform="translate(531 1588) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2213" data-name="Rectangle 2213" width="12" height="2" rx="1" transform="translate(477 1399) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2306" data-name="Rectangle 2306" width="12" height="2" rx="1" transform="translate(477 1507) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2254" data-name="Rectangle 2254" width="12" height="2" rx="1" transform="translate(477 1453) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2307" data-name="Rectangle 2307" width="12" height="2" rx="1" transform="translate(477 1561) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2230" data-name="Rectangle 2230" width="12" height="2" rx="1" transform="translate(477 1426) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2308" data-name="Rectangle 2308" width="12" height="2" rx="1" transform="translate(477 1534) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2255" data-name="Rectangle 2255" width="12" height="2" rx="1" transform="translate(477 1480) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2309" data-name="Rectangle 2309" width="12" height="2" rx="1" transform="translate(477 1588) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2220" data-name="Rectangle 2220" width="12" height="2" rx="1" transform="translate(585 1399) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2330" data-name="Rectangle 2330" width="12" height="2" rx="1" transform="translate(585 1507) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2268" data-name="Rectangle 2268" width="12" height="2" rx="1" transform="translate(585 1453) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2331" data-name="Rectangle 2331" width="12" height="2" rx="1" transform="translate(585 1561) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2237" data-name="Rectangle 2237" width="12" height="2" rx="1" transform="translate(585 1426) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2332" data-name="Rectangle 2332" width="12" height="2" rx="1" transform="translate(585 1534) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2269" data-name="Rectangle 2269" width="12" height="2" rx="1" transform="translate(585 1480) rotate(-180)" fill="#282f49"/>
+                   <rect id="Rectangle_2333" data-name="Rectangle 2333" width="12" height="2" rx="1" transform="translate(585 1588) rotate(-180)" fill="#282f49"/>
+                </g>
+             </svg>
+          </div>
+       </section>
+       
+       <!-- ABOUT ME -->
+       <section id="about" class="py-2">
+         <div class="container">
+            <div class="nav-title" >Quick Links</div>
+            <div class="section-buttons mt-5">
+               <a href="#education"><i class="fas fa-graduation-cap" style="margin-right: 10px;"></i> Education</a>
+               <a href="#experience"><i class="fas fa-briefcase" style="margin-right: 10px;"></i> Experience</a>
+               <a href="/teaching.html"><i class="fas fa-chalkboard-teacher" style="margin-right: 10px;"></i> Teaching</a>
+               <a href="#publications_section"><i class="fas fa-book" style="margin-right: 10px;"></i> Publications</a>
+               <a href="#projects"><i class="fas fa-project-diagram" style="margin-right: 10px;"></i> Projects</a>
+               <a href="#certifications"><i class="fas fa-certificate" style="margin-right: 10px;"></i> Certifications</a>
+               <a href="#achievements"><i class="fas fa-trophy" style="margin-right: 10px;"></i> Achievements</a>
+               <!-- add for Events -->
+                <a href="events.html"><i class="fas fa-calendar-alt" style="margin-right: 10px;"></i> Events</a>
+             </div>
+           <h2 class="text-left mb-4">About Me</h2>
+           <div class="row">
+             <div class="col-lg-8 content">
+               <p  style="font-family: 'Alata', sans-serif; opacity: 0.85;">PhD in Computational and Data Sciences at <a href="https://iisc.ac.in">Indian Institute of Science</a>. My research interests include:</p>
+               <div class="tech-cards">
+                  <div class="tech-card">Scientific Machine Learning</div>
+                  <div class="tech-card">Physics Informed Neural Networks</div>
+                 <div class="tech-card">High Performance Computing</div>
+
+                 <div class="tech-card">Finite Element Methods</div>
+                
+                 <div class="tech-card">Computational Fluid Dynamics</div>
+               </div>
+               <p class="mt-4" style="font-family: 'Alata', sans-serif; opacity: 0.85;">I am a Google Certified TensorFlow Developer. During my PhD, I developed CUDA routines in our in-house FEM package <a href="#">ParMooN</a> and led the development of <a href="https://cmgcds.github.io/fastvpinns">FastVPINNs</a>, an efficient hp-VPINNs implementation in Python. I collaborated with Shell Research India and ITC Research.</p>
+               
+               <h4 class="mt-4">Skill Sets</h4>
+               
+               <!-- SKILLS -->
+               <div class="skills-container">
+                  <div class="skills-grid">
+                      <div class="skill-category">
+                          <div class="skill-header">
+                              <i class="fas fa-code"></i>
+                              Programming Languages
+                          </div>
+                          <div class="skill-tags">
+                              <span class="skill-tag">C++</span>
+                              <span class="skill-tag">C</span>
+                              <span class="skill-tag">Python</span>
+                              <span class="skill-tag">Matlab</span>
+                          </div>
+                      </div>
+              
+                      <div class="skill-category">
+                          <div class="skill-header">
+                              <i class="fas fa-microchip"></i>
+                              High Performance Computing
+                          </div>
+                          <div class="skill-tags">
+                              <span class="skill-tag">MPI</span>
+                              <span class="skill-tag">OpenMP</span>
+                              <span class="skill-tag">CUDA</span>
+                              <span class="skill-tag">pympi</span>
+                              <span class="skill-tag">OpenACC</span>
+                          </div>
+                      </div>
+              
+                      <div class="skill-category">
+                          <div class="skill-header">
+                              <i class="fas fa-brain"></i>
+                              Machine Learning
+                          </div>
+                          <div class="skill-tags">
+                              <span class="skill-tag">TensorFlow</span>
+                              <span class="skill-tag">scikit-learn</span>
+                              <span class="skill-tag">DeepXDE</span>
+                              <span class="skill-tag">JAX</span>
+                          </div>
+                      </div>
+              
+                      <div class="skill-category">
+                          <div class="skill-header">
+                              <i class="fas fa-calculator"></i>
+                              Scientific Computing
+                          </div>
+                          <div class="skill-tags">
+                              <span class="skill-tag">deal.II</span>
+                              <span class="skill-tag">Gmsh</span>
+                              <span class="skill-tag">CMake</span>
+                              <span class="skill-tag">Paraview</span>
+                              <span class="skill-tag">Pointwise</span>
+                          </div>
+                      </div>
+              
+                      <div class="skill-category">
+                          <div class="skill-header">
+                              <i class="fas fa-cogs"></i>
+                              MLOps
+                          </div>
+                          <div class="skill-tags">
+                              <span class="skill-tag">Git</span>
+                              <span class="skill-tag">DVC</span>
+                              <span class="skill-tag">Docker</span>
+                              <span class="skill-tag">GitHub Actions</span>
+                              <span class="skill-tag">Jenkins</span>
+                          </div>
+                      </div>
+              
+                      <div class="skill-category">
+                          <div class="skill-header">
+                              <i class="fas fa-window-maximize"></i>
+                              Web Technologies
+                          </div>
+                          <div class="skill-tags">
+                              <span class="skill-tag">HTML</span>
+                              <span class="skill-tag">CSS</span>
+                              <span class="skill-tag">JavaScript</span>
+                              <span class="skill-tag">p5.js</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+
+             </div>
+             <div class="col-lg-4">
+               <div class="recent-highlights">
+                 <h4 class="mb-3">Recent Highlights</h4>
+                 <div class="highlight-item">
+                   <h5>Post Doc Offer</h5>
+                   <p>Received a post doc offer at Brown University from Prof. George Karniadakis</p>
+                   <a href="../events/crunch_seminar.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                 </div>
+                 <div class="highlight-item">
+                   <h5>Publication at CMAME</h5>
+                   <p>FastVPINNs paper got  Accepted at SIAM Journal sof Scientific Computing.</p>
+                   <a href="projects/fastvpinns_supg.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                 </div>
+                 <div class="highlight-item">
+                  <h5>Publication at SIAM-SISC</h5>
+                  <p>Our Paper on SUPG Stabilisation got accepted at CMAME.</p>
+                  <a href="projects/fastvpinns_supg.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                 <div class="highlight-item" style="border: none; display: flex; align-items: center; justify-content: center;">
+                  <!-- <p>For all other events</p> -->
+                  <button class="btn btn-primary" style="font-family: 'Alata';" onclick="window.location.href='events.html'">Click here to see other events</button>
+                </div>
+               </div>
+             </div>
+           </div>
+           
+           
+         </div>
+       </section>
+
+
+       
+       <section id=education class="py-4" style="margin-top: 4rem;">
+          <div class=container>
+             <h2 class=text-center>Education</h2>
+             <div class="row justify-content-center py-2">
+                <div class="col-12 p-0">
+                   <div class="row row align-items-center justify-content-center m-1 mb-4">
+                      <div class=col-md-11>
+                         <div class=card>
+                            <div class=card-body>
+                               <div class=float-end>
+                                  <small>2018 - 2024</small>
+                               </div>
+                               <h5 class=card-title>Ph.D in Computational and Data Sciences</h5>
+                               <a href=https://example.org target=_blank>
+                                  <h6>
+                                    Indian Institute of Science, Bangalore
+                                  </h6>
+                               </a>
+                               <div class=py-1>
+                                  Advisor: <a href="https://cds.iisc.ac.in/people/sashi" style="color: var(--primary-color);">Prof. Sashikumaar Ganesan</a>
+                               </div>
+                               <div class="col-sm-12 col-md-12 col-lg-12 py-2">
+                                 <div class="activities-container">
+                                    <!-- <h2>Activities</h2> -->
+                                    <ul class="activities-tabs nav" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="research-tab" data-bs-toggle="tab" data-bs-target="#research" type="button" role="tab" aria-controls="research" aria-selected="true">
+                                                <i class="fas fa-flask"></i> Research
+                                            </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="organizational-tab" data-bs-toggle="tab" data-bs-target="#organizational" type="button" role="tab" aria-controls="organizational" aria-selected="false">
+                                                <i class="fas fa-users"></i> Organizational
+                                            </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                          <button class="nav-link" id="coursework-tab" data-bs-toggle="tab" data-bs-target="#coursework" type="button" role="tab" aria-controls="coursework" aria-selected="false">
+                                              <i class="fas fa-book"></i> Course Work
+                                          </button>
+                                      </li>
+                                        
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="teaching-tab" data-bs-toggle="tab" data-bs-target="#teaching" type="button" role="tab" aria-controls="teaching" aria-selected="false">
+                                                <i class="fas fa-chalkboard-teacher"></i> Teaching
+                                            </button>
+                                        </li>
+                                        
+                                        <li class="nav-item" role="presentation">
+                                          <button class="nav-link" id="extracurricular-tab" data-bs-toggle="tab" data-bs-target="#extracurricular" type="button" role="tab" aria-controls="extracurricular" aria-selected="false">
+                                              <i class="fas fa-running"></i> Extracurricular
+                                          </button>
+                                      </li>
+                                    </ul>
+                                    <div class="tab-content" id="activities-tabContent">
+                                        <div class="tab-pane fade show active" id="research" role="tabpanel" aria-labelledby="research-tab">
+                                            <!-- <h4>Research Activities</h4> -->
+                                            <ul>
+                                                <li>Developed <a href="https://cmgcds.github.io/fastvpins" target="_blank">FastVPINNs</a>, an efficient implementation of hp-Variational Physics Informed Neural Networks, and applied it to solve complex problems such as the <a href="projects/fastvpinns_nse2d.html" target="_blank">Incompressible Navier-Stokes Equations</a> and <a href="projects/fastvpinns_supg.html" target="_blank">Singularly Perturbed Problems</a>.</li>
+                                                <li>Implemented <a href="projects/gpu_siminhale.html" target="_blank">GPU-Accelerated Particle Deposition</a> for human airway simulations using our in-house FEM package, <a href="#" target="_blank">ParMooN</a>.</li>
+                                                <li>Developed an <a href="projects/ale_gpu.html" target="_blank">ALE-based FEM</a> approach for simulating free surface flows in 3D domains.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-pane fade" id="organizational" role="tabpanel" aria-labelledby="organizational-tab">
+                                            <!-- <h4>Organizational Activities</h4> -->
+                                            <ul>
+                                             <li>Conference Organizer for <a href="https://casml.cc" target="_blank">CASML-2024</a> (Conference on Applied AI and Scientific Machine Learning) to be held at IISc, Bangalore in Dec 2024.</li>
+                                             <li>Lead Student Organizer for the <a href="https://www.hcsa.uni-heidelberg.de/en/about-us/events-archive/indo-german-conference-on-computational-mathematics-igcm-2023-challenges-and-opportunities-towards" target="_blank">Indo-German Conference on Computational Mathematics</a> (March 2023).</li>
+                                             <li>Speaker and Organizer for the <a href="https://kiac.iisc.ac.in/activities/workshops/instructional-school-on-ai-and-ml-for-researchers/">Kotak-IISc Instructional School on AI & ML</a> (March 2023).</li>
+                                             <li>Lead Student Organizer for the "Parallel Finite Element Computing" workshop at IISc (Oct-2019).</li>
+                                             <li>Student Organizer for the <a href="https://www.easychair.org/cfp/igcm2019" target="_blank">Indo-German Conference on Computational Mathematics</a> (March 2019).</li>
+                                         </ul>
+                                        </div>
+                                        
+                                        <div class="tab-pane fade" id="teaching" role="tabpanel" aria-labelledby="teaching-tab">
+                                            <!-- <h4>Teaching Experience</h4> -->
+                                            For more details, please refer  <a href="/teaching.html">here</a>.
+                                        </div>
+                                        <div class="tab-pane fade" id="coursework" role="tabpanel" aria-labelledby="coursework-tab">
+                                            <!-- <h4>Relevant Course Work</h4> -->
+                                            <ul>
+                                                <li>Finite Element Methods: Theory and Algorithms (Grade A+)</li>
+                                                <li>Parallel Finite Element Computing (Grade A+)</li>
+                                                <li>Parallel Programming (Grade A+)</li>
+                                                <li>Computational Heat Transfer and Fluid Flow (Grade B+)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-pane fade" id="extracurricular" role="tabpanel" aria-labelledby="extracurricular-tab">
+                                          <!-- <h4>Extracurricular Activities</h4> -->
+                                          <ul>
+                                              <li>Keyboard player for IISc's Music Band Rhythmica - <a href="https://www.youtube.com/watch?v=LY4qQOjtdDE" target="_blank">Video Link</a></li>
+                                              <li>Member of CDS Wellness Committee from 2022-2023</li>
+                                          </ul>
+                                      </div>
+                                    </div>
+                                </div>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <div class="col-12 p-0">
+                   <div class="row row align-items-center justify-content-center m-1 mb-4">
+                      <div class=col-md-11>
+                         <div class=card>
+                            <div class=card-body>
+                               <div class=float-end>
+                                  <small>2011 - 2015</small>
+                               </div>
+                               <h5 class=card-title>Bachelor of Engineering (Mechanical)</h5>
+                               <a href=https://example.org target=_blank>
+                                  <h6>
+                                     Anna University, Chennai
+                                  </h6>
+                               </a>
+                               <div class=py-1>
+                                  GPA:
+                                  <i>
+                                  <small>8.6 out of 10</small>
+                                  </i>
+                               </div>
+                               <!-- COntet -->
+                               <div class="education-content py-1">
+                                 <div class="activities-container">
+                                   <ul class="activities-tabs nav" role="tablist">
+                                     <li class="nav-item" role="presentation">
+                                       <button class="nav-link active" id="ug-academic-tab" data-bs-toggle="tab" data-bs-target="#ug-academic" type="button" role="tab" aria-controls="ug-academic" aria-selected="true">
+                                         <i class="fas fa-graduation-cap"></i> Academic
+                                       </button>
+                                     </li>
+                                     <li class="nav-item" role="presentation">
+                                       <button class="nav-link" id="ug-extracurricular-tab" data-bs-toggle="tab" data-bs-target="#ug-extracurricular" type="button" role="tab" aria-controls="ug-extracurricular" aria-selected="false">
+                                         <i class="fas fa-running"></i> Extracurricular
+                                       </button>
+                                     </li>
+                                   </ul>
+                                   <div class="tab-content" id="ug-activities-tabContent">
+                                     <div class="tab-pane fade show active" id="ug-academic" role="tabpanel" aria-labelledby="ug-academic-tab">
+                                       <ul>
+                                         <li>Gold medalist for overall best outgoing student for batch 2011 to 2015</li>
+                                       </ul>
+                                     </div>
+                                     <div class="tab-pane fade" id="ug-extracurricular" role="tabpanel" aria-labelledby="ug-extracurricular-tab">
+                                       <ul>
+                                         <li>NCC: Cadet Under Officer(CUO) and C-Certificate holder.</li>
+                                       </ul>
+                                     </div>
+                                   </div>
+                                 </div>
+                               </div>
+                               
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+
+             </div>
+          </div>
+       </section>
+
+
+       <section id=experience class=py-2>
+         <div class=container>
+            <h2 class=text-center>Experience</h2>
+            <div class="row justify-content-center">
+               <div class="col-sm-12 col-md-12 col-lg-11 py-2">
+                  <div class="experience-container px-3 pt-2">
+                     <ul class="nav nav-pills mb-3 bg-transparent primary-font" id=pills-tab role=tablist>
+                        <li class="nav-item px-1 bg-transparent" role=presentation>
+                           <div class="nav-link active bg-transparent" aria-selected=true role=tab data-bs-toggle=pill id=Acceture data-bs-target=#pills-accenture aria-controls=Facebook-Jan-2022---present>
+                              Accenture
+                           </div>
+                        </li>
+                        <li class="nav-item px-1 bg-transparent" role=presentation>
+                           <div class="nav-link bg-transparent" aria-selected=true role=tab data-bs-toggle=pill id=IISc-tab data-bs-target=#pills-IISc-aria aria-controls=IISc-aria>
+                              Indian Institute of Science
+                           </div>
+                        </li>
+                       
+                     </ul>
+                     <div class="tab-content pb-5 pt-2 bg-transparent primary-font" id=pills-tabContent>
+                        <div class="tab-pane fade show active bg-transparent" role=tabpanel id=pills-accenture aria-labelledby=pills-Acceture>
+                           <div>
+                              <span class=h4>Software Engineer</span>
+                              <small>-</small>
+                              <a href=https://accenture.com target=_blank>Accenture</a>
+                              <div class=pb-1>
+                                 <small>Jun 2015 - Jul 2017</small>
+                                 <span class=p-2>
+                                 <span style=cursor:pointer data-bs-toggle=tooltip data-bs-placement=top data-bs-original-title="Worked as a Software Engineer at Accenture">
+                                 <i class="fas fa-info-circle fa-xs"></i>
+                                 </span>
+                                 </span>
+                              </div>
+                              <!-- <div class="py-2 featuredLink">
+                                 <a class="p-2 px-4 btn btn-outline-primary btn-sm" href=https://example.com target=_blank>
+                                 View the project
+                                 </a>
+                              </div> -->
+                           </div>
+                           I was responsible for developing automated testing routines for a financial product at First Data. During my tenure, I received the following awards:
+                           <ul>
+                              <li>Exide Innovator Award: Recognized for developing an automation routine that reduced man-hours by over 90% and saved the client $3,000 USD annually.</li>
+                              <li>ACE - Gold Standard: The highest award at Accenture for excellence in quality and delivery.</li>
+                           </ul>
+                        </div>
+                        <div class="tab-pane fade bg-transparent" role=tabpanel id=pills-IISc-aria aria-labelledby=pills-IISc-tab>
+                           <div>
+                              <span class=h4>Teaching Assistant</span>
+                              <small>-</small>
+                              <a href=https://example.com target=_blank>Indian Institute of Science</a>
+                              <div class=pb-1>
+                                 <small>Sep 2020 - Dec 2024</small>
+                                 <span class=p-2>
+                                 <span style=cursor:pointer data-bs-toggle=tooltip data-bs-placement=top data-bs-original-title="Click on more info to see the details of my TAship.">
+                                 <i class="fas fa-info-circle fa-xs"></i>
+                                 </span>
+                                 </span>
+                              </div>
+                              <div class="py-2 featuredLink">
+                                 <a class="p-2 px-4 btn btn-outline-primary btn-sm" href="/teaching" target=_blank>
+                                 More Info
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="pt-2">
+                             <p>I have served as a teaching assistant for more than five courses over eight occasions at the Indian Institute of Science. The courses I assisted with include:</p>
+                             <ul>
+                                 <li>Finite Element Methods: Theory and Algorithms</li>
+                                 <li>Numerical Methods</li>
+                                 <li>Introduction to Artificial Intelligence and Machine Learning</li>
+                                 <li>Machine Learning Operations (MLOps)</li>
+                             </ul>
+                         </div>
+                        </div>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section id="publications_section" class="py-5_publication">
+         <div class="container_publication">
+            <h2 class="title_publication">Publications</h2>
+            <div class="tabs_publication">
+                <button class="tab-btn_publication active_publication" data-tab="papers_publication">Papers</button>
+                <button class="tab-btn_publication" data-tab="conferences_publication">Conferences</button>
+                <button class="tab-btn_publication" data-tab="book_chapters_publication">Book Chapters</button>
+            </div>
+            <div id="papers_publication" class="tab-content_publication active_publication">
+               <div class="publication-item_publication">
+                  <h5>Improving hp-Variational Physics-Informed Neural Networks for Steady-State Convection-Dominated Problems</h5>
+                  <p class="authors_publication"><span class="author-highlight_publication">Manoj Solanki</span>, Divij Ghose, Himanshu Jain, Pratham Sunkad, Sashikumaar Ganesan, Volker John</p>
+                  <p class="journal_date_publication"><em>Accepted for Publication , Computer Methods in Applied Mechanics and Engineering[CMAME] </em></p>
+                  <div class="links_publication">
+                      <a href="https://www.sciencedirect.com/science/article/abs/pii/S0045782525000696" class="btn_publication btn-small_publication" target="_blank">Paper</a>
+                      <a href="https://arxiv.org/pdf/2411.09329" class="btn_publication btn-small_publication" target="_blank">arXiv</a>
+                      <a href="https://github.com/cmgcds/fastvpinns_supg" class="btn_publication btn-small_publication" target="_blank">GitHub</a>
+                      <a href="projects/fastvpinns_supg.html" class="btn_publication btn-small_publication" >Project</a>
+
+                  </div>
+              </div>
+
+                <div class="publication-item_publication">
+                    <h5>FastVPINNs: Tensor-Driven Acceleration of VPINNs for Complex Geometries</h5>
+                    <p class="authors_publication"><span class="author-highlight_publication">Manoj Solanki</span>, Divij Ghose, Himanshu Jain, Sashikumaar Ganesan</p>
+                    <p class="journal_date_publication"><em>Accepted for Publication , SIAM journal of Scientific Computing [SIAM-SISC] </em></p>
+                    <div class="links_publication">
+                        <a href="https://arxiv.org/pdf/2404.12063" class="btn_publication btn-small_publication" target="_blank">PDF</a>
+                        <a href="https://arxiv.org/abs/2404.12063" class="btn_publication btn-small_publication" target="_blank">arXiv</a>
+                        <a href="https://github.com/thivinanandh/FastVPINNs" class="btn_publication btn-small_publication" target="_blank">GitHub</a>
+                        <a href="projects/fastvpinns.html" class="btn_publication btn-small_publication" >Project</a>
+
+                    </div>
+                </div>
+                <div class="publication-item_publication">
+                    <h5>FastVPINNs: An efficient tensor-based Python library for solving partial differential equations using hp-Variational Physics Informed Neural Networks</h5>
+                    <p class="authors_publication"><span class="author-highlight_publication">Manoj Solanki</span>, Divij Ghose, Sashikumaar Ganesan</p>
+                    <p class="journal_date_publication"><em>Journal of Open Source Software, 2024</em></p>
+                    <div class="links_publication">
+                        <a href="https://joss.theoj.org/papers/10.21105/joss.06764.pdf" class="btn_publication btn-small_publication" target="_blank">PDF</a>
+                        <a href="https://joss.theoj.org/papers/10.21105/joss.06764" class="btn_publication btn-small_publication" target="_blank">Journal</a>
+                        <a href="https://github.com/thivinanandh/FastVPINNs" class="btn_publication btn-small_publication" target="_blank">GitHub</a>
+                        <a href="projects/fastvpinns_joss.html" class="btn_publication btn-small_publication" >Project</a>
+
+                    </div>
+                </div>
+                <div class="publication-item_publication">
+                    <h5>An efficient hp-Variational Physics Informed Neural Network framework for Incompressible Navier-Stokes equations</h5>
+                    <p class="authors_publication"><span class="author-highlight_publication">Manoj Solanki</span>, Divij Ghose, Ankit Tyagi, Abhineet Gupta, Suranjan Sarkar, Sashikumaar Ganesan</p>
+                    <p class="journal_date_publication"><em>arXiv preprint, 2024</em></p>
+                    <div class="links_publication">
+                        <a href="https://arxiv.org/pdf/2409.04143v1" class="btn_publication btn-small_publication" target="_blank">PDF</a>
+                        <a href="https://arxiv.org/abs/2409.04143v1" class="btn_publication btn-small_publication" target="_blank">arXiv</a>
+                        <a href="https://github.com/cmgcds/fastvpinns" class="btn_publication btn-small_publication" target="_blank">GitHub</a>
+                        <a href="projects/fastvpinns_nse2d.html" class="btn_publication btn-small_publication" >Project</a>
+
+                    </div>
+                </div>
+                <div class="publication-item_publication">
+                    <h5>On the choice of hyper-parameters of artificial neural networks for stabilized finite element schemes</h5>
+                    <p class="authors_publication">Subodh M Joshi, <span class="author-highlight_publication">Manoj Solanki</span>, Bhanu Teja, Sashikumaar Ganesan</p>
+                    <p class="journal_date_publication"><em>International Journal of Advances in Engineering Sciences and Applied Mathematics, 2021</em></p>
+                    <div class="links_publication">
+                        <a href="pdf/s12572-021-00306-9.PDF" class="btn_publication btn-small_publication" target="_blank">PDF</a>
+                        <a href="https://link.springer.com/article/10.1007/s12572-021-00306-9" class="btn_publication btn-small_publication" target="_blank">Journal</a>
+                    </div>
+                </div>
+                <div class="publication-item_publication">
+                    <h5>Ensemble forecast of COVID-19 in Karnataka for vulnerability assessment and policy interventions</h5>
+                    <p class="authors_publication">Sashikumaar Ganesan, Deepak Subramani, <span class="author-highlight_publication">Manoj Solanki</span>, Divij Ghose, Giridhara R Babu</p>
+                    <p class="journal_date_publication"><em>medRxiv preprint, 2021</em></p>
+                    <div class="links_publication">
+                        <a href="https://arxiv.org/pdf/2404.12063" class="btn_publication btn-small_publication" target="_blank">PDF</a>
+                        <a href="https://www.medrxiv.org/content/10.1101/2021.08.31.21262943v1" class="btn_publication btn-small_publication" target="_blank">medRxiv</a>
+                    </div>
+                </div>
+            </div>
+            <div id="conferences_publication" class="tab-content_publication">
+                <div class="publication-item_publication">
+                    <h5>Fast and Efficient hp-Variational PINNS framework for solving the Incompressible Navier-Stokes equations</h5>
+                    <p class="authors_publication"><span class="author-highlight_publication">Manoj Solanki</span>, Divij Ghose, Sashikumaar Ganesan</p>
+                    <p class="conference_date_publication"><em>International Conference on Computational Fluid Dynamics (ICCFD-12), 2024, Kobe, Japan</em></p>
+                    <div class="links_publication">
+                    <a href="https://www.iccfd.org/iccfd12/assets/pdf/papers/ICCFD12_Paper_9-C-02.pdf" class="btn_publication btn-small_publication" target="_blank">Conference Proceedings</a>
+
+                 </div>
+                    <!-- <a href="projects/fastvpinns_joss.html" class="btn_publication btn-small_publication" target="_blank">Project</a> -->
+                </div>
+                <div class="publication-item_publication">
+                    <h5>GPU ACCELERATED FEM BASED LAGRANGIAN PARTICLE TRACKING FRAMEWORK FOR HUMAN AIR PATHWAY</h5>
+                    <p class="authors_publication"><span class="author-highlight_publication">Manoj Solanki</span>, Sashikumaar Ganesan</p>
+                    <p class="conference_date_publication"><em>ParCFD-2024, 2024, University Club Bonn, Germany</em></p>
+                    <div class="links_publication">
+                     <a href="#" class="btn_publication btn-small_publication" target="_blank">Conference Proceedings</a>
+                     <a href="projects/gpu_siminhale.html" class="btn_publication btn-small_publication" target="_blank">Project Page</a>
+                     <a href="src/ParCFD_2024_Paper.pdf" class="btn_publication btn-small_publication" target="_blank">PDF</a>
+                  </div>
+                </div>
+                <div class="publication-item_publication">
+                    <h5>A Deep Learning Simulation Framework for Building Digital Twins of Wind Farms: Concepts and Roadmap</h5>
+                    <p class="authors_publication">Subodh M Joshi, <span class="author-highlight_publication">Manoj Solanki</span>, Sashikumaar Ganesan</p>
+                    <p class="conference_date_publication"><em>12th International Conference on Simulation and Modeling Methodologies, Technologies and Applications (SIMULTECH-2022), 2024, Lisbon, Portugal</em></p>
+                    
+                    <div class="links_publication">
+                     <a href="https://www.scitepress.org/Papers/2022/113195/113195.pdf" class="btn_publication btn-small_publication" target="_blank">Conference Proceedings</a>
+                     <a href="projects/digital_shadow.html" class="btn_publication btn-small_publication" >Project Page</a>
+
+                  </div>
+
+                </div>
+            </div>
+            <div id="book_chapters_publication" class="tab-content_publication">
+                <div class="publication-item_publication">
+                    <h5>Computational Ship Hydrodynamics: Modeling and Simulation</h5>
+                    <p class="authors_publication">Sashikumaar Ganesan, Bhanu Teja, <span class="author-highlight_publication">Manoj Solanki</span></p>
+                    <p class="book_date_publication"><em>Computational Science and its Applications, 1st edition, 2020</em></p>
+                    <p class="publisher_publication">Taylor & Francis</p>
+                    <div class="links_publication">
+                        <a href="https://www.taylorfrancis.com/chapters/edit/10.1201/9780429288739-10/computational-ship-hydrodynamics-modeling-simulation-sashikumaar-ganesan-bhanu-teja-thivin-anandh" class="btn_publication btn-small_publication" target="_blank">Link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <section id="projects" class="py-2" style="margin-bottom: 3rem;"> 
+      <div class="container">
+          <h2 class="section-title text-center mb-4">Projects</h2>
+          <div class="row justify-content-center">
+              <div class="col-md-4 mb-4">
+                  <div class="card h-100">
+                      <div class="card-body d-flex flex-column">
+                          <h4>Academic Projects</h4>
+                          <p class="card-text flex-grow-1">Collection of research projects completed during my PhD on Scientific Machine Learning, High Performance Computing , Finite Element Methods and Computational Fluid Dynamics</p>
+                          <div class="text-center">
+                              <a href="/projects.html" class="btn btn-primary">View Projects</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                  <div class="card h-100">
+                      <div class="card-body d-flex flex-column">
+                          <h4>GitHub Projects</h4>
+                          <p class="card-text">Collection of Additional projects on AI/ML, HPC, Open-source contributions, Teaching materials, Game development etc. </p>
+                          <div class="text-center">
+                              <a href="/projects/github_projects.html" class="btn btn-primary">View GitHub Projects</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section id="certifications">
+   <div class="container">
+       <h2 class="section-title">Certifications</h2>
+       <div class="certifications-grid">
+           <!-- Tensorflow Developer Certificate -->
+           <div class="certification-card">
+               <div class="certification-logo-container">
+                   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1920px-Google_%22G%22_logo.svg.png" alt="Google Logo" class="certification-logo">
+               </div>
+               <div class="certification-content">
+                   <div class="certification-info">
+                       <h3 class="certification-title">Tensorflow Developer Certificate</h3>
+                       <p class="certification-provider">Google</p>
+                       <p class="certification-date">Issued: Jan 2024</p>
+                       <p class="certification-id">Credential ID: 92608005</p>
+                   </div>
+                   <div class="certification-action">
+                       <a href="https://www.credential.net/611e037c-00e4-476b-b2ee-1cdc01e187c3#gs.3d2ge4" class="certification-button" target="_blank">View Credential</a>
+                   </div>
+               </div>
+           </div>
+
+           <!-- The Finite Element Method for Problems in Physics -->
+           <div class="certification-card">
+               <div class="certification-logo-container">
+                   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/University_of_Michigan_logo.svg/2880px-University_of_Michigan_logo.svg.png" alt="University of Michigan Logo" class="certification-logo">
+               </div>
+               <div class="certification-content">
+                   <div class="certification-info">
+                       <h3 class="certification-title">The Finite Element Method for Problems in Physics</h3>
+                       <p class="certification-provider">University of Michigan</p>
+                       <p class="certification-date">Issued: Jul 2020</p>
+                       <p class="certification-id">Credential ID: MCXRSFRASFXD</p>
+                   </div>
+                   <div class="certification-action">
+                       <a href="#" class="certification-button" target="_blank">View Credential</a>
+                   </div>
+               </div>
+           </div>
+
+           <!-- NVIDIA DLI Certificate -->
+           <div class="certification-card">
+               <div class="certification-logo-container">
+                   <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/about-nvidia/logo-and-brand/02-nvidia-logo-color-grn-500x200-4c25-p@2x.png" alt="NVIDIA Logo" class="certification-logo">
+               </div>
+               <div class="certification-content">
+                   <div class="certification-info">
+                       <h3 class="certification-title">Deep Learning</h3>
+                       <p class="certification-provider">NVIDIA Deep Learning Institute</p>
+                       <p class="certification-date">Issued: Sep 2023</p>
+                       <p class="certification-id">Credential ID: 123456789</p>
+                   </div>
+                   <div class="certification-action">
+                       <a href="https://courses.nvidia.com/certificates/531cbbab0a4c4d14981fac814acd5bd7" class="certification-button" target="_blank">View Credential</a>
+                   </div>
+               </div>
+           </div>
+
+           <!-- NVIDIA DLI Certificate -->
+           <div class="certification-card">
+            <div class="certification-logo-container">
+                <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/about-nvidia/logo-and-brand/02-nvidia-logo-color-grn-500x200-4c25-p@2x.png" alt="NVIDIA Logo" class="certification-logo">
+            </div>
+            <div class="certification-content">
+                <div class="certification-info">
+                    <h3 class="certification-title">Accelerating Data Engineering Pipelines</h3>
+                    <p class="certification-provider">NVIDIA Deep Learning Institute</p>
+                    <p class="certification-date">Issued: Feb 2022</p>
+                    <p class="certification-id">Credential ID: 123456789</p>
+                </div>
+                <div class="certification-action">
+                    <a href="https://courses.nvidia.com/certificates/01fdd48969c848daa43ce180e389bc0a" class="certification-button" target="_blank">View Credential</a>
+                </div>
+            </div>
+        </div>
+
+           <!-- DeepLearning.AI TensorFlow Developer Professional Certificate -->
+           <div class="certification-card">
+               <div class="certification-logo-container">
+                   <img src="images/images.png" alt="DeepLearning.AI Logo" class="certification-logo">
+               </div>
+               <div class="certification-content">
+                   <div class="certification-info">
+                       <h3 class="certification-title">TensorFlow Developer Professional Certificate</h3>
+                       <p class="certification-provider">DeepLearning.AI</p>
+                       <p class="certification-date">Issued: May 2021</p>
+                       <p class="certification-id">Credential ID: 221640EDEDAC</p>
+                   </div>
+                   <div class="certification-action">
+                       <a href="#" class="certification-button" target="_blank">View Credential</a>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+</section>
+
+
+       <section id=achievements class=py-2 >
+          <div class=container>
+             <h3 class=text-center>Achievements & Awards</h3>
+             <div class="px-0 px-md-1 px-lg-5">
+               
+               <div class="row justify-content-center px-3 px-md-5 px-lg-5">
+
+                  <div class="col-lg-12 col-md-1 my-1">
+                     <a class="card my-2 p-2" href="#" target="_blank" style="text-decoration: none; color: var(--text-color); border: 1px solid #dee2e6; transition: border-color 0.3s ease; min-height: 100px; position: relative;">
+                        <div class="card-body bg-transparent p-2">
+                           <div style="display: flex; justify-content: space-between; align-items: top;">
+                              <div style="display: flex; align-items: center; gap: 10px;">
+                                 <i class="fas fa-trophy" style="color: var(--primary-color); font-size: 1.2rem;"></i>
+                                 <h5 class="card-title bg-transparent" style="margin: 0;">Best Poster Presentation Award (IGHASC)</h5>
+                              </div>
+                              <span style="color: var(--text-secondary-color); font-size: 0.9rem;">Oct 2024</span>
+                           </div>
+                           <div class="card-text" style="margin-top: 0.5rem;">
+                             Best poster Presentation award at Indo-German conference on Hardware aware Scientific Computing (IGHSAC) held at Heidelberg Germany.
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                 
+                  <div class="col-lg-12 col-md-1 my-1">
+                     <a class="card my-2 p-2" href="#" target="_blank" style="text-decoration: none; color: var(--text-color); border: 1px solid #dee2e6; transition: border-color 0.3s ease; min-height: 100px; position: relative;">
+                        <div class="card-body bg-transparent p-2">
+                           <div style="display: flex; justify-content: space-between; align-items: top;">
+                              <div style="display: flex; align-items: center; gap: 10px;">
+                                 <i class="fas fa-trophy" style="color: var(--primary-color); font-size: 1.2rem;"></i>
+                                 <h5 class="card-title bg-transparent" style="margin: 0;">Best Presentation Award (AI/ML Track)</h5>
+                              </div>
+                              <span style="color: var(--text-secondary-color); font-size: 0.9rem;">Feb 2024</span>
+                           </div>
+                           <div class="card-text" style="margin-top: 0.5rem;">
+                             FastVPINNs: "An Efficient and fast hp-Variational PINNs for large scale simulations" at EECS-2024.
+                             Organized by IISc Bangalore.
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="col-lg-12 col-md-1 my-1">
+                     <a class="card my-2 p-2" href="#" target="_blank" style="text-decoration: none; color: var(--text-color); border: 1px solid #dee2e6; transition: border-color 0.3s ease; min-height: 100px; position: relative;">
+                        <div class="card-body bg-transparent p-2">
+                           <div style="display: flex; justify-content: space-between; align-items: top;">
+                              <div style="display: flex; align-items: center; gap: 10px;">
+                                 <i class="fas fa-trophy" style="color: var(--primary-color); font-size: 1.2rem;"></i>
+                                 <h5 class="card-title bg-transparent" style="margin: 0;">Best Presentation Award (AI/ML Track)</h5>
+                              </div>
+                              <span style="color: var(--text-secondary-color); font-size: 0.9rem;">Feb 2023</span>
+                           </div>
+                           <div class="card-text" style="margin-top: 0.5rem;">
+                             FastVPINNs: "Large Scale - AI Augmented simulations for wind farms" at EECS-2023.
+                             Organized by IISc Bangalore.
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="col-lg-12 col-md-1 my-1">
+                     <a class="card my-2 p-2" href="#" target="_blank" style="text-decoration: none; color: var(--text-color); border: 1px solid #dee2e6; transition: border-color 0.3s ease; min-height: 100px; position: relative;">
+                        <div class="card-body bg-transparent p-2">
+                           <div style="display: flex; justify-content: space-between; align-items: top;">
+                              <div style="display: flex; align-items: center; gap: 10px;">
+                                 <i class="fas fa-medal" style="color: var(--primary-color); font-size: 1.2rem;"></i>
+                                 <h5 class="card-title bg-transparent" style="margin: 0;">Gold Medalist: Best Outgoing Student</h5>
+                              </div>
+                              <span style="color: var(--text-secondary-color); font-size: 0.9rem;">2015</span>
+                           </div>
+                           <div class="card-text" style="margin-top: 0.5rem;">
+                             Awarded Gold Medal for obtaining overall best outgoing student for the batch 2011 to 2015 at KEC.
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  
+</div>
+
+
+                <!-- Read More button -->
+                <div class="highlight-item" style="border: none; display: flex; align-items: center; justify-content: center; margin-top: 30px;">
+                  <!-- <p>For all other events</p> -->
+                  <button class="btn btn-primary" style="font-family: 'Alata';" onclick="window.location.href='events.html'">Click here to see other events</button>
+                </div>
+             </div>
+          </div>
+       </section>
+
+
+
+
+
+       <section id=contact class=py-5>
+          <div class=container>
+             <h2 class=text-center>Get in Touch</h2>
+             <div class="px-0 px-md-5 px-lg-5">
+                <div class="row justify-content-center px-md-5">
+                   <div class="col-md-8 py-3">
+                      <div class=text-center >
+                       <p style="font-size: 1.2rem;">Email me at: thivinanandh [at] gmail [dot] com </p>
+                      </div>
+
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div id=contact-form-status></div>
+       </section>
+       
+    </div>
+    <footer style="display: flex; align-items: center; justify-content: center;">
+
+       <p style="opacity: 0.5;"> The base template and theme was inspired from <a href="https://hugo-profile.netlify.app">Hugo-Profile</a></p>
+
+    </footer>
+    <script src=/bootstrap-5/js/bootstrap.bundle.min.js></script>
+    <script>
+if (localStorage.getItem("pref-theme") === "dark") {
+    document.body.classList.add('dark');
+} else {
+    document.body.classList.remove('dark');
+    localStorage.setItem("pref-theme", 'light');
+}
+</script>    
+      <script src=/js/search.js></script>
+    <!-- <script src=/js/search.js></script> -->
+    <script>
+      document.querySelectorAll('.tab-btn_publication').forEach(button => {
+          button.addEventListener('click', () => {
+              const tab = button.dataset.tab;
+              document.querySelectorAll('.tab-btn_publication').forEach(btn => btn.classList.remove('active_publication'));
+              document.querySelectorAll('.tab-content_publication').forEach(content => content.classList.remove('active_publication'));
+              button.classList.add('active_publication');
+              document.getElementById(tab).classList.add('active_publication');
+          });
+      });
+  </script>
+    <section id=search-content class=py-2>
+       <div class=container id=search-results></div>
+    </section>
+    <button id="floating-theme-toggle" class="floating-theme-toggle">
+      <svg id="moon-icon" class="theme-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+      <svg id="sun-icon" class="theme-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+      <span class="theme-text"></span>
+  </button>
+
+  <script>
+   var tooltipTriggerList, tooltipList;
+
+   document.getElementById("floating-theme-toggle").addEventListener("click", () => {
+       console.log("Toggle change");
+       if (document.body.classList.contains("dark")) {
+           document.body.classList.remove('dark');
+           localStorage.setItem("pref-theme", 'light');
+       } else {
+           document.body.classList.add('dark');
+           localStorage.setItem("pref-theme", 'dark');
+       }
+   });
+
+   tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+   tooltipList = tooltipTriggerList.map(function(a) {
+       return new bootstrap.Tooltip(a);
+   });
+</script>
+ </body>
+</html>
