@@ -865,130 +865,47 @@ if (localStorageValue === "dark") {
 </section>
 
 
-      <section id="publications_section" class="py-5_publication">
-         <div class="container_publication">
-            <h2 class="title_publication">Publications</h2>
-            <div class="tabs_publication">
-                <button class="tab-btn_publication active_publication" data-tab="papers_publication">Papers</button>
-                <button class="tab-btn_publication" data-tab="conferences_publication">Conferences</button>
-                <button class="tab-btn_publication" data-tab="book_chapters_publication">Book Chapters</button>
-            </div>
-            <div id="papers_publication" class="tab-content_publication active_publication">
-               <div class="publication-item_publication">
-                  <h5>Improving hp-Variational Physics-Informed Neural Networks for Steady-State Convection-Dominated Problems</h5>
-                  <p class="authors_publication"><span class="author-highlight_publication">Manoj Solanki</span>, Divij Ghose, Himanshu Jain, Pratham Sunkad, Sashikumaar Ganesan, Volker John</p>
-                  <p class="journal_date_publication"><em>Accepted for Publication , Computer Methods in Applied Mechanics and Engineering[CMAME] </em></p>
-                  <div class="links_publication">
-                      <a href="https://www.sciencedirect.com/science/article/abs/pii/S0045782525000696" class="btn_publication btn-small_publication" target="_blank">Paper</a>
-                      <a href="https://arxiv.org/pdf/2411.09329" class="btn_publication btn-small_publication" target="_blank">arXiv</a>
-                      <a href="https://github.com/cmgcds/fastvpinns_supg" class="btn_publication btn-small_publication" target="_blank">GitHub</a>
-                      <a href="projects/fastvpinns_supg.html" class="btn_publication btn-small_publication" >Project</a>
-
-                  </div>
+            <section id="publications_section" class="py-5_publication">
+           <div class="container_publication">
+              <h2 class="title_publication">Publications</h2>
+              <div class="tabs_publication">
+                 <button class="tab-btn_publication active_publication" data-tab="book_chapters_publication">Books</button>
+                 <button class="tab-btn_publication" data-tab="papers_publication">Papers</button>
               </div>
-
-                <div class="publication-item_publication">
-                    <h5>FastVPINNs: Tensor-Driven Acceleration of VPINNs for Complex Geometries</h5>
-                    <p class="authors_publication"><span class="author-highlight_publication">Manoj Solanki</span>, Divij Ghose, Himanshu Jain, Sashikumaar Ganesan</p>
-                    <p class="journal_date_publication"><em>Accepted for Publication , SIAM journal of Scientific Computing [SIAM-SISC] </em></p>
+        
+              <!-- BOOKS TAB -->
+              <div id="book_chapters_publication" class="tab-content_publication active_publication">
+                 <div class="publication-item_publication">
+                    <h5>Numerical Solutions of Differential Equations with Programs in Python</h5>
+                    <p class="authors_publication">Manoj Solanki | Under the guidance of Prof. ASV Ravi Kanth (Mathematics Dept. NIT Kurukshetra.)</p>
+                    <p class="book_date_publication"><em>ISBN - 978-93-341-9831-7, Jan 2025</em></p>
                     <div class="links_publication">
-                        <a href="https://arxiv.org/pdf/2404.12063" class="btn_publication btn-small_publication" target="_blank">PDF</a>
-                        <a href="https://arxiv.org/abs/2404.12063" class="btn_publication btn-small_publication" target="_blank">arXiv</a>
-                        <a href="https://github.com/thivinanandh/FastVPINNs" class="btn_publication btn-small_publication" target="_blank">GitHub</a>
-                        <a href="projects/fastvpinns.html" class="btn_publication btn-small_publication" >Project</a>
-
+                       <a href="https://manojmsmaths.wixsite.com/manoj-solanki/book" class="btn_publication btn-small_publication" target="_blank">Link</a>
                     </div>
-                </div>
-                <div class="publication-item_publication">
-                    <h5>FastVPINNs: An efficient tensor-based Python library for solving partial differential equations using hp-Variational Physics Informed Neural Networks</h5>
-                    <p class="authors_publication"><span class="author-highlight_publication">Manoj Solanki</span>, Divij Ghose, Sashikumaar Ganesan</p>
-                    <p class="journal_date_publication"><em>Journal of Open Source Software, 2024</em></p>
-                    <div class="links_publication">
-                        <a href="https://joss.theoj.org/papers/10.21105/joss.06764.pdf" class="btn_publication btn-small_publication" target="_blank">PDF</a>
-                        <a href="https://joss.theoj.org/papers/10.21105/joss.06764" class="btn_publication btn-small_publication" target="_blank">Journal</a>
-                        <a href="https://github.com/thivinanandh/FastVPINNs" class="btn_publication btn-small_publication" target="_blank">GitHub</a>
-                        <a href="projects/fastvpinns_joss.html" class="btn_publication btn-small_publication" >Project</a>
-
-                    </div>
-                </div>
-                <div class="publication-item_publication">
-                    <h5>An efficient hp-Variational Physics Informed Neural Network framework for Incompressible Navier-Stokes equations</h5>
-                    <p class="authors_publication"><span class="author-highlight_publication">Manoj Solanki</span>, Divij Ghose, Ankit Tyagi, Abhineet Gupta, Suranjan Sarkar, Sashikumaar Ganesan</p>
-                    <p class="journal_date_publication"><em>arXiv preprint, 2024</em></p>
-                    <div class="links_publication">
-                        <a href="https://arxiv.org/pdf/2409.04143v1" class="btn_publication btn-small_publication" target="_blank">PDF</a>
-                        <a href="https://arxiv.org/abs/2409.04143v1" class="btn_publication btn-small_publication" target="_blank">arXiv</a>
-                        <a href="https://github.com/cmgcds/fastvpinns" class="btn_publication btn-small_publication" target="_blank">GitHub</a>
-                        <a href="projects/fastvpinns_nse2d.html" class="btn_publication btn-small_publication" >Project</a>
-
-                    </div>
-                </div>
-                <div class="publication-item_publication">
-                    <h5>On the choice of hyper-parameters of artificial neural networks for stabilized finite element schemes</h5>
-                    <p class="authors_publication">Subodh M Joshi, <span class="author-highlight_publication">Manoj Solanki</span>, Bhanu Teja, Sashikumaar Ganesan</p>
-                    <p class="journal_date_publication"><em>International Journal of Advances in Engineering Sciences and Applied Mathematics, 2021</em></p>
-                    <div class="links_publication">
-                        <a href="pdf/s12572-021-00306-9.PDF" class="btn_publication btn-small_publication" target="_blank">PDF</a>
-                        <a href="https://link.springer.com/article/10.1007/s12572-021-00306-9" class="btn_publication btn-small_publication" target="_blank">Journal</a>
-                    </div>
-                </div>
-                <div class="publication-item_publication">
-                    <h5>Ensemble forecast of COVID-19 in Karnataka for vulnerability assessment and policy interventions</h5>
-                    <p class="authors_publication">Sashikumaar Ganesan, Deepak Subramani, <span class="author-highlight_publication">Manoj Solanki</span>, Divij Ghose, Giridhara R Babu</p>
-                    <p class="journal_date_publication"><em>medRxiv preprint, 2021</em></p>
-                    <div class="links_publication">
-                        <a href="https://arxiv.org/pdf/2404.12063" class="btn_publication btn-small_publication" target="_blank">PDF</a>
-                        <a href="https://www.medrxiv.org/content/10.1101/2021.08.31.21262943v1" class="btn_publication btn-small_publication" target="_blank">medRxiv</a>
-                    </div>
-                </div>
-            </div>
-            <div id="conferences_publication" class="tab-content_publication">
-                <div class="publication-item_publication">
-                    <h5>Fast and Efficient hp-Variational PINNS framework for solving the Incompressible Navier-Stokes equations</h5>
-                    <p class="authors_publication"><span class="author-highlight_publication">Manoj Solanki</span>, Divij Ghose, Sashikumaar Ganesan</p>
-                    <p class="conference_date_publication"><em>International Conference on Computational Fluid Dynamics (ICCFD-12), 2024, Kobe, Japan</em></p>
-                    <div class="links_publication">
-                    <a href="https://www.iccfd.org/iccfd12/assets/pdf/papers/ICCFD12_Paper_9-C-02.pdf" class="btn_publication btn-small_publication" target="_blank">Conference Proceedings</a>
-
                  </div>
-                    <!-- <a href="projects/fastvpinns_joss.html" class="btn_publication btn-small_publication" target="_blank">Project</a> -->
-                </div>
-                <div class="publication-item_publication">
-                    <h5>GPU ACCELERATED FEM BASED LAGRANGIAN PARTICLE TRACKING FRAMEWORK FOR HUMAN AIR PATHWAY</h5>
-                    <p class="authors_publication"><span class="author-highlight_publication">Manoj Solanki</span>, Sashikumaar Ganesan</p>
-                    <p class="conference_date_publication"><em>ParCFD-2024, 2024, University Club Bonn, Germany</em></p>
+        
+                 <div class="publication-item_publication">
+                    <h5>General Maths Book - for Secondary School Level</h5>
+                    <p class="authors_publication">Manoj Solanki, Karan Kachhawaha</p>
+                    <p class="book_date_publication"><em>ASIN - B0B85N2VZS</em></p>
                     <div class="links_publication">
-                     <a href="#" class="btn_publication btn-small_publication" target="_blank">Conference Proceedings</a>
-                     <a href="projects/gpu_siminhale.html" class="btn_publication btn-small_publication" target="_blank">Project Page</a>
-                     <a href="src/ParCFD_2024_Paper.pdf" class="btn_publication btn-small_publication" target="_blank">PDF</a>
-                  </div>
-                </div>
-                <div class="publication-item_publication">
-                    <h5>A Deep Learning Simulation Framework for Building Digital Twins of Wind Farms: Concepts and Roadmap</h5>
-                    <p class="authors_publication">Subodh M Joshi, <span class="author-highlight_publication">Manoj Solanki</span>, Sashikumaar Ganesan</p>
-                    <p class="conference_date_publication"><em>12th International Conference on Simulation and Modeling Methodologies, Technologies and Applications (SIMULTECH-2022), 2024, Lisbon, Portugal</em></p>
-                    
-                    <div class="links_publication">
-                     <a href="https://www.scitepress.org/Papers/2022/113195/113195.pdf" class="btn_publication btn-small_publication" target="_blank">Conference Proceedings</a>
-                     <a href="projects/digital_shadow.html" class="btn_publication btn-small_publication" >Project Page</a>
-
-                  </div>
-
-                </div>
-            </div>
-            <div id="book_chapters_publication" class="tab-content_publication">
-                <div class="publication-item_publication">
-                    <h5>Computational Ship Hydrodynamics: Modeling and Simulation</h5>
-                    <p class="authors_publication">Sashikumaar Ganesan, Bhanu Teja, <span class="author-highlight_publication">Manoj Solanki</span></p>
-                    <p class="book_date_publication"><em>Computational Science and its Applications, 1st edition, 2020</em></p>
-                    <p class="publisher_publication">Taylor & Francis</p>
-                    <div class="links_publication">
-                        <a href="https://www.taylorfrancis.com/chapters/edit/10.1201/9780429288739-10/computational-ship-hydrodynamics-modeling-simulation-sashikumaar-ganesan-bhanu-teja-thivin-anandh" class="btn_publication btn-small_publication" target="_blank">Link</a>
+                       <a href="https://manojmsmaths.wixsite.com/manoj-solanki/book" class="btn_publication btn-small_publication" target="_blank">Link</a>
                     </div>
-                </div>
-            </div>
-        </div>
-     </section>
+                 </div>
+              </div>
+        
+              <!-- PAPERS TAB -->
+              <div id="papers_publication" class="tab-content_publication">
+                 <p>Coming soon...</p>
+              </div>
+        
+              <!-- CONFERENCES TAB -->
+              <div id="conferences_publication" class="tab-content_publication">
+                 <!-- Keep all your existing conference entries here as they are -->
+              </div>
+           </div>
+        </section>
+
 
      <section id="projects" class="py-2" style="margin-bottom: 3rem;"> 
       <div class="container">
