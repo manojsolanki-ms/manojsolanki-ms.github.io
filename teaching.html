@@ -7,7 +7,6 @@
 <meta name="author" content="Manoj Solanki">
 <link rel="canonical" href="https://manojsolanki-ms.github.io">
 <meta name="keywords" content="Manoj Solanki, Numerical Analysis, FEM, CFDM, PDE">
-
 <meta name="description" content="Manoj Solanki – Teaching and Research in Numerical Analysis, FEM and CFDM">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,6 +41,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <body class="light">
 
+<!-- ===================== INITIAL THEME LOAD ===================== -->
 <script>
 let localStorageValue = localStorage.getItem("pref-theme");
 if (localStorageValue === "dark") {
@@ -66,6 +66,7 @@ window.addEventListener("scroll", function () {
 });
 </script>
 
+<!-- ===================== HEADER ===================== -->
 <header id="profileHeader">
 <nav class="pt-3 navbar navbar-expand-lg animate">
 <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
@@ -113,15 +114,20 @@ data-bs-target="#navbarContent">
 <a class="nav-link" href="index.html#contact">Contact</a>
 </li>
 
+<!-- ===== TOP THEME TOGGLE ===== -->
+<li class="nav-item navbar-text">
+<button id="theme-toggle" class="btn btn-link">
+<i class="fas fa-moon"></i>
+</button>
+</li>
+
 </ul>
 </div>
-
 </div>
 </nav>
 </header>
 
 <!-- ===================== TEACHING CONTENT (UNCHANGED) ===================== -->
-
 <div class="container">
 <h1>Teaching Experience</h1>
 
@@ -139,8 +145,9 @@ Useful Links
 </div>
 
 <p>
-Here is a list of courses I have taught or assisted in teaching. Through my academic career,
-I have assisted multiple courses. Below is a summary of the courses.
+Here is a list of courses I have taught or assisted in teaching.
+Through my academic career, I have assisted multiple courses.
+Below is a summary of the courses.
 </p>
 
 <div class="teaching-container">
@@ -154,9 +161,36 @@ I have assisted multiple courses. Below is a summary of the courses.
 </div>
 </div>
 
-<script src="js/teaching.js"></script>
+<!-- ===================== FLOATING DARK MODE BUTTON ===================== -->
+<button id="floating-theme-toggle" class="floating-theme-toggle">
+<i class="fas fa-adjust"></i>
+</button>
 
+<!-- ===================== SCRIPTS ===================== -->
+<script src="js/teaching.js"></script>
 <script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.getElementById("theme-toggle").addEventListener("click", () => {
+    if (document.body.classList.contains("dark")) {
+        document.body.classList.remove("dark");
+        localStorage.setItem("pref-theme", "light");
+    } else {
+        document.body.classList.add("dark");
+        localStorage.setItem("pref-theme", "dark");
+    }
+});
+
+document.getElementById("floating-theme-toggle").addEventListener("click", () => {
+    if (document.body.classList.contains("dark")) {
+        document.body.classList.remove("dark");
+        localStorage.setItem("pref-theme", "light");
+    } else {
+        document.body.classList.add("dark");
+        localStorage.setItem("pref-theme", "dark");
+    }
+});
+</script>
 
 </body>
 </html>
