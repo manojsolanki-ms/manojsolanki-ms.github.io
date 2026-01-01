@@ -1,45 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-<meta name="generator" content="Hugo 0.92.0">
-<meta charset="utf-8">
-
-<meta name="author" content="Manoj Solanki">
-<link rel="canonical" href="https://manojsolanki-ms.github.io">
-<meta name="keywords" content="Manoj Solanki, Numerical Analysis, FEM, CFDM, PDE">
-
-<meta name="description" content="Manoj Solanki – Teaching and Research in Numerical Analysis, FEM and CFDM">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-
-<!-- Favicons -->
-<link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png">
-
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet"
-href="https://fonts.googleapis.com/css2?family=Alata&family=Lora&family=Roboto&display=swap">
-
-<!-- Font Awesome -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<!-- CSS -->
-<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css">
-<link rel="stylesheet" href="/css/font.css">
-<link rel="stylesheet" href="/css/header.css">
-<link rel="stylesheet" href="/css/footer.css">
-<link rel="stylesheet" href="/css/theme.css">
-<link rel="stylesheet" href="/css/index.css">
-<link rel="stylesheet" href="/css/projects.css">
-<link rel="stylesheet" href="css/teaching.css">
-
-<title>Manoj Solanki – Teaching</title>
-</head>
 <head>
 <meta name="generator" content="Hugo 0.92.0">
 <meta charset="utf-8">
@@ -80,91 +40,123 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <title>Manoj Solanki – Teaching</title>
 </head>
 
+<body class="light">
 
-     <div class="container">
-        <h1>Teaching Experience</h1>
-        <div style="width: 100%; display: flex; align-items: center; justify-content: center;">
-            <div class="top-buttons">
-                <!-- <button class="btn btn-primary" onclick="window.location.href='#courses'">Github Repository</button> -->
-                <button class="btn btn-primary" onclick="window.location.href='https://github.com/thivinanandh/Teaching-Python'">GitHub Repository</button>
-                <button class="btn btn-primary" onclick="window.location.href='teaching/useful_links.html'">Useful Links</button>
-            </div>
-        </div>
-        <p>Here is a list of courses I have taught or assisted in teaching. Throught my PhD Career I have been TA for close to ten courses held at Indian Institute of Science, Bangalore. The below are the summary of courses that I have assisted on </p>
-        <div class="teaching-container">
-            <div class="sidebar">
-                <div class="timeline-container">
-                    <h3>Timeline</h3>
-                    <div class="timeline"></div>
-                </div>
-            </div>
-            <div class="teaching-list"></div>
-        </div>
-    </div>
-    <script src="js/teaching.js"></script>
-
-
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-    <script src=/bootstrap-5/js/bootstrap.bundle.min.js></script>
-    <script>
-if (localStorage.getItem("pref-theme") === "dark") {
+<script>
+let localStorageValue = localStorage.getItem("pref-theme");
+if (localStorageValue === "dark") {
     document.body.classList.add('dark');
 } else {
     document.body.classList.remove('dark');
     localStorage.setItem("pref-theme", 'light');
 }
-</script>    <script>var tooltipTriggerList,tooltipList;document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))}),tooltipTriggerList=[].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]')),tooltipList=tooltipTriggerList.map(function(a){return new bootstrap.Tooltip(a)})</script>
-    <script src=/js/search.js></script>
-    <section id=search-content class=py-2>
-       <div class=container id=search-results></div>
-    </section>
-    <button id="floating-theme-toggle" class="floating-theme-toggle">
-        <svg id="moon-icon" class="theme-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-        <svg id="sun-icon" class="theme-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"/>
-            <line x1="12" y1="1" x2="12" y2="3"/>
-            <line x1="12" y1="21" x2="12" y2="23"/>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-            <line x1="1" y1="12" x2="3" y2="12"/>
-            <line x1="21" y1="12" x2="23" y2="12"/>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-        </svg>
-        <span class="theme-text"></span>
-    </button>
-  
-    <script>
-     var tooltipTriggerList, tooltipList;
-  
-     document.getElementById("floating-theme-toggle").addEventListener("click", () => {
-         console.log("Toggle change");
-         if (document.body.classList.contains("dark")) {
-             document.body.classList.remove('dark');
-             localStorage.setItem("pref-theme", 'light');
-         } else {
-             document.body.classList.add('dark');
-             localStorage.setItem("pref-theme", 'dark');
-         }
-     });
-  
-     tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-     tooltipList = tooltipTriggerList.map(function(a) {
-         return new bootstrap.Tooltip(a);
-     });
-  </script>
-  <script src="js/events.js"></script>
-</body>
+</script>
 
+<script>
+var prevScrollPos = window.pageYOffset;
+window.addEventListener("scroll", function () {
+    let header = document.getElementById("profileHeader");
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollPos > currentScrollPos) {
+        header.classList.add("showHeaderOnTop");
+    } else {
+        header.classList.remove("showHeaderOnTop");
+    }
+    prevScrollPos = currentScrollPos;
+});
+</script>
+
+<header id="profileHeader">
+<nav class="pt-3 navbar navbar-expand-lg animate">
+<div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+
+<a class="navbar-brand primary-font text-wrap" href="index.html">
+<img src="image/29197370.jpg" width="30" height="30"
+class="d-inline-block align-top">
+Manoj Solanki
+</a>
+
+<button class="navbar-toggler" type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarContent">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse primary-font" id="navbarContent">
+<ul class="navbar-nav ms-auto text-center">
+
+<li class="nav-item navbar-text">
+<a class="nav-link" href="index.html#about">About Me</a>
+</li>
+
+<li class="nav-item navbar-text">
+<a class="nav-link" href="index.html#education">Education</a>
+</li>
+
+<li class="nav-item navbar-text">
+<a class="nav-link active" href="teaching.html">Teaching</a>
+</li>
+
+<li class="nav-item navbar-text">
+<a class="nav-link" href="index.html#projects">Projects</a>
+</li>
+
+<li class="nav-item navbar-text">
+<a class="nav-link" href="index.html#publications_section">Publications</a>
+</li>
+
+<li class="nav-item navbar-text">
+<a class="nav-link" href="index.html#achievements">Achievements</a>
+</li>
+
+<li class="nav-item navbar-text">
+<a class="nav-link" href="index.html#contact">Contact</a>
+</li>
+
+</ul>
+</div>
+
+</div>
+</nav>
+</header>
+
+<!-- ===================== TEACHING CONTENT (UNCHANGED) ===================== -->
+
+<div class="container">
+<h1>Teaching Experience</h1>
+
+<div style="width:100%; display:flex; justify-content:center;">
+<div class="top-buttons">
+<button class="btn btn-primary"
+onclick="window.location.href='https://github.com/thivinanandh/Teaching-Python'">
+GitHub Repository
+</button>
+<button class="btn btn-primary"
+onclick="window.location.href='teaching/useful_links.html'">
+Useful Links
+</button>
+</div>
+</div>
+
+<p>
+Here is a list of courses I have taught or assisted in teaching. Through my academic career,
+I have assisted multiple courses. Below is a summary of the courses.
+</p>
+
+<div class="teaching-container">
+<div class="sidebar">
+<div class="timeline-container">
+<h3>Timeline</h3>
+<div class="timeline"></div>
+</div>
+</div>
+<div class="teaching-list"></div>
+</div>
+</div>
+
+<script src="js/teaching.js"></script>
+
+<script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>
