@@ -6,121 +6,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Sample teaching data (replace with your actual data)
     const courses = [
         {
-            title: "Introduction to Data Science",
-            subtitle: "Post Graduate Course @ Indian Institute of Science, Bangalore [Online M.Tech]",
-            date: "2022-01-15",
-            description: "This course covered introductory topics in Data Science such as Probability, Linear algebra, Python Libraries for Data Science. My responsibilities included creating and grading Quizes, Assignments for the course. I also took Tutorial sessions for the course including actual lectures for Python Libraries for ML such as sklearn and tensorflow.The training materials and the codes that I have written for the course are available in my github repository (Teaching-Python).",
-            feedbackScore: 4.9,
+            title: "Linear Algebra and Differential Equations",
+            subtitle: "Graduate Course @ Dayananda Sagar University [B.Tech]",
+            date: "2025-06-01",
+            description: " I taught Linear Algebra and Differential Equations for B.Tech (Engineering Mathematics) students at Dayananda Sagar University, covering systems of linear equations, REF/RREF, LU decomposition, vector spaces and subspaces, linear transformations, inner product spaces, Gram–Schmidt process, eigenvalues and eigenvectors, matrix diagonalization, and ordinary differential equations, with Python and MATLAB demonstrations to illustrate concepts, algorithms, and engineering applications.",
+            feedbackScore: 4.5,
             maxScore: 5,
             feedbacks: [
-                "Thivin put in some real hard work to herd our class, his classes were really interesting and he made sure all our queries were well answered. I think he deserves an award or prize of some sort.",
-                 "A perfect encourager to learn more. He explains the concepts in a very clear and concise way and asks us to research more to understand better. I could understand the intent behind that only when I followed that. Though the assignments were hard to understand initially, Thivin helped us in understanding those and the motive behind it. Once I started doing it, I could relate to how it was relevant to this course. Great Job Thivin.",
-                 "Even though tests are quite difficult, his intent was right and learnt a lot. He never hesitated from explaining the difficult concepts.",
-                 "Thivin has really been very approachable and been kind to clarify our conceptual doubts (doubts outstanding from lectures as well, that is really appreciable) and helped us solve the assignments.",
-                 "Thivin was also very helpful. He explained everything patiently.",
-                           "I don't have any words to describe how helpful Thivin was during the course. He was easily approachable and always accessible. Very patient and humble to answer any dumb questions from the class. He put lot of efforts and put extra time in several hours together to get us to speed, where the topics were bit tough to digest. I just couldn't imagine getting through 2nd part of the course without Thivin's tutorials in place. Thanks a ton Thivin!. I really hope we interact in upcoming courses.",
-                           "Thivin helped out..his assignment was very interesting",
+                     "Coming Soon",
                        ]
         },
         
-        {
-            title: "MLOps at Scale",
-            subtitle: "Post Graduate Course @ Indian Institute of Science, Bangalore [Online M.Tech]",
-            date: "2022-09-01",
-            description: "Course focuses on teaching basics of High performance computing and extends towards explaining deploying and training ML models at scale. Topics covered during the lectures include MPI, CUDA, Github actions, Docker, distributed training for Tensorflow. My responsibilities included creating and grading Quizes, Assignments for the course. I also took Tutorial sessions for the course including actual lectures for Docker and distributed training for Tensorflow. The training materials and the codes that I have written for the course are available in my github repository (Teaching-Python).",
-            feedbackScore: 4.4,
-            maxScore: 5,
-            feedbacks : [
-                
-                "Very patient TA who answers all questions individually. Very supportive and knowledgeable.",
-                "Thivin has a very strong hold over the concepts of parallel programming. His tutorials were really good and he was always available for clarifying doubts, whether it be in class or outside of it.",
-                "Thank you so much Thivin. One of the most supportive and dedicated TAs.",
-                "Thivin was very helpful in teaching the concepts for all the 3 courses. motivates us to learn more concepts and tries to maximize the learning. only thing is he should improve the planning (both lectures & Schedule) and executing it.",
-                "Very Good. Have learnt lot from Thivin. Very easy to approach. Always ready to explain and clarify doubts.",
-                "Always encouraged to discuss any topic which we were not clear. Hands on or programming bit of the course was covered well during tutorials",
-                "Very much accessible all the time and knowledgeable.",
-            ]
-        },
-
-        {
-            title: "Introduction to Computing for AI and ML",
-            subtitle: "Post Graduate Course @ Indian Institute of Science, Bangalore [Online M.Tech]",
-            date: "2023-01-01",
-            description: "Course focuses on Fundamendals of Linear Algebra concepts for ML, and also covers the summary of basic ML algorithms along with the Neural Networks. The training materials and the codes that I have written for the course are available in my github repository (Teaching-Python).",
-            feedbackScore: 4.4,
-            maxScore: 5,
-            feedbacks : [
-            ]
-        },
-
-        {
-            title: "Introduction to Computing for AI and ML",
-            subtitle: "Post Graduate Course @ Indian Institute of Science, Bangalore [Online M.Tech]",
-            date: "2023-06-01",
-            description: "Course focuses on Fundamendals of Linear Algebra concepts for ML, and also covers the summary of basic ML algorithms along with the Neural Networks. The training materials and the codes that I have written for the course are available in my github repository (Teaching-Python).",
-            feedbackScore: 4.5,
-            maxScore: 5,
-            feedbacks : [
-            ]
-        },
-
-        {
-            title: "Numerical Methods",
-            subtitle: "Post Graduate Course @ Indian Institute of Science, Bangalore ",
-            date: "2021-09-01",
-            description: "Course focuses on teaching basics of Numerical Differentiation and Numerical Integration and time stepping schemes, which can be used to solve Partial Differential Equations. My responsibilities for the course included setting up and evaluating Quizzes and Assignments for the course.",
-            feedbackScore: NaN,
-            maxScore: 5,
-            feedbacks : [
-                
-            
-            ]
-        },
-
-
-        {
-            title: "Finite ELement Methods: Theory and Algorithms",
-            subtitle: "Post Graduate Course @ Indian Institute of Science, Bangalore [Online M.Tech]",
-            date: "2022-09-01",
-            description: "Course focuses on teaching basics of Finite Element methods both from the Theoritical and Implementation perspective. My responsibilities for the course included setting up and evaluating Quizzes and Assignments on trying to make students implement Finite Element codes in our in-house FEM Package ParMooN.",
-            feedbackScore: NaN,
-            maxScore: 5,
-            feedbacks : [
-            ]
-        },
-
-        {
-            title: "AI and Machine Learning",
-            subtitle: "UpSkilling for Industry and Academic people @ Indian Institute of Science, Bangalore [CCE]",
-            date: "2023-09-01",
-            description: "Course focuses on teaching basics of AI and ML methods to industry professional from various domains to learn the basics of AI and ML. My responsibilities for the course included setting up and evaluating Quizzes and Assignments for the course. I also took actual lecture sessions on Python libraries for ML, MLOps (Github, Github actions), Tensorflow and ML Algorithms (SVD, PCA). The training materials and the codes that I have written for the course are available in my github repository (Teaching-Python).",
-            feedbackScore: NaN,
-            maxScore: 5,
-            feedbacks : [
-            ]
-        },
-
-        {
-            title: "AI and Machine Learning",
-            subtitle: "UpSkilling for Industry and Academic people @ Indian Institute of Science, Bangalore [CCE]",
-            date: "2024-09-01",
-            description: "Course focuses on teaching basics of AI and ML methods to industry professional from various domains to learn the basics of AI and ML. My responsibilities for the course included setting up and evaluating Quizzes and Assignments for the course. I also took actual lecture sessions on Python libraries for ML, MLOps (Github, Github actions), Tensorflow and ML Algorithms (SVD, PCA). The training materials and the codes that I have written for the course are available in my github repository (Teaching-Python).",
-            feedbackScore: NaN,
-            maxScore: 5,
-            feedbacks : [
-            ]
-        },
-
-        {
-            title: "AI and Machine Learning",
-            subtitle: "UpSkilling for Industry and Academic people @ Indian Institute of Science, Bangalore [CCE]",
-            date: "2024-02-01",
-            description: "Course focuses on teaching basics of AI and ML methods to industry professional from various domains to learn the basics of AI and ML. My responsibilities for the course included setting up and evaluating Quizzes and Assignments for the course. I also took actual lecture sessions on Python libraries for ML, MLOps (Github, Github actions), Tensorflow and ML Algorithms (SVD, PCA). The training materials and the codes that I have written for the course are available in my github repository (Teaching-Python).",
-            feedbackScore: NaN,
-            maxScore: 5,
-            feedbacks : [
-            ]
-        },
+     
 
         // Add more courses as needed
     ];
