@@ -46,6 +46,55 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                        ]
         },
+
+        {
+            title: "Application of Python",
+            subtitle: " A Short term course @ Anant The Mathematical Society, NIT Kurukshetra [M.Sc./B.Tech.]",
+            date: "2024-11-01",
+            description: "This short term course focuses on application of python in mathematics. My responsibilities for the course was introducing the basics of python to studnets of M.Sc. Mathematics and B.Tech. Studnet and its application in mathematica specially in linear algebra, Numerical Analysis, and Machine learning.",
+            feedbackScore: 4.5,
+            maxScore: 5,
+            feedbacks: [
+                       ]
+        },
+        
+         {
+            title: "Linear Algebra",
+            subtitle: " Online Coaching [B.Sc. JNVU Jodhpur and University of Delhi Students]",
+            date: "2024-05-01",
+            description: " Course focuses on teaching Linear Algebra topics including Matrix, Eigen values, Eigne vectors, Vector spaces, Linear Transformation etc. It is conducated via online google meet for 3 months.",
+            feedbackScore: NaN,
+            maxScore: 5,
+            feedbacks: [
+                    
+                
+                       ]
+        },
+         {
+            title: "Differential Equations",
+            subtitle: " Online Coaching [B.Sc. JNVU Jodhpur and University of Delhi Students]",
+            date: "2024-05-01",
+            description: "Course focuses on teaching Differential Equations topics including Linear Differential Equation, Exact Differential Equations, Second order Linaer Differential equations and probelm solving so these topcis. It is conducated via online google meet for 3 months.",
+            feedbackScore: NaN,
+            maxScore: 5,
+            feedbacks: [
+                    
+                
+                       ]
+        },
+
+         {
+            title: "Grpoup Theory",
+            subtitle: " Online Coaching [B.Sc. JNVU Jodhpur and University of Delhi Students]",
+            date: "2024-05-01",
+            description: "Course focuses on teaching Group Theory to B.Sc. Student. It is conducated via online google meet for 3 months.",
+            feedbackScore: NaN,
+            maxScore: 5,
+            feedbacks: [
+                    
+                
+                       ]
+        },
      
 
         // Add more courses as needed
