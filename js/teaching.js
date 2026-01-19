@@ -6,14 +6,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Sample teaching data (replace with your actual data)
     const courses = [
         {
-            title: "Differential Calculus",
+            title: "Single and Multi Variable Calculus",
             subtitle: "Graduate Course @ Dayananda Sagar University [B.Tech]",
-            date: "2026-01-01",
+            date: "2026-01-21",
             description: " Upcoming Course",
             feedbackScore: NaN,
             maxScore: 5,
             feedbacks: [
-                     "Coming Soon",
+                     "On-Going",
                        ]
         },
 
@@ -25,7 +25,13 @@ document.addEventListener('DOMContentLoaded', function() {
             feedbackScore: 4.5,
             maxScore: 5,
             feedbacks: [
-                     "Coming Soon",
+                 "Manoj sir is a fabulous teacher. He explains concepts very clearly and ensures everyone understands.",
+                "Absolutely amazing in teaching. Concepts were easy to understand in class itself, and the revision videos helped a lot during exams.",
+                "This maths course was very well structured. Concepts were explained clearly with good examples, which improved my confidence in maths.",
+                "Felt blessed to have you as our math professor and class advisor. We were really lucky to have you.",
+                "I was able to understand every topic and write my semester exam confidently. Thanks to Manoj sir.",
+                "Sir, I started loving calculus because of the way you taught it. Thank you so much.",
+                "And many more...",
                        ]
         },
 
