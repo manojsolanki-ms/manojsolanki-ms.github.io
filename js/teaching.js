@@ -9,12 +9,26 @@ document.addEventListener('DOMContentLoaded', function() {
             title: "Single and Multi Variable Calculus",
             subtitle: "Graduate Course @ Dayananda Sagar University [B.Tech]",
             date: "2026-01-21",
-            description: " Upcoming Course",
+            description: "I am currently teaching Single and Multivariable Calculus to undergraduate students, covering limits and continuity, differentiation and applications of derivatives, Taylor and Maclaurin series, partial differentiation, maxima and minima of functions of several variables, multiple integrals, Jacobians, and vector calculus including gradient, divergence, and curl. The course emphasizes strong conceptual understanding along with problem-solving techniques, supported by graphical interpretation and computational demonstrations using Python and MATLAB for better visualization and practical understanding.",
             feedbackScore: NaN,
             maxScore: 5,
             feedbacks: [
                      "On-Going",
                        ]
+            buttons: [
+        {
+            text: "Study Material",
+            link: "https://manojmsmaths.wixsite.com/maths/eng-math"
+        },
+        {
+            text: "Course Assignmets",
+            link: "https://drive.google.com/drive/folders/16LHL_G6pEdeypl8IK3RBoA83wVs5JE_0?usp=sharing"
+        }
+        {
+            text: "YouTube Videos",
+            link: "https://www.youtube.com/c/MSMATHS_higher_mahematics_manojsolanki"
+        }
+    ]
         },
 
         {
