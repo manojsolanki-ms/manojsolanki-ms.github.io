@@ -4,124 +4,124 @@ document.addEventListener('DOMContentLoaded', function() {
     const timeline = document.querySelector('.timeline');
 
     // Sample teaching data (replace with your actual data)
-const courses = [
-    {
-        title: "Single and Multi Variable Calculus",
-        subtitle: "Graduate Course @ Dayananda Sagar University [B.Tech]",
-        date: "2026-01-21",
-        description:
-            "I am currently teaching Single and Multivariable Calculus to undergraduate students, covering limits and continuity, differentiation and applications of derivatives, Taylor and Maclaurin series, partial differentiation, maxima and minima of functions of several variables, multiple integrals, Jacobians, and vector calculus including gradient, divergence, and curl. The course emphasizes strong conceptual understanding along with problem-solving techniques, supported by graphical interpretation and computational demonstrations using Python and MATLAB for better visualization and practical understanding.",
-
-        feedbackScore: null,
-        maxScore: 5,
-
-        feedbacks: ["On-Going"],
-
-        buttons: [
+        const courses = [
             {
-                text: "Study Material",
-                link: "https://manojmsmaths.wixsite.com/maths/eng-math"
+                title: "Single and Multi Variable Calculus",
+                subtitle: "Graduate Course @ Dayananda Sagar University [B.Tech]",
+                date: "2026-01-21",
+                description:
+                    "I am currently teaching Single and Multivariable Calculus to undergraduate students, covering limits and continuity, differentiation and applications of derivatives, Taylor and Maclaurin series, partial differentiation, maxima and minima of functions of several variables, multiple integrals, Jacobians, and vector calculus including gradient, divergence, and curl. The course emphasizes strong conceptual understanding along with problem-solving techniques, supported by graphical interpretation and computational demonstrations using Python and MATLAB for better visualization and practical understanding.",
+        
+                feedbackScore: null,
+                maxScore: 5,
+        
+                feedbacks: ["On-Going"],
+        
+                buttons: [
+                    {
+                        text: "Study Material",
+                        link: "https://manojmsmaths.wixsite.com/maths/eng-math"
+                    },
+                    {
+                        text: "Course Assignments",
+                        link: "https://drive.google.com/drive/folders/16LHL_G6pEdeypl8IK3RBoA83wVs5JE_0?usp=sharing"
+                    },
+                    {
+                        text: "YouTube Videos",
+                        link: "https://www.youtube.com/c/MSMATHS_higher_mahematics_manojsolanki"
+                    }
+                ]
             },
+        
             {
-                text: "Course Assignments",
-                link: "https://drive.google.com/drive/folders/16LHL_G6pEdeypl8IK3RBoA83wVs5JE_0?usp=sharing"
+                title: "Linear Algebra and Differential Equations",
+                subtitle: "Graduate Course @ Dayananda Sagar University [B.Tech]",
+                date: "2025-06-01",
+                description:
+                    "I taught Linear Algebra and Differential Equations for B.Tech (Engineering Mathematics) students at Dayananda Sagar University, covering systems of linear equations, REF/RREF, LU decomposition, vector spaces and subspaces, linear transformations, inner product spaces, Gram–Schmidt process, eigenvalues and eigenvectors, matrix diagonalization, and ordinary differential equations, with Python and MATLAB demonstrations to illustrate concepts, algorithms, and engineering applications.",
+        
+                feedbackScore: 4.6,
+                maxScore: 5,
+        
+                feedbacks: [
+                    "Manoj sir is a fabulous teacher. He explains concepts very clearly and ensures everyone understands.",
+                    "Absolutely amazing in teaching. Concepts were easy to understand in class itself, and the revision videos helped a lot during exams.",
+                    "This maths course was very well structured. Concepts were explained clearly with good examples, which improved my confidence in maths.",
+                    "Felt blessed to have you as our math professor and class advisor. We were really lucky to have you.",
+                    "I was able to understand every topic and write my semester exam confidently. Thanks to Manoj sir.",
+                    "Sir, I started loving calculus because of the way you taught it. Thank you so much.",
+                    "And many more..."
+                ]
             },
+        
             {
-                text: "YouTube Videos",
-                link: "https://www.youtube.com/c/MSMATHS_higher_mahematics_manojsolanki"
+                title: "Higher Mathematics on YouTube",
+                subtitle: "Complete Course @ MS MATHS [B.Sc./M.Sc./MA Mathematics]",
+                date: "2021-01-01",
+                description:
+                    "MS MATHS is my YouTube channel dedicated to Higher Mathematics and Computational Learning, featuring 1500+ educational videos. The channel covers M.Sc./M.A. Mathematics, B.Sc./B.A./B.Tech Mathematics, Physics, Python and C Programming, IIT JAM and CUET-PG preparation, PYQ solutions, and full course-oriented playlists.",
+        
+                feedbackScore: 4.9,
+                maxScore: 5,
+        
+                feedbacks: [
+                    "The only source that helped me in my B.Sc. the best content for semester system and yearly system both with video lecture and hand written notes.",
+                    "I was so tensed about my B.Sc but after subscribing @MsMaths I was so relaxed. Every topic is available with easy explanation.",
+                    "Thanks for helping us in difficult times. I really appreciate your dedication.",
+                    "This channel and everything related to it was really helpful.",
+                    "Very very helpful. We totally depend on MS Maths during exam time.",
+                    "And many more..."
+                ]
+            },
+        
+            {
+                title: "Application of Python",
+                subtitle: "Short Term Course @ Anant – The Mathematical Society, NIT Kurukshetra",
+                date: "2024-11-01",
+                description:
+                    "This short term course focuses on applications of Python in Mathematics, including Linear Algebra, Numerical Analysis, and Machine Learning for M.Sc. Mathematics and B.Tech students.",
+        
+                feedbackScore: 4.5,
+                maxScore: 5,
+                feedbacks: []
+            },
+        
+            {
+                title: "Linear Algebra",
+                subtitle: "Online Coaching [B.Sc. JNVU Jodhpur & University of Delhi]",
+                date: "2024-05-01",
+                description:
+                    "This course focused on Linear Algebra including matrices, eigenvalues, eigenvectors, vector spaces, and linear transformations. Conducted via Google Meet for 3 months.",
+        
+                feedbackScore: null,
+                maxScore: 5,
+                feedbacks: []
+            },
+        
+            {
+                title: "Differential Equations",
+                subtitle: "Online Coaching [B.Sc. JNVU Jodhpur & University of Delhi]",
+                date: "2024-05-01",
+                description:
+                    "Course covered Linear Differential Equations, Exact Equations, and Second Order Differential Equations with extensive problem-solving sessions.",
+        
+                feedbackScore: null,
+                maxScore: 5,
+                feedbacks: []
+            },
+        
+            {
+                title: "Group Theory",
+                subtitle: "Online Coaching [B.Sc. JNVU Jodhpur & University of Delhi]",
+                date: "2024-05-01",
+                description:
+                    "Course focused on fundamental concepts of Group Theory for B.Sc. students. Conducted online for 3 months.",
+        
+                feedbackScore: null,
+                maxScore: 5,
+                feedbacks: []
             }
-        ]
-    },
-
-    {
-        title: "Linear Algebra and Differential Equations",
-        subtitle: "Graduate Course @ Dayananda Sagar University [B.Tech]",
-        date: "2025-06-01",
-        description:
-            "I taught Linear Algebra and Differential Equations for B.Tech (Engineering Mathematics) students at Dayananda Sagar University, covering systems of linear equations, REF/RREF, LU decomposition, vector spaces and subspaces, linear transformations, inner product spaces, Gram–Schmidt process, eigenvalues and eigenvectors, matrix diagonalization, and ordinary differential equations, with Python and MATLAB demonstrations to illustrate concepts, algorithms, and engineering applications.",
-
-        feedbackScore: 4.6,
-        maxScore: 5,
-
-        feedbacks: [
-            "Manoj sir is a fabulous teacher. He explains concepts very clearly and ensures everyone understands.",
-            "Absolutely amazing in teaching. Concepts were easy to understand in class itself, and the revision videos helped a lot during exams.",
-            "This maths course was very well structured. Concepts were explained clearly with good examples, which improved my confidence in maths.",
-            "Felt blessed to have you as our math professor and class advisor. We were really lucky to have you.",
-            "I was able to understand every topic and write my semester exam confidently. Thanks to Manoj sir.",
-            "Sir, I started loving calculus because of the way you taught it. Thank you so much.",
-            "And many more..."
-        ]
-    },
-
-    {
-        title: "Higher Mathematics on YouTube",
-        subtitle: "Complete Course @ MS MATHS [B.Sc./M.Sc./MA Mathematics]",
-        date: "2021-01-01",
-        description:
-            "MS MATHS is my YouTube channel dedicated to Higher Mathematics and Computational Learning, featuring 1500+ educational videos. The channel covers M.Sc./M.A. Mathematics, B.Sc./B.A./B.Tech Mathematics, Physics, Python and C Programming, IIT JAM and CUET-PG preparation, PYQ solutions, and full course-oriented playlists.",
-
-        feedbackScore: 4.9,
-        maxScore: 5,
-
-        feedbacks: [
-            "The only source that helped me in my B.Sc. the best content for semester system and yearly system both with video lecture and hand written notes.",
-            "I was so tensed about my B.Sc but after subscribing @MsMaths I was so relaxed. Every topic is available with easy explanation.",
-            "Thanks for helping us in difficult times. I really appreciate your dedication.",
-            "This channel and everything related to it was really helpful.",
-            "Very very helpful. We totally depend on MS Maths during exam time.",
-            "And many more..."
-        ]
-    },
-
-    {
-        title: "Application of Python",
-        subtitle: "Short Term Course @ Anant – The Mathematical Society, NIT Kurukshetra",
-        date: "2024-11-01",
-        description:
-            "This short term course focuses on applications of Python in Mathematics, including Linear Algebra, Numerical Analysis, and Machine Learning for M.Sc. Mathematics and B.Tech students.",
-
-        feedbackScore: 4.5,
-        maxScore: 5,
-        feedbacks: []
-    },
-
-    {
-        title: "Linear Algebra",
-        subtitle: "Online Coaching [B.Sc. JNVU Jodhpur & University of Delhi]",
-        date: "2024-05-01",
-        description:
-            "This course focused on Linear Algebra including matrices, eigenvalues, eigenvectors, vector spaces, and linear transformations. Conducted via Google Meet for 3 months.",
-
-        feedbackScore: null,
-        maxScore: 5,
-        feedbacks: []
-    },
-
-    {
-        title: "Differential Equations",
-        subtitle: "Online Coaching [B.Sc. JNVU Jodhpur & University of Delhi]",
-        date: "2024-05-01",
-        description:
-            "Course covered Linear Differential Equations, Exact Equations, and Second Order Differential Equations with extensive problem-solving sessions.",
-
-        feedbackScore: null,
-        maxScore: 5,
-        feedbacks: []
-    },
-
-    {
-        title: "Group Theory",
-        subtitle: "Online Coaching [B.Sc. JNVU Jodhpur & University of Delhi]",
-        date: "2024-05-01",
-        description:
-            "Course focused on fundamental concepts of Group Theory for B.Sc. students. Conducted online for 3 months.",
-
-        feedbackScore: null,
-        maxScore: 5,
-        feedbacks: []
-    }
-];
+        ];
 
 
     function renderCourses() {
