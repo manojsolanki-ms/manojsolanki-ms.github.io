@@ -17,20 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
                 feedbacks: ["On-Going"],
         
-                buttons: [
-                    {
-                        text: "Study Material",
-                        link: "https://manojmsmaths.wixsite.com/maths/eng-math"
-                    },
-                    {
-                        text: "Course Assignments",
-                        link: "https://drive.google.com/drive/folders/16LHL_G6pEdeypl8IK3RBoA83wVs5JE_0?usp=sharing"
-                    },
-                    {
-                        text: "YouTube Videos",
-                        link: "https://www.youtube.com/c/MSMATHS_higher_mahematics_manojsolanki"
-                    }
-                ]
             },
         
             {
