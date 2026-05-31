@@ -913,14 +913,13 @@ header .navbar.animate {
     font-weight: 500;
     line-height: 1.2;
 }
-
-#certifications .certifications-grid {
+.certifications-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-#certifications .certification-card {
+.certification-card {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
