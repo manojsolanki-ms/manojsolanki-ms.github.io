@@ -913,13 +913,13 @@ header .navbar.animate {
     font-weight: 500;
     line-height: 1.2;
 }
-.certifications-grid {
+#certifications .certifications-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-.certification-card {
+#certifications .certifications-grid {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -1041,6 +1041,151 @@ header .navbar.animate {
         grid-template-columns: 1fr;
     }
 }
+
+
+
+
+
+
+
+
+
+/* CONFERENCE & WORKSHOPS */
+#conference-workshops {
+    padding: 3rem 0;
+    background-color: var(--background-color);
+}
+
+#conference-workshops .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+#conference-workshops .section-title {
+    color: var(--primary-color);
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+#conference-workshops .certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+#conference-workshops .certification-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#conference-workshops .certification-content {
+    background-color: var(--background-color);
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#conference-workshops .certification-info {
+    flex-grow: 1;
+}
+
+#conference-workshops .certification-card:hover {
+    border: 2px solid var(--primary-color) !important;
+}
+
+#conference-workshops .certification-logo-container {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#conference-workshops img {
+    border-radius: 10px;
+}
+
+#conference-workshops .certification-logo {
+    max-width: 230px;
+    max-height: 100px;
+    min-height: 100px;
+    object-fit: contain;
+    display: block;
+}
+
+#conference-workshops .certification-title {
+    font-family: 'Alata', sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+#conference-workshops .certification-provider {
+    font-family: 'Alata', sans-serif;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    text-align: center;
+    font-weight: 600;
+}
+
+#conference-workshops .certification-date,
+#conference-workshops .certification-id {
+    font-family: 'Alata', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-color-light);
+    margin-bottom: 0.25rem;
+    text-align: center;
+    font-style: italic;
+}
+
+#conference-workshops .certification-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+#conference-workshops .certification-button {
+    display: inline-block;
+    margin-top: auto;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Alata', sans-serif;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+#conference-workshops .certification-button:hover {
+    background-color: var(--primary-color-dark);
+}
+
+@media (max-width: 768px) {
+    #conference-workshops .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
 
 /* achievements */
 
