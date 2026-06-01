@@ -10,10 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
             subtitle: "Graduate Course @ Dayananda Sagar University [B.Tech]",
             date: "2026-01-21",
             description: "I am currently teaching Single and Multivariable Calculus to undergraduate students, covering limits and continuity, differentiation and applications of derivatives, Taylor and Maclaurin series, partial differentiation, maxima and minima of functions of several variables, multiple integrals, Jacobians, and vector calculus including gradient, divergence, and curl. The course emphasizes strong conceptual understanding along with problem-solving techniques, supported by graphical interpretation and computational demonstrations using Python and MATLAB for better visualization and practical understanding.",
-            feedbackScore: NaN,
+            feedbackScore: 4.63,
             maxScore: 5,
             feedbacks: [
-                     "Ongoing",
+                     "Sir, your classes were truly amazing you made us understand everything through concepts instead of just memorizing formulas, and that made calculus feel much easier for me",
+                     "Thank you, for your amazing explanations and the way you clear every doubt with patience and care. Your teaching style makes difficult topics easy to understand and motivates us to learn more every day. We truly appreciate your support, guidance, and dedication towards every student.",
+                     "Sir tbh you are a very good teacher. Always supportive. And a charming guy. Thank you sir.",
+                     "Great teacher and you make sure everyone understands every topic you teach",
+                     "and Many More...",
                        ]
         },
 
