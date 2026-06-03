@@ -911,44 +911,47 @@ header .navbar.animate {
     font-weight: 500;
 }
 
-/* Vertical list of cards */
+/* GRID LAYOUT */
+
 #certifications .certifications-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
 
-/* Main Card */
+/* CARD */
+
 #certifications .certification-card {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    text-align: center;
 
     background-color: var(--secondary-color);
 
     border-radius: 24px;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem;
 
     border: 2px solid transparent;
 
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 
     transition: all 0.3s ease;
+
+    height: 100%;
 }
 
 #certifications .certification-card:hover {
     border-color: var(--primary-color);
     transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-/* Logo Section */
+/* LOGO */
 
 #certifications .certification-logo-container {
-    flex-shrink: 0;
-
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
 
     display: flex;
     align-items: center;
@@ -957,40 +960,41 @@ header .navbar.animate {
     background-color: var(--background-color);
 
     border-radius: 50%;
+
+    margin-bottom: 1rem;
 }
 
 #certifications .certification-logo {
-    width: 110px;
-    height: 110px;
+    width: 85px;
+    height: 85px;
     object-fit: contain;
 }
 
-/* Content Section */
+/* CONTENT */
 
 #certifications .certification-content {
-    flex: 1;
-
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-
-    gap: 2rem;
+    gap: 1rem;
+    width: 100%;
 }
 
 #certifications .certification-info {
-    flex: 1;
+    width: 100%;
 }
 
-/* Title */
+/* TITLE */
 
 #certifications .certification-title {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: 600;
 
     color: var(--text-color);
 
     margin-bottom: 0.5rem;
+    line-height: 1.4;
 }
 
 #certifications .certification-provider {
@@ -998,7 +1002,7 @@ header .navbar.animate {
 
     color: var(--primary-color);
 
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 600;
 
     margin-bottom: 0.4rem;
@@ -1010,12 +1014,13 @@ header .navbar.animate {
     color: var(--text-secondary-color);
 
     font-style: italic;
+    font-size: 0.95rem;
 }
 
-/* Button Section */
+/* BUTTON */
 
 #certifications .certification-action {
-    flex-shrink: 0;
+    margin-top: auto;
 }
 
 #certifications .certification-button {
@@ -1041,36 +1046,35 @@ header .navbar.animate {
     color: white;
 }
 
-/* Mobile */
+/* TABLET */
 
-@media (max-width: 768px) {
-
-    #certifications .certification-card {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #certifications .certification-content {
-        flex-direction: column;
-    }
-
-    #certifications .certification-logo-container {
-        width: 120px;
-        height: 120px;
-    }
-
-    #certifications .certification-logo {
-        width: 90px;
-        height: 90px;
+@media (max-width: 992px) {
+    #certifications .certifications-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
+/* MOBILE */
 
+@media (max-width: 768px) {
+    #certifications .certifications-grid {
+        grid-template-columns: 1fr;
+    }
 
+    #certifications .section-title {
+        font-size: 2.2rem;
+    }
 
+    #certifications .certification-logo-container {
+        width: 100px;
+        height: 100px;
+    }
 
-
-
+    #certifications .certification-logo {
+        width: 70px;
+        height: 70px;
+    }
+}
 
 
 /* CONFERENCE & WORKSHOPS */
