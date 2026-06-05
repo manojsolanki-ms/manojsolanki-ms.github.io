@@ -55,37 +55,7 @@
     <title>
     Manoj Solanki
     </title>
-    <!-- <style>
-        :root {
-            --text-color: #343a40;
-            --text-secondary-color: #6c757d;
-            --text-link-color: #007bff;
-            --background-color: #eaedf0;
-            --secondary-background-color: #64ffda1a;
-            --primary-color: #007bff;
-            --secondary-color: #f8f9fa;
-        } -->
-    <style>
-.project-card{
-    background:red;
-    padding:20px;
-    margin:20px;
-}
-</style>
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            font-size: 16px;
-            line-height: 1.5;
-            color: var(--text-color);
-            background-color: var(--background-color);
-            margin: 0;
-            padding: 0;
-        }
-
-
-    </style>
-    <style>
+<style>
 
 .projects-grid{
     display:grid;
@@ -116,6 +86,11 @@
 }
 
 </style>
+
+
+
+
+    
 </head>
 <body class="light">
 <script>
@@ -229,38 +204,25 @@ if (localStorageValue === "dark") {
      </header>
 
 <div class="container">
+
     <h1>Research Projects</h1>
 
     <p class="page-description">
-        This section highlights my research contributions in Numerical Analysis, Differential Equations, Finite Difference Methods, Compact Finite Difference Methods, and Scientific Computing.
+        This section highlights my research contributions in Numerical Analysis,
+        Differential Equations, Finite Difference Methods, Compact Finite Difference
+        Methods, and Scientific Computing.
     </p>
 
     <div class="project-category">
+
         <h2>Research Projects</h2>
-        <div class="projects-grid">
 
-    <div class="project-card">
-        <div class="project-content">
-            <h3>Test Project 1</h3>
-            <p class="abstract">
-                This is a test project card.
-            </p>
-        </div>
-    </div>
+        <div id="research-projects" class="projects-grid"></div>
 
-    <div class="project-card">
-        <div class="project-content">
-            <h3>Test Project 2</h3>
-            <p class="abstract">
-                This is another test project card.
-            </p>
-        </div>
     </div>
 
 </div>
-    </div>
-
-    </div>
+    <script src="js/research-projects.js"></script>
 
 <!-- <script src="js/research-projects.js"></script>
     <script>
