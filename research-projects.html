@@ -200,13 +200,37 @@ if (localStorageValue === "dark") {
 
     <div class="project-category">
         <h2>Research Projects</h2>
-        <div id="research-projects" class="projects-grid"></div>
+        <div class="projects-grid">
+
+    <div class="project-card">
+        <div class="project-content">
+            <h3>Test Project 1</h3>
+            <p class="abstract">
+                This is a test project card.
+            </p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <div class="project-content">
+            <h3>Test Project 2</h3>
+            <p class="abstract">
+                This is another test project card.
+            </p>
+        </div>
+    </div>
+
+</div>
     </div>
 
     </div>
 
-<script src="js/research-projects.js"></script>
-
+<!-- <script src="js/research-projects.js"></script>
+    <script>
+document.getElementById("research-projects").innerHTML =
+"<h2 style='color:red'>TEST WORKING</h2>";
+</script>
+-->
 
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
