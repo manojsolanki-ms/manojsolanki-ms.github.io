@@ -85,7 +85,37 @@
 
 
     </style>
-    <link rel="stylesheet" href="css/teaching.css">
+    <style>
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+.project-card{
+    background:#111;
+    border:2px solid #5465ce;
+    border-radius:16px;
+    padding:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
+    transition:.3s ease;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+}
+
+.project-content h3{
+    color:#5465ce;
+}
+
+.abstract{
+    color:#cfcfcf;
+}
+
+</style>
 </head>
 <body class="light">
 <script>
