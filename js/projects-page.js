@@ -1,3 +1,4 @@
+console.log("PROJECTS JS LOADED");
 document.addEventListener('DOMContentLoaded', () => {
 
 ```
