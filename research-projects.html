@@ -65,7 +65,7 @@
 }
 
 .project-card{
-    background: var(--secondary-background-color-dark);
+    background:#0c0c0c;
     border: 1px solid rgba(84,101,206,0.25);
 
     border-radius:12px;
@@ -161,6 +161,36 @@
 .read-more{
     margin-top:auto;
 }
+
+    .container h1{
+    font-family:'Poppins',sans-serif;
+    color:#5465ce;
+    font-size:3rem;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.project-category h2{
+    font-family:'Poppins',sans-serif;
+    color:#5465ce;
+    font-size:2.2rem;
+    margin-bottom:25px;
+}
+
+.page-description{
+    color:var(--text-secondary-color-dark);
+    font-family:'Roboto',sans-serif;
+    font-size:1.05rem;
+    line-height:1.8;
+    margin-bottom:50px;
+}
+
+    .container{
+    max-width:1200px;
+    margin:auto;
+    padding-top:50px;
+    padding-bottom:50px;
+}
     
 </style>
 
@@ -187,7 +217,8 @@ if (localStorageValue === "dark") {
               Manoj Solanki
               </a>
              <!-- <div>
-    <input id=search autocomplete=off class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k to Search..." aria-label=Search oninput=searchOnChange(event)>
+   
+               <input id=search autocomplete=off class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k to Search..." aria-label=Search oninput=searchOnChange(event)>
  </div> -->
               <button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarContent aria-controls=navbarContent aria-expanded=false aria-label="Toggle navigation">
                  <svg aria-hidden="true" height="24" viewBox="0 0 16 16" width="24" data-view-component="true">
@@ -364,12 +395,7 @@ if (localStorageValue === "dark") {
 </div>
 
 
-<!-- <script src="js/research-projects.js"></script>
-    <script>
-document.getElementById("research-projects").innerHTML =
-"<h2 style='color:red'>TEST WORKING</h2>";
-</script>
--->
+
 
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
