@@ -98,8 +98,8 @@
 }
 
 .container{
-    max-width:1200px;
-    margin:auto;
-    padding-top:50px;
-    padding-bottom:50px;
+    width:100%;
+    max-width:1400px;
+    margin:0 auto;
+    padding:50px 20px;
 }
