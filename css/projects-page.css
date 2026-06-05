@@ -1,97 +1,366 @@
+/* ===========================
+PROJECTS PAGE
+=========================== */
+
 .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 40px 20px;
+max-width: 1250px;
+margin: auto;
+padding: 50px 20px;
 }
 
+/* ===========================
+PAGE HEADER
+=========================== */
+
 .container h1 {
-    text-align: center;
-    margin-bottom: 15px;
+text-align: center;
+font-size: 3rem;
+font-weight: 700;
+margin-bottom: 15px;
+color: var(--primary-color);
+letter-spacing: 1px;
 }
 
 .page-description {
-    text-align: center;
-    max-width: 850px;
-    margin: auto;
-    color: var(--text-secondary-color);
-    margin-bottom: 50px;
+text-align: center;
+max-width: 900px;
+margin: auto;
+color: var(--text-secondary-color);
+font-size: 1.1rem;
+line-height: 1.8;
+margin-bottom: 70px;
 }
 
+/* ===========================
+CATEGORY TITLES
+=========================== */
+
 .project-category {
-    margin-bottom: 70px;
+margin-bottom: 80px;
 }
 
 .project-category h2 {
-    margin-bottom: 25px;
-    border-left: 5px solid var(--primary-color);
-    padding-left: 15px;
+position: relative;
+font-size: 2rem;
+margin-bottom: 35px;
+padding-left: 18px;
+border-left: 5px solid var(--primary-color);
+font-weight: 600;
 }
+
+.project-category h2::after {
+content: "";
+position: absolute;
+bottom: -10px;
+left: 18px;
+width: 120px;
+height: 3px;
+background: linear-gradient(
+90deg,
+var(--primary-color),
+transparent
+);
+}
+
+/* ===========================
+GRID
+=========================== */
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
-    gap: 25px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+gap: 30px;
 }
+
+/* ===========================
+CARD
+=========================== */
 
 .project-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: 0.3s ease;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+position: relative;
+overflow: hidden;
+
+```
+background: white;
+border-radius: 18px;
+
+transition: all 0.4s ease;
+
+box-shadow:
+    0 8px 25px rgba(0,0,0,0.08);
+
+animation: fadeUp .8s ease forwards;
+```
+
 }
 
-.dark .project-card {
-    background: #141414;
+/* animated border */
+
+.project-card::before {
+content: "";
+
+```
+position: absolute;
+inset: 0;
+
+border-radius: 18px;
+padding: 2px;
+
+background: linear-gradient(
+    135deg,
+    #5465ce,
+    #00c6ff,
+    #5465ce
+);
+
+-webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+
+opacity: 0;
+transition: .4s ease;
+```
+
+}
+
+.project-card:hover::before {
+opacity: 1;
 }
 
 .project-card:hover {
-    transform: translateY(-6px);
+transform: translateY(-10px);
+
+```
+box-shadow:
+    0 15px 40px rgba(84,101,206,.20);
+```
+
 }
 
+/* ===========================
+IMAGE
+=========================== */
+
 .project-image {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
+width: 100%;
+height: 230px;
+object-fit: cover;
+
+```
+transition: transform .5s ease;
+```
+
+}
+
+.project-card:hover .project-image {
+transform: scale(1.08);
+}
+
+/* ===========================
+CONTENT
+=========================== */
+
+.project-content {
+padding: 25px;
+}
+
+.project-content h3 {
+font-size: 1.35rem;
+margin-bottom: 15px;
+line-height: 1.4;
+font-weight: 600;
+}
+
+/* ===========================
+SUPERVISOR
+=========================== */
+
+.supervisor {
+display: inline-block;
+
+```
+background: rgba(84,101,206,.10);
+color: var(--primary-color);
+
+padding: 8px 14px;
+border-radius: 50px;
+
+font-size: .9rem;
+margin-bottom: 15px;
+```
+
+}
+
+/* ===========================
+ABSTRACT
+=========================== */
+
+.abstract {
+color: var(--text-secondary-color);
+line-height: 1.8;
+margin-bottom: 20px;
+}
+
+/* ===========================
+TAGS
+=========================== */
+
+.tags {
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+
+```
+margin-bottom: 20px;
+```
+
+}
+
+.tags span {
+background: rgba(84,101,206,.12);
+
+```
+color: var(--primary-color);
+
+padding: 6px 12px;
+
+border-radius: 50px;
+
+font-size: .82rem;
+font-weight: 500;
+```
+
+}
+
+/* ===========================
+BUTTON
+=========================== */
+
+.read-more {
+display: inline-block;
+
+```
+text-decoration: none;
+
+background: var(--primary-color);
+color: white;
+
+padding: 10px 18px;
+
+border-radius: 8px;
+
+font-weight: 600;
+
+transition: .3s ease;
+```
+
+}
+
+.read-more:hover {
+color: white;
+
+```
+transform: translateX(5px);
+
+box-shadow:
+    0 5px 15px rgba(84,101,206,.35);
+```
+
+}
+
+/* ===========================
+DARK MODE
+=========================== */
+
+.dark .project-card {
+background: #141414;
+
+```
+box-shadow:
+    0 8px 30px rgba(0,0,0,.45);
+```
+
+}
+
+.dark .project-content h3 {
+color: #f5f5f5;
+}
+
+.dark .abstract {
+color: #c7c7c7;
+}
+
+.dark .supervisor {
+background: rgba(84,101,206,.20);
+}
+
+.dark .tags span {
+background: rgba(84,101,206,.25);
+}
+
+.dark .project-category h2 {
+color: #f5f5f5;
+}
+
+/* ===========================
+ENTRY ANIMATION
+=========================== */
+
+@keyframes fadeUp {
+
+```
+from {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+```
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media (max-width: 992px) {
+
+```
+.projects-grid {
+    grid-template-columns: 1fr;
+}
+
+.container h1 {
+    font-size: 2.4rem;
+}
+```
+
+}
+
+@media (max-width: 768px) {
+
+```
+.project-image {
+    height: 200px;
 }
 
 .project-content {
     padding: 20px;
 }
 
-.project-content h3 {
-    margin-bottom: 12px;
-    font-size: 1.2rem;
+.project-category h2 {
+    font-size: 1.6rem;
 }
 
-.supervisor {
-    color: var(--text-secondary-color);
-    margin-bottom: 10px;
+.container h1 {
+    font-size: 2rem;
 }
-
-.abstract {
-    line-height: 1.7;
-    margin-bottom: 15px;
-}
-
-.read-more {
-    text-decoration: none;
-    font-weight: 600;
-    color: var(--primary-color);
-}
-
-.read-more:hover {
-    text-decoration: underline;
-}
-
-@media (max-width:768px){
-
-    .projects-grid{
-        grid-template-columns:1fr;
-    }
-
-    .project-image{
-        height:200px;
-    }
+```
 
 }
