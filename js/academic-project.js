@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    const researchList = document.querySelector('.research-list');
+    const researchList = document.querySelector('.academic-list');
     const timeline = document.querySelector('.timeline');
 
     const projects = [
