@@ -43,6 +43,44 @@ document.addEventListener('DOMContentLoaded', function () {
 
             link:
             "projects/cfdm-pde.html"
+        },
+                {
+            title:
+            "Compact Finite Difference Method to Solve Differential Equations",
+
+            subtitle:
+            "Department of Mathematics, XYZ University",
+
+            supervisor:
+            "Dr. Manoj Solanki",
+
+            date:
+            "2023-01-01",
+
+            description:
+            "Development and implementation of high-order compact finite difference schemes for ordinary and partial differential equations with applications in scientific computing.",
+
+            link:
+            "projects/cfdm-pde.html"
+        },
+                {
+            title:
+            "Compact Finite Difference Method to Solve Differential Equations",
+
+            subtitle:
+            "Department of Mathematics, XYZ University",
+
+            supervisor:
+            "Dr. Manoj Solanki",
+
+            date:
+            "2023-01-01",
+
+            description:
+            "Development and implementation of high-order compact finite difference schemes for ordinary and partial differential equations with applications in scientific computing.",
+
+            link:
+            "projects/cfdm-pde.html"
         }
 
     ];
