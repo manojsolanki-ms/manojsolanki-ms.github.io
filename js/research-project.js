@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
             image: "image/python-package.png",
 
             description:
-            "We have developed a comprehensive Python package for solving Ordinary Differential Equations (ODEs) using various numerical methods.",
+            ".",
 
             link: "projects/ode-package.html"
         },
