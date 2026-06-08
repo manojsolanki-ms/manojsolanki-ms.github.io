@@ -343,13 +343,13 @@ if (localStorageValue === "dark") {
                     <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="sml-tab" data-bs-toggle="tab" data-bs-target="#sml" type="button" role="tab" aria-controls="sml" aria-selected="false">Scientific Machine Learning</button>
+                    <button class="nav-link" id="cfdm-tab" data-bs-toggle="tab" data-bs-target="#cfdm" type="button" role="tab" aria-controls="cfdm" aria-selected="false">Compact Finite Difference Method</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="fem-tab" data-bs-toggle="tab" data-bs-target="#fem" type="button" role="tab" aria-controls="fem" aria-selected="false">Finite Element Methods</button>
+                    <button class="nav-link" id="nlp-tab" data-bs-toggle="tab" data-bs-target="#nlp" type="button" role="tab" aria-controls="nlp" aria-selected="false">Non Linear PDEs</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="hpc-tab" data-bs-toggle="tab" data-bs-target="#hpc" type="button" role="tab" aria-controls="hpc" aria-selected="false">High Performance Computing</button>
+                    <button class="nav-link" id="heat-tab" data-bs-toggle="tab" data-bs-target="#hpc" type="button" role="tab" aria-controls="heat" aria-selected="false">Heat Equations</button>
                 </li>
             </ul>
     
@@ -357,178 +357,80 @@ if (localStorageValue === "dark") {
                 <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
                     <!-- All projects will be displayed here -->
                 </div>
-                <div class="tab-pane fade" id="sml" role="tabpanel" aria-labelledby="sml-tab">
-                    <!-- SML projects will be displayed here -->
+                <div class="tab-pane fade" id="cfdm" role="tabpanel" aria-labelledby="cfdm-tab">
+                    <!-- cfdm projects will be displayed here -->
                 </div>
-                <div class="tab-pane fade" id="fem" role="tabpanel" aria-labelledby="fem-tab">
-                    <!-- FEM projects will be displayed here -->
+                <div class="tab-pane fade" id="nlp" role="tabpanel" aria-labelledby="nlp-tab">
+                    <!-- nlp projects will be displayed here -->
                 </div>
-                <div class="tab-pane fade" id="hpc" role="tabpanel" aria-labelledby="hpc-tab">
-                    <!-- HPC projects will be displayed here -->
+                <div class="tab-pane fade" id="heat" role="tabpanel" aria-labelledby="heat-tab">
+                    <!-- heat projects will be displayed here -->
                 </div>
             </div>
             
             <div class="project-cards">
-                <!-- FastVPINNs-->
-                <div class="project-card" data-tags="sml">
+                <!--CFDM -->
+                <div class="project-card" data-tags="cfdm,heat">
                     <div class="row">
                         <div class="col-md-5">
                             <div class="image-container">
-                                <img src="https://cmgcds.github.io/fastvpinns/_static/Fastvpinns_logo.png" alt="Project Title">
+                                <img src="projects/images/Thesis prjects.png" alt="Project Title">
                             </div>
                         </div>
                         <div class="col-md-7">
-                            <h3>FastVPINNs</h3>
-                            <h4>Fast and efficient hp-Variational Physics-Informed Neural Networks for solving PDEs</h4>
-                            <p>We propose a novel tensor based method to compute variational loss, which leads to 100x speedup in training time when compared to the existing implementations.</p>
-                            <a href="projects/fastvpinns.html" class="btn btn-primary read-more">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- GPU SIMINHALE -->
-                <div class="project-card" data-tags="fem,hpc">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="image-container">
-                                <img src="images/siminhale.png" alt="Project Title">
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <h3>GPU-Accelerated particle tracking</h3>
-                            <h4>FEM based Lagrangian particle tracking in Human air pathways</h4>
-                            <p>We have implemented a GPU accelerated FEM solver for Lagrangian particle tracking in human air pathways. The framework is implemented in CUDA using the FEM library ParMooN. We achieved a speed up of 80x when compared to the sequential implementation. </p>
-                            <a href="projects/gpu_siminhale.html" class="btn btn-primary read-more">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- hp-VPINNs for NSE -->
-                <div class="project-card" data-tags="sml">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="image-container">
-                                <img src="images/vpinns_nse2d.png" alt="Project Title" class="img-fluid">
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <h3>hp-VPINNs for Incompressible Navier-Stokes Equations</h3>
-                            <h4>FastVPINNs implementation for vector valued problems </h4>
-                            <p>We extend the implemetation of hp-VPINNs for vector valued problems, such as Burgers equation and the incompressible Navier-Stokes equations. We have solved Lid-Driven Cavity, flow past a cylinder, Falkner-Skan boundary layer flow problems etc. We have achieved a 2.4x speedup in training time when compared to the existing PINNsimplementations.</p>
-                            <a href="projects/fastvpinns_nse2d.html" class="btn btn-primary read-more">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FastVPINNs SUPG -->
-                <div class="project-card" data-tags="fem">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="image-container">
-                                <img src="images/vpinns_supg_tau.png" alt="Project Title" class="">
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <h3>Improving hp-Variational Physics-Informed Neural Networks for Steady-State Convection-Dominated Problems</h3>
-                            <h4>New Methods to improve accuracy of variational PINNs in solving Singularly Perturbed Problems. </h4>
-                            <p>We present an ensemble forecast for Wave-3 of COVID-19 in the state of Karnataka, India, using the IISc Population Balance Model for infectious disease spread. The reported data of confirmed, recovered, and deceased cases in Karnataka from 1 July 2020 to 4 July 2021 is utilized to tune the model’s parameters, and an ensemble forecast is done from 5 July 2021 to 30 June 2022. The ensemble is built with 972 members by varying seven critical parameters that quantify the uncertainty in the spread dynamics (antibody waning, viral mutation) and interventions (pharmaceutical, non-pharmaceutical). The probability of Wave-3, the peak date distribution, and the peak caseload distribution are estimated from the ensemble forecast.</p>
-                            <a href="projects/fastvpinns_supg.html" class="btn btn-primary read-more">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Digital Shadowing -->
-                <div class="project-card" data-tags="sml">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="image-container">
-                                <img src="images/pinns_dmd.png" alt="Project Title" class="img-fluid">
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <h3>Digital Shadowing</h3>
-                            <h4>PINNs + DMD based framework for realtime moitoring of wind farms</h4>
-                            <p>We present a novel simulation framework that combines Physics Informed Neural Networks (PINNs) with Dynamic Mode Decomposition (DMD) for rapid fluid flow simulations in complex domains. This lightweight, flexible framework is designed to create simulation-based Digital Twins, primarily targeting wind farm aerodynamics but adaptable to other continuous physics systems. By incorporating a reduced order model, the framework aims to enable trained models to run efficiently on compact edge devices, as demonstrated through a transient heat transfer example.</p>
-                            <a href="projects/digital_shadow.html" class="btn btn-primary read-more">Read More</a>
+                            <h3> Compact Finite Difference methods for solving partial differential equations </h3>
+                            <h4>Two fourth order CFDM schems were developed for heat and ADR equations</h4>
+                            <h5>Supervisor : Dr. Harshita Madduri</h5>
+                            <p>A higher order numerical approach for solving 1-D parabolic PDEs, such as the Diffusion and Advection-Diffusion-Reaction (ADR) equations, is developed and studied in this work. The proposed approach uses the Crank–Nicolson traditional finite difference method (FDM) for time discretization and a fourth-order compact finite difference method (CFDM) for spatial discretization. The accuracy and efficiency limits of the explicit, implicit, and Crank-Nicolson finite difference methods (FDM) are highlighted in this we use operator-based and Taylor series techniques, a compact study is created to overcome these issues, producing a solution that uses fewer grid points while achieving higher accuracy. The stability of the scheme is analyzed using Von Neumann ( Fourier analysis). A comparative study of CFDM is conducted through Python implementation on a variety of problems involving diffusion, advection, and reaction with constant coefficients. The results show that CFDM yields more accurate and efficient solutions than traditional methods. The work concludes by outlining future directions, particularly the extension of the scheme to PDEs with variable coefficients, for which initial developments are underway. </p>
+                            <a href="        " class="btn btn-primary read-more">Read More</a>
                         </div>
                     </div>
                 </div>
 
 
-                <!-- Asynchronous Mesh movement Computation -->
-                <div class="project-card" data-tags="fem,hpc">
+                
+                <!-- Non Linear PDEs -->
+                <div class="project-card" data-tags="nlp">
                     <div class="row">
                         <div class="col-md-4">
                             <div class="image-container">
-                                <img src="images/gpu_ale.png" alt="Project Title" class="img-fluid">
+                                <img src="projects/images/project1.png" alt="Project Title">
                             </div>
                         </div>
                         <div class="col-md-8">
-                            <h3>Asynchronous Mesh Movement - GPU</h3>
-                            <h4>Parallel Asynchronous Mesh Movement Computations for ALE-FEM in GPU</h4>
-                            <p>This project optimizes mesh movement computations for Navier-Stokes solvers by leveraging GPU parallelism. We addressed two key challenges: restructuring module dependencies to enable asynchronous GPU computation, and efficiently transferring complex finite element data structures between CPU and GPU using mapped arrays. These innovations allow for seamless GPU computations without host intervention, significantly enhancing overall solver performance.</p>
-                            <a href="projects/ale_gpu.html" class="btn btn-primary read-more">Read More</a>
+                            <h3>Solution of Non Linear Partial Differential Equations</h3>
+                            <h5>Supervisor : Dr. Harshita Madduri</h5>
+                            <p>We solved various types of differential equations, including the Burgers’ equation, using Newton’s Method, Quasi-Linearization Method, and the Finite Difference Method (FDM). The implementation was carried out in Python, leveraging numerical techniques to ensure accuracy and stability in the solutions. </p>
+                            <a href="    " class="btn btn-primary read-more">Read More</a>
                         </div>
                     </div>
                 </div>
 
                 
-
-                <!-- Free Surface ALE -->
-                <div class="project-card" data-tags="fem">
+                <!-- Comparison of Solution of Parabolic PDEs -->
+                <div class="project-card" data-tags="heat">
                     <div class="row">
                         <div class="col-md-4">
                             <div class="image-container">
-                                <img src="images/alefem.png" alt="Project Title" class="img-fluid">
+                                <img src="projects/images/project2.png" alt="Project Title" class="img-fluid">
                             </div>
                         </div>
                         <div class="col-md-8">
-                            <h3>ALE-FEM for Free Surface Flows</h3>
-                            <h4>Arbitrary Lagrangian Eulerian based FEM for Free Surface Flows in 3D</h4>
-                            <p>Simulations of free surface flow of an incompressible fluid using ALE-FEM. The implementation is done in our in-house FEM library ParMooN.</p>
-                            <a href="projects/ale_fem.html" class="btn btn-primary read-more">Read More</a>
+                            <h3>Comparison of method for Solution of heat eqaution </h3>
+                            <h5>Supervisor : Dr. Harshita Madduri </h5>
+                            <p>We implemented the Heat Equation model using Explicit, Implicit, and Crank-Nicholson schemes and compared their computational costs. To solve the resulting Tri-Diagonal System of Linear Equations (SOLE) efficiently, we utilized the Thomas Algorithm and Sparse Matrix methods. The entire implementation was carried out using Python, focusing on accuracy, stability, and computational efficiency.</p>
+                            <a href="   " class="btn btn-primary read-more">Read More</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Free Surface ALE -->
-                <div class="project-card" data-tags="fem">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="image-container">
-                                <img src="images/covid.png" alt="Project Title" class="img-fluid">
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <h3>Ensemble forecast of COVID-19 in Karnataka for vulnerability assessment and policy interventions</h3>
-                            <h4>Population balance model to predict the severity of Covid second wave 3</h4>
-                            <p>We present an ensemble forecast for Wave-3 of COVID-19 in the state of Karnataka, India, using the IISc Population Balance Model for infectious disease spread. The reported data of confirmed, recovered, and deceased cases in Karnataka from 1 July 2020 to 4 July 2021 is utilized to tune the model’s parameters, and an ensemble forecast is done from 5 July 2021 to 30 June 2022. The ensemble is built with 972 members by varying seven critical parameters that quantify the uncertainty in the spread dynamics (antibody waning, viral mutation) and interventions (pharmaceutical, non-pharmaceutical). The probability of Wave-3, the peak date distribution, and the peak caseload distribution are estimated from the ensemble forecast.</p>
-                            <a href="https://colab.research.google.com/github/divijghose/COVID_Wave3_IISc/blob/main/COVID_Wave3_Ensemble.ipynb" class="btn btn-primary read-more">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- DO Equations-->
-                <div class="project-card" data-tags="fem">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="image-container">
-                                <img src="images/do_1.png" alt="Project Title" class="img-fluid">
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <h3>A finite element implementation of the dynamically orthogonal field equations scheme for uncertainty quantification</h3>
-                            <h4>Dynamic Orthogonal formulation for Uncertanity Quantification using FEM</h4>
-                            <p>In this work, we employ an efficient and provably accurate Dynamically Orthogonal (DO) field equation method for reducing the stochastic order by ensuring that the mean squared error of the variance of the stochastic field is minimised. By hypothesizing a decomposition of the solution field into a mean and stochastic dynamical component, we derive a system of field equations consisting of a Partial Differential Equation (PDE) for the mean field, a family of PDEs for the orthonormal basis that describe the stochastic subspace where the stochasticity ‘lives’ as well as a system of Stochastic Differential Equations that defines how the stochasticity evolves in the time varying stochastic subspace. These new evolution equations are derived directly from the original SPDE, using nothing more than a dynamically orthogonal condition on the representation of the solution. We apply this method to both linear and non-linear dynamical systems and compare our results with Monte Carlo simulations.</p>
-                            <!-- <a href="https://colab.research.google.com/github/divijghose/COVID_Wave3_IISc/blob/main/COVID_Wave3_Ensemble.ipynb" class="btn btn-primary read-more">Read More</a> -->
-                        </div>
-                    </div>
-                </div>
-
-                
-
-            </div>
+        
             
             <div class="text-center mt-5">
-                <a href="/projects/github_projects.html" class="btn btn-secondary">View Additional GitHub Projects</a>
+                <a href="github_projects.html" class="btn btn-secondary">View - GitHub Projects</a>
+            </div>
+            <div class="text-center mt-5">
+                <a href="academic_projects.html" class="btn btn-secondary">View - Academic Projects</a>
             </div>
         </div>
     </main>
