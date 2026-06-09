@@ -46,234 +46,185 @@
         Manoj Solanki
         </title>
         <style>
-        :root {
-    --content-width: 80%;
-}
-
-.container-fluid {
-    padding: 0;
-    background-color: var(--background-color);
-    display: flex;
-    justify-content: center;
-}
-
-.content-wrapper {
-    display: flex;
-    width: var(--content-width);
-    max-width: 1200px;
-    background-color: var(--background-color);
-}
-
-.sidebar {
-    font-family: 'Poppins', sans-serif;
-    width: 25%;
-    position: sticky;
-    top: 20px;
-    height: calc(100vh - 40px);
-    overflow-y: auto;
-    padding: 20px;
-    margin-top: 20px;
-    background-color: var(--secondary-color);
-    border-radius: 10px;
-}
-
-.content {
-    width: 75%;
-    padding: 20px;
-}
-
-.nav-link {
-    display: block;
-    padding: 10px;
-    color: var(--text-color);
-    text-decoration: none;
-    border-left: 3px solid transparent;
-    transition: all 0.3s ease;
-    margin-bottom: 8px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.nav-link-sidebar {
-    display: block;
-    padding: 10px;
-    color: var(--text-color);
-    text-decoration: none;
-    border-left: 3px solid transparent;
-    /* border: 1px solid var(--text-secondary-color); */
-    transition: all 0.3s ease;
-    margin-bottom: 8px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: 'Alata', sans-serif;
-    font-weight: 300;
-    opacity: 0.8;
-}
-
-/* .nav-link-sidebar.active {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    font-weight: 500;
-} */
-
-/* Add spacing between categories */
-.category-group {
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid var(--text-secondary-color);
-}
-
-.nav-link-sidebar:hover, .nav-link-sidebar:focus {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-}
-
-.nav-link:hover, .nav-link:focus {
-    background-color: var(--secondary-background-color);
-    border-left-color: var(--primary-color);
-    color: var(--primary-color);
-}
-
-.section-card {
-    background-color: var(--secondary-color);
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.section-card h2 {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif; 
-}
-
-.section-card h3 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    margin-top: 1.9rem;
-    /* Add a box around the text */
-    /* border: 2px solid var(--primary-color);
-    padding: 10px;
-    border-radius: 5px; */
-}
-
-.section-card h4 {
-    font-family: 'Alata', sans-serif;
-    font-weight: 500;
-    margin-bottom: 1.2rem;
-    margin-top: 1.2rem;
-}
-
-.project-cards {
+            .project-cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
+
+
 .project-card {
-    background-color: var(--background-color);
-    border-radius: 4px;
-    padding: 15px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    width: calc(50% - 14px);
+    width: calc(95% - 1rem);
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    
+    border-radius: 12px;
     transition: all 0.3s ease;
-    border: 0px solid var(--primary-color);
+    
+    background-color: var(--background-color);
+    box-shadow: 0px 8px 56px rgb(15 80 100 / 16%);
+    /* border: 2px solid var(--text-secondary-color); */
 }
 
 .project-card:hover {
-    /* transform: translateY(-1px); */
-    /* box-shadow: 0 4px 6px rgba(0,0,0,0.1); */
-    border: 2px solid var(--primary-color);
-    transition: all 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
 }
 
-.project-card h5 {
-    color: var(--primary-color);
-    margin-bottom: 10px;
+.project-card .image-container {
+    /* width: 100%; */
+    height: 100%;
+    padding-bottom: 45%; 
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+/* .project-card:nth-child(1) .image-container {
+    padding-bottom: 65%;
+}
+
+.project-card:nth-child(2) .image-container {
+    padding-bottom: 80%;
+    width: 80%  ;
+}
+
+.project-card:nth-child(3) .image-container {
+    padding-bottom: 75%;
+}
+
+.project-card:nth-child(4) .image-container {
+    padding-bottom: 70%;
+}
+
+.project-card:nth-child(5) .image-container {
+    padding-bottom: 70%;
+}
+
+.project-card:nth-child(6) .image-container {
+    padding-bottom: 70%;
+}
+
+.project-card:nth-child(7) .image-container {
+    padding-bottom: 70%;
+} */
+
+.project-card img {
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+    width: 100%;
+    height: 100%; 
+    object-fit: scale-down; 
+}
+.project-card h3 {
+    margin-top: 1rem;
+    color: var(--text-color);
     font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+
+}
+
+.project-card h4 {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: 'Alata', sans-serif;
+    opacity: 1;   
 }
 
 .project-card p {
     color: var(--text-color);
+    font-size: 1rem;
     font-family: 'Alata', sans-serif;
-    font-weight: 300;
     opacity: 0.8;
 }
 
-.github-btn {
-    display: inline-flex;
-    align-items: center;
-    background-color: #121417;
-    color: rgb(240, 236, 236);
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
     font-family: 'Poppins', sans-serif;
-    padding: 5px 10px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
 }
 
-.github-btn:hover {
-    background-color: rgb(240, 236, 236);
-    color: #121417;
-    border: 2px solid #121417;
-    transition: background-color 0.3s ease;
+.read-more:hover {
+    color: var(--secondary-color);
 }
 
-.github-btn i {
-    margin-right: 5px;
-    /* increase size of icon */
-    font-family: 'Poppins', sans-serif;
-
+.nav-link {
+    color: var(--text-color);
+    /* font-family: 'Poppins', sans-serif; */
 }
 
-/* overide bootstrap */
-.btn {
-    font-family: 'Poppins', sans-serif !important;
-    font-size: 0.8rem !important;
-    color: var(--background-color) !important;
+.nav-link.active {
     background-color: var(--primary-color) !important;
-    border: 2px solid var(--primary-color) !important;
-    margin-top: 0.2rem !important;
-    margin-bottom: 0.2rem !important;
+    color: var(--background-color) !important;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
 }
 
 
-@media (max-width: 1024px) {
-    .content-wrapper {
-        width: 90%;
-    }
+@media (max-width: 991px) {
     .project-card {
-        width: calc(50% - 10px);
+        width: 100%;
     }
-}
-
-@media (max-width: 768px) {
-    .content-wrapper {
+    
+    .project-card .row {
         flex-direction: column;
-        width: 95%;
     }
-    .sidebar, .content {
-        width: 100%;
-    }
-    .sidebar {
-        position: static;
-        height: auto;
-        margin-bottom: 20px;
-    }
-    .project-card {
-        width: 100%;
+    
+    .project-card .col-md-4 {
+        margin-bottom: 1rem;
     }
 }
-    </style>
-    </style>
-</head><body class="light">
-<script>
+        </style>
+        <!-- <link rel=stylesheet href=/css/projects.css media=all> -->
+
+        <!-- Script for project tabs -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const allTab = document.getElementById('all-tab');
+                const projectCards = document.querySelectorAll('.project-card');
+                const tabs = document.querySelectorAll('.project-tabs .nav-link');
+                const tabContent = document.querySelectorAll('.tab-pane');
+            
+                function filterProjects(category) {
+                    projectCards.forEach(card => {
+                        if (category === 'all' || card.dataset.tags.split(',').includes(category)) {
+                            card.style.display = '';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                }
+            
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        tabs.forEach(t => t.classList.remove('active'));
+                        this.classList.add('active');
+                        tabContent.forEach(content => content.classList.remove('show', 'active'));
+                        const target = document.querySelector(this.dataset.bsTarget);
+                        target.classList.add('show', 'active');
+                        const category = this.id.replace('-tab', '');
+                        filterProjects(category);
+                    });
+                });
+            
+                // Initially show all projects
+                filterProjects('all');
+            });
+            </script>
+        
+    </head>
+<body class="light">
+    <!-- <script> -->
+    <script>
 let localStorageValue = localStorage.getItem("pref-theme");
 if (localStorageValue === "dark") {
     document.body.classList.add('dark');
@@ -281,12 +232,12 @@ if (localStorageValue === "dark") {
     document.body.classList.remove('dark');
     localStorage.setItem("pref-theme", 'light');
 }
-</script>    <script>var prevScrollPos=window.pageYOffset;window.addEventListener("scroll",function(){let c=document.getElementById("profileHeader"),a=window.pageYOffset,b=!1,d=!0,e=d?prevScrollPos>a:a>0;e?c.classList.add("showHeaderOnTop"):b=!0,a===0&&(b=!0),b&&c.classList.remove("showHeaderOnTop"),prevScrollPos=a})</script>
+</script>        <script>var prevScrollPos=window.pageYOffset;window.addEventListener("scroll",function(){let c=document.getElementById("profileHeader"),a=window.pageYOffset,b=!1,d=!0,e=d?prevScrollPos>a:a>0;e?c.classList.add("showHeaderOnTop"):b=!0,a===0&&(b=!0),b&&c.classList.remove("showHeaderOnTop"),prevScrollPos=a})</script>
     <header id=profileHeader>
         <nav class="pt-3 navbar navbar-expand-lg animate">
            <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
               <a class="navbar-brand primary-font text-wrap" href="/">
-              <img src=src/logo.png width=30 height=30 class="d-inline-block align-top">
+              <img src=image/29197370.jpg width=30 height=30 class="d-inline-block align-top">
               Manoj Solanki
               </a>
              <!-- <div>
@@ -383,7 +334,6 @@ if (localStorageValue === "dark") {
            </div>
         </nav>
      </header>
-    
 
     <div class="container-fluid">
         <div class="content-wrapper">
