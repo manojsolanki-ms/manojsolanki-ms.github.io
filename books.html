@@ -336,20 +336,17 @@ if (localStorageValue === "dark") {
      </header>
      <main class="container-fluid px-0">
         <div class="container mt-12">
-            <h1 class="text-center mb-5" style="font-family: 'Poppins', sans-serif;">My Projects</h1>
+            <h1 class="text-center mb-5" style="font-family: 'Poppins', sans-serif;">My Books</h1>
     
             <ul class="nav nav-tabs project-tabs mb-4" id="projectTabs" role="tablist" style="color: var(--primary-color); font-family: 'Alata';">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="cfdm-tab" data-bs-toggle="tab" data-bs-target="#cfdm" type="button" role="tab" aria-controls="cfdm" aria-selected="false">Compact Finite Difference Method</button>
+                    <button class="nav-link" id="higher-tab" data-bs-toggle="tab" data-bs-target="#higher" type="button" role="tab" aria-controls="higher" aria-selected="false">Higher Mathematics</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="nlp-tab" data-bs-toggle="tab" data-bs-target="#nlp" type="button" role="tab" aria-controls="nlp" aria-selected="false">Non Linear PDEs</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="heat-tab" data-bs-toggle="tab" data-bs-target="#hpc" type="button" role="tab" aria-controls="heat" aria-selected="false">Heat Equations</button>
+                    <button class="nav-link" id="basic-tab" data-bs-toggle="tab" data-bs-target="#basic" type="button" role="tab" aria-controls="basic" aria-selected="false">Basic Mathematics</button>
                 </li>
             </ul>
     
@@ -357,72 +354,70 @@ if (localStorageValue === "dark") {
                 <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
                     <!-- All projects will be displayed here -->
                 </div>
-                <div class="tab-pane fade" id="cfdm" role="tabpanel" aria-labelledby="cfdm-tab">
+                <div class="tab-pane fade" id="higher" role="tabpanel" aria-labelledby="higher-tab">
                     <!-- cfdm projects will be displayed here -->
                 </div>
-                <div class="tab-pane fade" id="nlp" role="tabpanel" aria-labelledby="nlp-tab">
+                <div class="tab-pane fade" id="basic" role="tabpanel" aria-labelledby="basic-tab">
                     <!-- nlp projects will be displayed here -->
-                </div>
-                <div class="tab-pane fade" id="heat" role="tabpanel" aria-labelledby="heat-tab">
-                    <!-- heat projects will be displayed here -->
                 </div>
             </div>
             
             <div class="project-cards">
-                <!--CFDM -->
-                <div class="project-card" data-tags="cfdm,heat">
+                <!-- higher mathematics book -->
+                <div class="project-card" data-tags="Higher">
                     <div class="row">
                         <div class="col-md-5">
                             <div class="image-container">
-                                <img src="projects/images/Thesis prjects.png" alt="Project Title">
+                                <img src="Books-content/numerical-book.png.avif" alt="Project Title">
                             </div>
                         </div>
                         <div class="col-md-7">
-                            <h3> Compact Finite Difference methods for solving partial differential equations </h3>
-                            <h4>Two fourth order CFDM schems were developed for heat and ADR equations</h4>
-                            <h5>Supervisor : Dr. Harshita Madduri</h5>
-                            <p>A higher order numerical approach for solving 1-D parabolic PDEs, such as the Diffusion and Advection-Diffusion-Reaction (ADR) equations, is developed and studied in this work. The proposed approach uses the Crank–Nicolson traditional finite difference method (FDM) for time discretization and a fourth-order compact finite difference method (CFDM) for spatial discretization. The accuracy and efficiency limits of the explicit, implicit, and Crank-Nicolson finite difference methods (FDM) are highlighted in this we use operator-based and Taylor series techniques, a compact study is created to overcome these issues, producing a solution that uses fewer grid points while achieving higher accuracy. The stability of the scheme is analyzed using Von Neumann ( Fourier analysis). A comparative study of CFDM is conducted through Python implementation on a variety of problems involving diffusion, advection, and reaction with constant coefficients. The results show that CFDM yields more accurate and efficient solutions than traditional methods. The work concludes by outlining future directions, particularly the extension of the scheme to PDEs with variable coefficients, for which initial developments are underway. </p>
-                            <a href="        " class="btn btn-primary read-more">Read More</a>
+                            <h3> Numerical Solution of Differential Equations with Programs in Python </h3>
+                            <h4>Jan 2025</h4>
+                            <p>I'm thrilled to announce that my new book has been officially published with an ISBN: 978-93-341-9831-7 from the Government of India! "Numerical Solutions of Differential Equations with Programs in Python" This book is a proof of my research and efforts, guided by the expertise of Prof. ASV Ravi Kanth, a renowned academician from NIT Kurukshetra. This comprehensive guide covers numerical techniques to solve ODEs and PDEs using various schemes and Finite Difference methods. Solved examples to illustrate key concepts Python programs and implementation for hands-on practice Perfect for students, and professionals in mathematics, physics, engineering, and computer science. </p>
+                            <a href="https://www.amazon.in/dp/B0F3B6YGQW?ref=cm_sw_r_ffobk_cp_ud_dp_0131XSXTX3PN0D317CBV&ref_=cm_sw_r_ffobk_cp_ud_dp_0131XSXTX3PN0D317CBV&social_share=cm_sw_r_ffobk_cp_ud_dp_0131XSXTX3PN0D317CBV&bestFormat=true" class="btn btn-primary read-more">Read More</a>
                         </div>
                     </div>
                 </div>
 
 
                 
-                <!-- Non Linear PDEs -->
-                <div class="project-card" data-tags="nlp">
+                <!-- Basic Mathematics Book - englsih -->
+                <div class="project-card" data-tags="basic">
                     <div class="row">
                         <div class="col-md-4">
                             <div class="image-container">
-                                <img src="projects/images/project1.png" alt="Project Title">
+                                <img src="Books-content/general-maths-book.png.avif" alt="Project Title">
                             </div>
                         </div>
                         <div class="col-md-8">
-                            <h3>Solution of Non Linear Partial Differential Equations</h3>
-                            <h5>Supervisor : Dr. Harshita Madduri</h5>
-                            <p>We solved various types of differential equations, including the Burgers’ equation, using Newton’s Method, Quasi-Linearization Method, and the Finite Difference Method (FDM). The implementation was carried out in Python, leveraging numerical techniques to ensure accuracy and stability in the solutions. </p>
-                            <a href="    " class="btn btn-primary read-more">Read More</a>
+                            <h3>General Maths (English Edition) </h3>
+                            <h4>Jan 2021</h4>
+                            <p>I'm thrilled to announce that my new book has been officially published with an ASIN number (B0B85N2VZS) on Amazon. "General Maths for Secondary School Level : Handbook of Formulas and Concepts" is a comprehensive guide designed to help students understand essential mathematical concepts with clarity. This book serves as a valuable reference, covering fundamental formulas, equations, and theorems in a structured manner. It is ideal for secondary school students, educators, and anyone preparing for competitive exams. A must-have resource for mastering mathematics at this level!</p>
+                            <a href="https://www.amazon.in/dp/B0B85N2VZS?ref=cm_sw_r_ffobk_cp_ud_dp_7SG6QS6AN1CYZ5Z6947N&ref_=cm_sw_r_ffobk_cp_ud_dp_7SG6QS6AN1CYZ5Z6947N&social_share=cm_sw_r_ffobk_cp_ud_dp_7SG6QS6AN1CYZ5Z6947N&skipTwisterOG=1&bestFormat=true" class="btn btn-primary read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            <!-- Basic Mathematics Book - Hindi -->
+                <div class="project-card" data-tags="basic">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="image-container">
+                                <img src="Books-content/general-maths-book.png.avif" alt="Project Title">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <h3>General Maths (Hindi Edition) </h3>
+                            <h4>Dec 2020</h4>
+                            <p>I'm thrilled to announce that my new book has been officially published with an ASIN number (B0B85N2VZS) on Amazon. "General Maths for Secondary School Level : Handbook of Formulas and Concepts" is a comprehensive guide designed to help students understand essential mathematical concepts with clarity. This book serves as a valuable reference, covering fundamental formulas, equations, and theorems in a structured manner. It is ideal for secondary school students, educators, and anyone preparing for competitive exams. A must-have resource for mastering mathematics at this level!</p>
+                            <a href="https://www.amazon.in/General-Maths-Hindi-Manoj-Solanki-ebook/dp/B0B85N4TQM/ref=sr_1_1?crid=345IXYLTXC8LJ&dib=eyJ2IjoiMSJ9.72KSSLwNc5g5ovE5RikZMI0LgdLzs_PXPrpfgRs0LEI.jYd5lVMmiuG4As6twcHfuLeARNgP8f8rwlI4ySbZNLc&dib_tag=se&keywords=General+Maths+manoj+solanki&qid=1780997223&s=digital-text&sprefix=general+maths+manoj+solank%2Cdigital-text%2C277&sr=1-1" class="btn btn-primary read-more">Read More</a>
                         </div>
                     </div>
                 </div>
 
                 
-                <!-- Comparison of Solution of Parabolic PDEs -->
-                <div class="project-card" data-tags="heat">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="image-container">
-                                <img src="projects/images/project2.png" alt="Project Title" class="img-fluid">
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <h3>Comparison of method for Solution of heat eqaution </h3>
-                            <h5>Supervisor : Dr. Harshita Madduri </h5>
-                            <p>We implemented the Heat Equation model using Explicit, Implicit, and Crank-Nicholson schemes and compared their computational costs. To solve the resulting Tri-Diagonal System of Linear Equations (SOLE) efficiently, we utilized the Thomas Algorithm and Sparse Matrix methods. The entire implementation was carried out using Python, focusing on accuracy, stability, and computational efficiency.</p>
-                            <a href="   " class="btn btn-primary read-more">Read More</a>
-                        </div>
-                    </div>
-                </div>
 
         
             
