@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name=generator content="Hugo 0.92.0"><meta charset=utf-8>
+<meta name="author" content="Manoj Solanki">
+<link rel="canonical" href="https://manojsolanki-ms.github.io">
+<meta name="keywords" content="Manoj Solanki, Numerical Analysis, Solution of Partial differential equation, FEM and CFDM">
+<!-- add favicon -->
+<!-- Multiple sizes for different devices -->
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-32x32.png">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<meta name="description" content="Manoj Solanki's personal website showcasing teaching and research in Numerical Analysis and Partial Differential Equation using FEM and CFDM">
+        <meta name=viewport content="width=device-width,initial-scale=1">
+        <meta http-equiv=x-ua-compatible content="ie=edge">
+        <meta http-equiv=accept-ch content="DPR, Viewport-Width, Width">
+        <link rel=icon href=/fav.png type=image/gif>
+        <link rel=preconnect href=https://fonts.googleapis.com>
+        <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+        <link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+        <link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" media=print onload="this.media='all'">
+        <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel=stylesheet>
+        </noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel=stylesheet href=/css/font.css media=all>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DWJJVE27WD"></script>
+        <script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-DWJJVE27WD',{anonymize_ip:!1})}</script>
+        <meta property="og:title" content="Manoj Solanki">
+        <meta property="og:description" content="Portfolio: Manoj Solanki">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://manojsolanki-ms.github.io"><meta property="og:site_name" content="Manoj Solanki">
+        <meta name=twitter:card content="summary">
+        <meta name=twitter:title content="Manoj Solanki">
+        <meta name=twitter:description content="Portfolio: Manoj Solanki">
+        <link rel=stylesheet href=/bootstrap-5/css/bootstrap.min.css media=all><link rel=stylesheet href=/css/header.css media=all>
+        <link rel=stylesheet href=/css/footer.css media=all>
+        <link rel=stylesheet href=/css/theme.css media=all>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>:root{--text-color:#343a40;--text-secondary-color:#6c757d;--text-link-color:#007bff;--background-color:#eaedf0;--secondary-background-color:#64ffda1a;--primary-color:#007bff;--secondary-color:#f8f9fa;--text-color-dark:#e4e6eb;--text-secondary-color-dark:#b0b3b8;--text-link-color-dark:#5465ce;--background-color-dark:#040404;--secondary-background-color-dark:#0c0c0c;--primary-color-dark:#5465ce;--secondary-color-dark:#0c0c0c}body{font-size:1rem;font-weight:400;line-height:1.5;text-align:left}html{background-color:var(--background-color)!important}body::-webkit-scrollbar{height:0;width:8px;background-color:var(--background-color)}::-webkit-scrollbar-track{border-radius:1rem}::-webkit-scrollbar-thumb{border-radius:1rem;background:#b0b0b0;outline:1px solid var(--background-color)}#search-content::-webkit-scrollbar{width:.5em;height:.1em;background-color:var(--background-color)}</style>
+        
+        <meta name=description content="Portfolio: Manoj Solanki">
+        <link rel=stylesheet href=/css/index.css media=all>
+        <script defer src=/fontawesome-6/all-6.4.2.js></script>
+        <title>
+        Manoj Solanki
+        </title>
+        <style>
+            .project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+
+
+.project-card {
+    width: calc(95% - 1rem);
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    
+    background-color: var(--background-color);
+    box-shadow: 0px 8px 56px rgb(15 80 100 / 16%);
+    /* border: 2px solid var(--text-secondary-color); */
+}
+
+.project-card:hover {
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+.project-card .image-container {
+    /* width: 100%; */
+    height: 100%;
+    padding-bottom: 45%; 
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+/* .project-card:nth-child(1) .image-container {
+    padding-bottom: 65%;
+}
+
+.project-card:nth-child(2) .image-container {
+    padding-bottom: 80%;
+    width: 80%  ;
+}
+
+.project-card:nth-child(3) .image-container {
+    padding-bottom: 75%;
+}
+
+.project-card:nth-child(4) .image-container {
+    padding-bottom: 70%;
+}
+
+.project-card:nth-child(5) .image-container {
+    padding-bottom: 70%;
+}
+
+.project-card:nth-child(6) .image-container {
+    padding-bottom: 70%;
+}
+
+.project-card:nth-child(7) .image-container {
+    padding-bottom: 70%;
+} */
+
+.project-card img {
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+    width: 100%;
+    height: 100%; 
+    object-fit: scale-down; 
+}
+.project-card h3 {
+    margin-top: 1rem;
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+
+}
+
+.project-card h4 {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: 'Alata', sans-serif;
+    opacity: 1;   
+}
+
+.project-card p {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: 'Alata', sans-serif;
+    opacity: 0.8;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.read-more:hover {
+    color: var(--secondary-color);
+}
+
+.nav-link {
+    color: var(--text-color);
+    /* font-family: 'Poppins', sans-serif; */
+}
+
+.nav-link.active {
+    background-color: var(--primary-color) !important;
+    color: var(--background-color) !important;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+
+@media (max-width: 991px) {
+    .project-card {
+        width: 100%;
+    }
+    
+    .project-card .row {
+        flex-direction: column;
+    }
+    
+    .project-card .col-md-4 {
+        margin-bottom: 1rem;
+    }
+}
+        </style>
+        <!-- <link rel=stylesheet href=/css/projects.css media=all> -->
+
+        <!-- Script for project tabs -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const allTab = document.getElementById('all-tab');
+                const projectCards = document.querySelectorAll('.project-card');
+                const tabs = document.querySelectorAll('.project-tabs .nav-link');
+                const tabContent = document.querySelectorAll('.tab-pane');
+            
+                function filterProjects(category) {
+                    projectCards.forEach(card => {
+                        if (category === 'all' || card.dataset.tags.split(',').includes(category)) {
+                            card.style.display = '';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                }
+            
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        tabs.forEach(t => t.classList.remove('active'));
+                        this.classList.add('active');
+                        tabContent.forEach(content => content.classList.remove('show', 'active'));
+                        const target = document.querySelector(this.dataset.bsTarget);
+                        target.classList.add('show', 'active');
+                        const category = this.id.replace('-tab', '');
+                        filterProjects(category);
+                    });
+                });
+            
+                // Initially show all projects
+                filterProjects('all');
+            });
+            </script>
+        
+    </head>
+<body class="light">
+    <!-- <script> -->
+    <script>
+let localStorageValue = localStorage.getItem("pref-theme");
+if (localStorageValue === "dark") {
+    document.body.classList.add('dark');
+} else {
+    document.body.classList.remove('dark');
+    localStorage.setItem("pref-theme", 'light');
+}
+</script>        <script>var prevScrollPos=window.pageYOffset;window.addEventListener("scroll",function(){let c=document.getElementById("profileHeader"),a=window.pageYOffset,b=!1,d=!0,e=d?prevScrollPos>a:a>0;e?c.classList.add("showHeaderOnTop"):b=!0,a===0&&(b=!0),b&&c.classList.remove("showHeaderOnTop"),prevScrollPos=a})</script>
+    <header id=profileHeader>
+        <nav class="pt-3 navbar navbar-expand-lg animate">
+           <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+              <a class="navbar-brand primary-font text-wrap" href="/">
+              <img src=image/29197370.jpg width=30 height=30 class="d-inline-block align-top">
+              Manoj Solanki
+              </a>
+             <!-- <div>
+    <input id=search autocomplete=off class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k to Search..." aria-label=Search oninput=searchOnChange(event)>
+ </div> -->
+              <button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarContent aria-controls=navbarContent aria-expanded=false aria-label="Toggle navigation">
+                 <svg aria-hidden="true" height="24" viewBox="0 0 16 16" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75.0 011.75 2h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 2.75zm0 5A.75.75.0 011.75 7h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 7.75zM1.75 12a.75.75.0 100 1.5h12.5a.75.75.0 100-1.5H1.75z"/>
+                 </svg>
+              </button>
+              <div class="collapse navbar-collapse text-wrap primary-font" id=navbarContent>
+                 <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item navbar-text d-block d-md-none">
+                       <div class=nav-link>
+                          <input id=search autocomplete=off class="form-control mr-sm-2" placeholder="Ctrl + k to Search..." aria-label=Search oninput=searchOnChange(event)>
+                  </div>
+                   </li>
+                   <li class="nav-item navbar-text">
+                     <a class=nav-link href=/#education aria-label=education>
+                     Education
+                     </a>
+                  </li>
+                   
+                   <li class="nav-item navbar-text">
+                     <a class=nav-link href="/#experience" aria-label=education>
+                     Teaching
+                     </a>
+                  </li>
+                    <li class="nav-item navbar-text">
+                      <a class=nav-link href=/#publications_section aria-label=experience>
+                      Publications
+                      </a>
+                   </li>
+                   <li class="nav-item navbar-text">
+                      <a class=nav-link href=/#projects aria-label=projects>
+                      Projects
+                      </a>
+                   </li>
+                    
+                    <li class="nav-item navbar-text">
+                     <a class=nav-link href=/#certifications aria-label=Certifications>
+                     Certifications
+                     </a>
+                  </li>
+                    <li class="nav-item navbar-text">
+                     <a class=nav-link href=/#conference-workshops aria-label= Conference & Workshops>
+                     Conference & Workshops
+                     </a>
+                  </li>
+                    
+                   <li class="nav-item navbar-text">
+                      <a class=nav-link href=/#achievements aria-label=achievements>
+                      Achievements
+                      </a>
+                   </li>
+
+                   <li class="nav-item navbar-text">
+                      <a class=nav-link href=/#contact aria-label=contact>
+                      Contact
+                      </a>
+                   </li>
+                    <!-- <li class="nav-item navbar-text">
+                       <a class=nav-link href=/blogs title="Blog posts">
+                       Blog
+                       </a>
+                    </li>
+                    <li class="nav-item navbar-text">
+                       <a class=nav-link href=/teaching/useful_links.html title="Blog posts">
+                       links
+                       </a>
+                    </li> -->
+                    <li class="nav-item navbar-text">
+                       <div class=text-center>
+                          <button id=theme-toggle>
+                             <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+                             </svg>
+                             <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"/>
+                                <line x1="12" y1="1" x2="12" y2="3"/>
+                                <line x1="12" y1="21" x2="12" y2="23"/>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                                <line x1="1" y1="12" x2="3" y2="12"/>
+                                <line x1="21" y1="12" x2="23" y2="12"/>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                             </svg>
+                          </button>
+                       </div>
+                    </li>
+                 </ul>
+              </div>
+           </div>
+        </nav>
+     </header>
+     <main class="container-fluid px-0">
+        <div class="container mt-12">
+            <h1 class="text-center mb-5" style="font-family: 'Poppins', sans-serif;">My Projects</h1>
+    
+            <ul class="nav nav-tabs project-tabs mb-4" id="projectTabs" role="tablist" style="color: var(--primary-color); font-family: 'Alata';">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="cfdm-tab" data-bs-toggle="tab" data-bs-target="#cfdm" type="button" role="tab" aria-controls="cfdm" aria-selected="false">Compact Finite Difference Method</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="nlp-tab" data-bs-toggle="tab" data-bs-target="#nlp" type="button" role="tab" aria-controls="nlp" aria-selected="false">Non Linear PDEs</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="heat-tab" data-bs-toggle="tab" data-bs-target="#hpc" type="button" role="tab" aria-controls="heat" aria-selected="false">Heat Equations</button>
+                </li>
+            </ul>
+    
+            <div class="tab-content" id="projectTabContent">
+                <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                    <!-- All projects will be displayed here -->
+                </div>
+                <div class="tab-pane fade" id="cfdm" role="tabpanel" aria-labelledby="cfdm-tab">
+                    <!-- cfdm projects will be displayed here -->
+                </div>
+                <div class="tab-pane fade" id="nlp" role="tabpanel" aria-labelledby="nlp-tab">
+                    <!-- nlp projects will be displayed here -->
+                </div>
+                <div class="tab-pane fade" id="heat" role="tabpanel" aria-labelledby="heat-tab">
+                    <!-- heat projects will be displayed here -->
+                </div>
+            </div>
+            
+            <div class="project-cards">
+                <!--CFDM -->
+                <div class="project-card" data-tags="cfdm,heat">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="image-container">
+                                <img src="projects/images/Thesis prjects.png" alt="Project Title">
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <h3> Compact Finite Difference methods for solving partial differential equations </h3>
+                            <h4>Two fourth order CFDM schems were developed for heat and ADR equations</h4>
+                            <h5>Supervisor : Dr. Harshita Madduri</h5>
+                            <p>A higher order numerical approach for solving 1-D parabolic PDEs, such as the Diffusion and Advection-Diffusion-Reaction (ADR) equations, is developed and studied in this work. The proposed approach uses the Crank–Nicolson traditional finite difference method (FDM) for time discretization and a fourth-order compact finite difference method (CFDM) for spatial discretization. The accuracy and efficiency limits of the explicit, implicit, and Crank-Nicolson finite difference methods (FDM) are highlighted in this we use operator-based and Taylor series techniques, a compact study is created to overcome these issues, producing a solution that uses fewer grid points while achieving higher accuracy. The stability of the scheme is analyzed using Von Neumann ( Fourier analysis). A comparative study of CFDM is conducted through Python implementation on a variety of problems involving diffusion, advection, and reaction with constant coefficients. The results show that CFDM yields more accurate and efficient solutions than traditional methods. The work concludes by outlining future directions, particularly the extension of the scheme to PDEs with variable coefficients, for which initial developments are underway. </p>
+                            <a href="        " class="btn btn-primary read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                
+                <!-- Non Linear PDEs -->
+                <div class="project-card" data-tags="nlp">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="image-container">
+                                <img src="projects/images/project1.png" alt="Project Title">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <h3>Solution of Non Linear Partial Differential Equations</h3>
+                            <h5>Supervisor : Dr. Harshita Madduri</h5>
+                            <p>We solved various types of differential equations, including the Burgers’ equation, using Newton’s Method, Quasi-Linearization Method, and the Finite Difference Method (FDM). The implementation was carried out in Python, leveraging numerical techniques to ensure accuracy and stability in the solutions. </p>
+                            <a href="    " class="btn btn-primary read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- Comparison of Solution of Parabolic PDEs -->
+                <div class="project-card" data-tags="heat">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="image-container">
+                                <img src="projects/images/project2.png" alt="Project Title" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <h3>Comparison of method for Solution of heat eqaution </h3>
+                            <h5>Supervisor : Dr. Harshita Madduri </h5>
+                            <p>We implemented the Heat Equation model using Explicit, Implicit, and Crank-Nicholson schemes and compared their computational costs. To solve the resulting Tri-Diagonal System of Linear Equations (SOLE) efficiently, we utilized the Thomas Algorithm and Sparse Matrix methods. The entire implementation was carried out using Python, focusing on accuracy, stability, and computational efficiency.</p>
+                            <a href="   " class="btn btn-primary read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+        
+            
+            <div class="text-center mt-5">
+                <a href="github_projects.html" class="btn btn-secondary">View - GitHub Projects</a>
+            </div>
+            <div class="text-center mt-5">
+                <a href="academic-projects.html" class="btn btn-secondary">View - Academic Projects</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Your footer content -->
+    </footer>
+    <script src=/bootstrap-5/js/bootstrap.bundle.min.js></script>
+    <script>
+if (localStorage.getItem("pref-theme") === "dark") {
+    document.body.classList.add('dark');
+} else {
+    document.body.classList.remove('dark');
+    localStorage.setItem("pref-theme", 'light');
+}
+</script>    
+      <script src=/js/search.js></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <button id="floating-theme-toggle" class="floating-theme-toggle" aria-label="Toggle theme">
+        <svg id="moon-icon" class="theme-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg id="sun-icon" class="theme-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <span class="theme-text"></span>
+    </button>
+    <script>
+        var tooltipTriggerList, tooltipList;
+     
+        document.getElementById("floating-theme-toggle").addEventListener("click", () => {
+            console.log("Toggle change");
+            if (document.body.classList.contains("dark")) {
+                document.body.classList.remove('dark');
+                localStorage.setItem("pref-theme", 'light');
+            } else {
+                document.body.classList.add('dark');
+                localStorage.setItem("pref-theme", 'dark');
+            }
+        });
+     
+        tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipList = tooltipTriggerList.map(function(a) {
+            return new bootstrap.Tooltip(a);
+        });
+     </script>
+</body>
+</html>
