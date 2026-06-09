@@ -1777,5 +1777,36 @@ if (localStorage.getItem("pref-theme") === "dark") {
        return new bootstrap.Tooltip(a);
    });
 </script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const tabs = document.querySelectorAll("#eventTabs .nav-link");
+    const cards = document.querySelectorAll(".certification-card");
+
+    tabs.forEach(tab => {
+        tab.addEventListener("click", function () {
+
+            tabs.forEach(btn => btn.classList.remove("active"));
+            this.classList.add("active");
+
+            const filter = this.dataset.filter;
+
+            cards.forEach(card => {
+
+                const tags = card.dataset.tags || "";
+
+                if (filter === "all" || tags.includes(filter)) {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+
+            });
+
+        });
+    });
+
+});
+</script>
  </body>
 </html>
