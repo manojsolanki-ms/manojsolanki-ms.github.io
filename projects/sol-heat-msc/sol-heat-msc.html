@@ -239,46 +239,35 @@
             }
         }
 
-                .scheme-table{
-            width:100%;
-            border-collapse:collapse;
-            margin-top:20px;
-        }
-        
-        .scheme-table th,
-        .scheme-table td{
-            border:1px solid #ddd;
-            padding:12px;
-            text-align:center;
-        }
-        
-        .scheme-table th{
-            background:#e5e7eb;
-            color:#111827;
-            font-weight:700;
-        }
-        
-        hr{
-            margin:40px 0;
-        }
-        .report-title{
-    text-align:center;
-    font-size:2.4rem;
-    font-weight:600;
-    color:#e5e7eb;
-    margin-bottom:25px;
-    text-transform:uppercase;
-    letter-spacing:1px;
+              .scheme-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.95rem;
+    background: #111827;
+    border: 1px solid #374151;
 }
 
-        .scheme-table{
-    background:#0f172a;
-    color:#f8fafc;
+.scheme-table th {
+    background: #1f2937;
+    color: #f8fafc;
+    padding: 14px;
+    border: 1px solid #374151;
+    font-weight: 600;
 }
 
-.scheme-table th{
-    background:#1e293b;
-    color:#f8fafc;
+.scheme-table td {
+    padding: 12px;
+    border: 1px solid #374151;
+    color: #e5e7eb;
+}
+
+.scheme-table tbody tr:nth-child(even) {
+    background: #0f172a;
+}
+
+.scheme-table tbody tr:hover {
+    background: #1e293b;
 }
         
     </style>
@@ -964,9 +953,9 @@ if (localStorageValue === "dark") {
                 
                     <hr>
                 
-                    <h2>1. Thomas Algorithm (Tri-Diagonal Matrix Algorithm)</h2>
+                    <h3>1. Thomas Algorithm (Tri-Diagonal Matrix Algorithm)</h3>
                 
-                    <h3>Introduction</h3>
+                    <h4>Introduction</h4>
                 
                     <p>
                         The Thomas Algorithm is a simplified form of Gaussian Elimination
@@ -976,7 +965,7 @@ if (localStorageValue === "dark") {
                         backward substitution.
                     </p>
                 
-                    <h3>General Tridiagonal System</h3>
+                    <h4>General Tridiagonal System</h4>
                 
                     <p>
                         The system obtained from the finite difference discretization can be
@@ -1032,7 +1021,7 @@ if (localStorageValue === "dark") {
                         \]
                     </div>
                 
-                    <h3>Forward Elimination</h3>
+                    <h4>Forward Elimination</h4>
                 
                     <div class="equation">
                         \[
@@ -1088,7 +1077,7 @@ if (localStorageValue === "dark") {
                         \]
                     </div>
                 
-                    <h3>Computational Complexity</h3>
+                    <h4>Computational Complexity</h4>
                 
                     <div class="equation">
                         \[
@@ -1108,7 +1097,7 @@ if (localStorageValue === "dark") {
                         discretizations of the heat equation.
                     </p>
                 
-                    <h3>Application to BTCS and Crank–Nicolson Methods</h3>
+                    <h4>Application to BTCS and Crank–Nicolson Methods</h4>
                 
                     <p>
                         For the BTCS scheme:
@@ -1145,7 +1134,7 @@ if (localStorageValue === "dark") {
                 
                     <hr>
                 
-                    <h2>2. Sparse Matrix Solver</h2>
+                    <h3>2. Sparse Matrix Solver</h3>
                 
                     <h3>Introduction</h3>
                 
@@ -1161,7 +1150,7 @@ if (localStorageValue === "dark") {
                         savings in memory and computational cost.
                     </p>
                 
-                    <h3>Example of a Sparse Matrix</h3>
+                    <h4>Example of a Sparse Matrix</h4>
                 
                     <div class="equation">
                         \[
@@ -1180,7 +1169,7 @@ if (localStorageValue === "dark") {
                         non-zero values.
                     </p>
                 
-                    <h3>Sparse Representation</h3>
+                    <h4>Sparse Representation</h4>
                 
                     <p>
                         Rather than storing all matrix entries, only the following diagonals
@@ -1215,7 +1204,7 @@ if (localStorageValue === "dark") {
                         This significantly reduces storage requirements for large systems.
                     </p>
                 
-                    <h3>Mathematical Formulation</h3>
+                    <h4>Mathematical Formulation</h4>
                 
                     <div class="equation">
                         \[
@@ -1230,7 +1219,7 @@ if (localStorageValue === "dark") {
                         original mathematical problem.
                     </p>
                 
-                    <h3>Computational Complexity</h3>
+                    <h4>Computational Complexity</h4>
                 
                     <div class="equation">
                         \[
@@ -1271,7 +1260,7 @@ if (localStorageValue === "dark") {
                         of spatial grid points increases.
                     </p>
                 
-                    <h3>Relation to Python Scientific Computing</h3>
+                    <h4>Relation to Python Scientific Computing</h4>
                 
                     <p>
                         In Python, sparse matrices are commonly stored using CSR
@@ -1296,7 +1285,7 @@ if (localStorageValue === "dark") {
                 
                     <hr>
                 
-                    <h2>3. Performance Comparison</h2>
+                    <h3>3. Performance Comparison</h3>
                 
                     <p>
                         Both the Thomas Algorithm and Sparse Matrix Solver solve the same
@@ -1346,7 +1335,7 @@ if (localStorageValue === "dark") {
                         </tbody>
                     </table>
                 
-                    <h3>Observed Results</h3>
+                    <h4>Observed Results</h4>
                 
                     <p>
                         Numerical experiments conducted in this project showed that the
@@ -1385,6 +1374,95 @@ if (localStorageValue === "dark") {
                 </section>
 
             
+            <h2>Numerical Example</h2>
+            
+                <p>
+                    Consider the one-dimensional heat equation
+                </p>
+            
+                <div class="equation">
+                    \[
+                    \frac{\partial u}{\partial t}
+                    =
+                    \frac{\partial^2 u}{\partial x^2},
+                    \qquad 0 < x < 1,\; t>0
+                    \]
+                </div>
+            
+                <p>
+                    with homogeneous Dirichlet boundary conditions
+                </p>
+            
+                <div class="equation">
+                    \[
+                    u(0,t)=0,
+                    \qquad
+                    u(1,t)=0,
+                    \qquad t>0
+                    \]
+                </div>
+            
+                <p>
+                    and initial condition
+                </p>
+            
+                <div class="equation">
+                    \[
+                    u(x,0)
+                    =
+                    2\sin\left(\frac{\pi x}{2}\right),
+                    \qquad 0 \le x \le 1.
+                    \]
+                </div>
+                            <table class="scheme-table">
+                    <thead>
+                        <tr>
+                            <th>Mesh Points<br>N = M</th>
+                            <th>Error in Solution<br>Calculating by Thomas Algorithm</th>
+                            <th>Computational Cost<br>(using TA)</th>
+                            <th>Error in Solution<br>Calculating by Sparse Matrix</th>
+                            <th>Computational Cost<br>(Using SM)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10</td>
+                            <td>0.5811</td>
+                            <td>0.0019919872283933547</td>
+                            <td>0.4344</td>
+                            <td>0.0009987354278564453</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>0.3915</td>
+                            <td>0.02094101905822754</td>
+                            <td>0.2651</td>
+                            <td>0.0009996891021728516</td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>0.2390</td>
+                            <td>0.06778788566589355</td>
+                            <td>0.1619</td>
+                            <td>0.0009913444519042969</td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>0.14594</td>
+                            <td>0.16256427764892578</td>
+                            <td>0.0988</td>
+                            <td>0.00099135485609412969</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+            
+             <div class="image-container">
+                <img src="sol-heat-msc/heat-plot.png" alt="Example-4">
+            </div>
+
             
         </div>
             <!-- add a line -->
