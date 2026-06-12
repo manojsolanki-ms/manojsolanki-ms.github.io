@@ -677,7 +677,7 @@ if (localStorageValue === "dark") {
                 
                 <p>
                 Consider the advection-diffusion equation obtained from Equation (1) by setting
-                \(\alpha = 0.1, \beta=1, \gamma=0\), with with initial Condition given by
+                \(\alpha = 0.1, \beta=1, \gamma=0\), with initial Condition given by
                 </p>
                 
                 $$
@@ -706,21 +706,53 @@ if (localStorageValue === "dark") {
                 </div>
             <div class="image-container">
                 <img src="cfdm-msc/example2-1.gif" alt="Example-2">
-                <p>Fig: Numerical and Exact Solution for Example-1 with different $h$ values $k= h^2$  </p>
+                <p>Fig: Numerical and Exact Solution for Example-2 with different $h$ values $k= h^2$  </p>
             </div>
 
 
 
+            <div>
+        <h2>Example 3</h2>
+                
+                <p>
+                Consider the advection-diffusion equation obtained from Equation (1) by setting
+                \(\alpha = \frac{\beta}{P_e}, \beta=-11, \gamma=0\), with different  $P_e = 10,20,100,1000 $ alogn with initial Condition given by
+                </p>
+                
+                $$
+                u(x,t)=a\exp(bt-\bar{c}x).
+                \tag{9}
+                $$
+                                
+                <p>
+                where
+                </p>
+
+                
+                                    $$
+                    \bar{c}
+                    =
+                    \frac{-\beta+\sqrt{\beta^{2}+4\alpha b}}
+                    {2\alpha}.
+                \tag{12}
+                    $$
+                <p>
+                and the boundary conditions are given as follows:
+                </p>
+                $$
+                u(0,t)=a\exp(bt),
+                \qquad
+                u(1,t)=a\exp(bt-\bar{c}).
+                \tag{13}
+                $$
+                </div>
+            <div class="image-container">
+                <img src="cfdm-msc/example3-1.gif" alt="Example-3">
+                <p>Fig: Numerical and Exact Solution for Example-1 with different $P_e$ values $k= h^2$  </p>
+            </div>
 
 
-
-
-
-
-
-
-
-                <div>
+            <div>
                 <h2>Example 4</h2>
                 
                 <p>
@@ -737,7 +769,7 @@ if (localStorageValue === "dark") {
                     \frac{\partial^2 u}{\partial x^2}(x,t),
                     \qquad
                     (x,t)\in [0,2\pi]\times\left[0,\frac{1}{2}\right].
-                    \tag{12}
+                    \tag{14}
                     $$
                     
                     
@@ -747,7 +779,7 @@ if (localStorageValue === "dark") {
                     </p>
                     
                     $$
-                    u(x,0)=\sin(x). \tag{13}
+                    u(x,0)=\sin(x). \tag{15}
                     $$
                     
                     <p>
@@ -756,17 +788,13 @@ if (localStorageValue === "dark") {
                     
                     $$
                     u(0,t)=e^{2t}\sin(-t),
-                    $$
-                    
-                    and
-                    
-                    $$
-                    u(2\pi,t)=e^{2t}\sin(2\pi-t). \tag{14}
+                      \qquad
+                    u(2\pi,t)=e^{2t}\sin(2\pi-t). \tag{16}
                     $$
                 </div>
             <div class="image-container">
                 <img src="cfdm-msc/example4-1.gif" alt="Example-4">
-                <p>Fig: Numerical and Exact Solution for Example-1 with different $h$ values $k= h^2$  </p>
+                <p>Fig: Numerical and Exact Solution for Example-4 with different $h$ values $k= h^2$  </p>
             </div>
 
 
