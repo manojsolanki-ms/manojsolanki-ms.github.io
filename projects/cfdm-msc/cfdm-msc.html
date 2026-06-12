@@ -239,6 +239,21 @@
             }
         }
     </style>
+
+<!-- Add MathJax here -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
 </head>
 <body class="light">
 <script>
@@ -358,33 +373,76 @@ if (localStorageValue === "dark") {
             <a href="projects.html" class="btn">Back to Projects</a>
         </div>
 
-        <h1 style="text-align: center;">FastVPINNs: Tensor-Driven Acceleration of VPINNs for Complex Geometries</h1>
+        <h1 style="text-align: center;">Compact finite difference schemes for solving partial differential equations</h1>
         <!-- add a line -->
         <div class="journal-card">
-            <h4>PrePrint Available. (Accepted for Publication at SIAM journal of Scientific Computing (SISC))</h4>
+            <h4>Masters dissertation is available here.</h4>
             <div style="display: flex; align-items: center; justify-content: center;">
-                <a href="https://cmgcds.github.io/fastvpinns" class="btn">Github</a>
-            <a href="https://arxiv.org/abs/2404.12063" class="btn">arXiv</a>
+                <a href="projects/cfdm-msc/Manoj Solanki Thesis 723410009.pdf" class="btn">PDF</a>
+            <a href="projects/cfdm-msc/Manoj_Solanki__723410009_M_Sc__Project_Presentation_ (1) (2).pdf" class="btn">Presentation PDF</a>
             </div>
         </div>
         
         <div class="project-content">
 
             <h3>Project Abstract</h3>
-            <p>Variational Physics-Informed Neural Networks (VPINNs) utilize a variational loss function to solve partial differential equations, mirroring Finite Element Analysis techniques.
-                Traditional hp-VPINNs, while effective for high-frequency problems, are computationally
-                intensive and scale poorly with increasing element counts, limiting their use in complex
-                geometries. This work introduces FastVPINNs, a tensor-based advancement that significantly reduces computational overhead and improves scalability. Using optimized tensor
-                operations, FastVPINNs achieve a 100-fold reduction in the median training time per epoch
-                compared to traditional hp-VPINNs. With proper choice of hyperparameters, FastVPINNs
-                surpass conventional PINNs in both speed and accuracy, especially in problems with highfrequency solutions. Demonstrated effectiveness in solving inverse problems on complex
-                domains underscores FastVPINNs’ potential for widespread application in scientific and
-                engineering challenges, opening new avenues for practical implementations in scientific machine learning. </p>
-                            <h3>Key Features</h3>
-            <ul>
-                <li>100x speedup over the existing implementation of hp-VPINNs</li>
-                <li>With proper hyperparameter selection, it can train faster than PINNs for higher frequency solutions</li>
-            </ul>
+            <p>A higher order numerical approach for solving 1-D parabolic PDEs, such as the Diffusion and Advection-Diffusion-Reaction (ADR) equations, is developed and studied in this work. The proposed approach uses theCrank–Nicolson traditional finite difference method (FDM) for time discretization and a fourth-order compactfinite difference method (CFDM) for spatial discretization. The accuracy and efficiency limits of the explicit,implicit, and Crank-Nicolson finite difference methods (FDM) are highlighted in this we use operator-based and Taylor series techniques, a compact study is created to overcome these issues, producing a solution that uses fewer grid points while achieving higher accuracy. The stability of the scheme is analyzed using Von Neumann ( Fourier analysis). A comparative study of CFDM is conducted through Python implementation on a variety of problems involving diffusion, advection, and reaction with constant coefficients. The results show that CFDM yields more accurate and efficient solutions than traditional methods. The work concludes by outlining future directions, particularly the extension of the scheme to PDEs with variable coefficients, for which initial developments are under way.</p>
+            
+            
+            <h3>Introduction</h3>
+            <p>
+                Partial Differential Equations (PDEs) arise naturally in the mathematical modeling of physical, biological, and engineering phenomena involving spatial and temporal variations. Processes such as heat conduction, mass diffusion, fluid transport, chemical reactions, and population dynamics are commonly governed by parabolic PDEs. Due to the complexity of real-world systems, analytical solutions are often unavailable, making numerical methods an essential tool for practical simulations.
+                </p>
+                
+                <p>
+                Among numerical techniques, finite difference methods (FDMs) are particularly attractive because of their conceptual simplicity, structured formulation, and ease of implementation on uniform grids. Classical methods such as the Forward-Time Central-Space (FTCS), Backward-Time Central-Space (BTCS), and Crank–Nicolson schemes are widely used for solving parabolic problems. However, these methods are typically limited to second-order accuracy in space, which may be insufficient for problems involving sharp gradients or advection-dominated behavior.
+                </p>
+                
+                <p>
+                To address these limitations, compact finite difference methods (CFDMs) have been developed. These methods achieve higher-order spatial accuracy while using compact stencils, thereby improving computational efficiency without increasing stencil width or significantly adding to computational complexity. As a result, CFDMs provide a powerful and accurate alternative for the numerical solution of parabolic partial differential equations encountered in science and engineering applications.
+                </p>
+           <h3>Parabolic Partial Differential Equations</h3>
+                            <p>
+                This thesis focuses on the numerical solution of the one-dimensional parabolic equation of the form
+                </p>
+                
+                <p style="text-align:center;">
+                \[
+                \frac{\partial u}{\partial t}
+                +\beta\frac{\partial u}{\partial x}
+                +\gamma u
+                =
+                \alpha\frac{\partial^2u}{\partial x^2},
+                \qquad
+                x\in(0,L),\; t>0,
+                \tag{1}
+                \]
+                </p>
+                
+                <p>where</p>
+                
+                <ul>
+                    <li><em>u(x,t)</em> represents the unknown scalar field,</li>
+                    <li><em>\(\alpha > 0\)</em> is the diffusion coefficient,</li>
+                    <li><em>\(\beta\)</em> is the advection velocity, and</li>
+                    <li><em>\(\gamma\)</em> is the reaction coefficient.</li>
+                </ul>
+                
+                <ul>
+                    <li>Depending on the values of <em>\(\beta\)</em> and <em>\(\gamma\)</em>, this equation reduces to:</li>
+                    <li>The diffusion equation (<em>\(\beta = 0,\gamma = 0\)</em>),</li>
+                    <li>The advection–diffusion equation (<em>\(\beta \neq 0,\gamma = 0\)</em>),</li>
+                    <li>The advection–diffusion–reaction equation (<em>\(\beta \neq 0,\gamma \neq 0\)</em>),</li>
+                    <li>
+                        These models arise in numerous applications such as heat transfer,
+                        pollutant transport, chemical kinetics, and biological systems.
+                    </li>
+                </ul>
+
+
+
+
+            
 
             <h3>Methology</h3>
             <div class="image-container">
