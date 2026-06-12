@@ -915,7 +915,476 @@ if (localStorageValue === "dark") {
                         </table>
                     
 
+             <h3>Sparse Matrix Solver</h3>
 
+                    <p>
+                        The coefficient matrices arising from the BTCS and Crank–Nicolson
+                        schemes are highly sparse because only the main diagonal and the
+                        two adjacent diagonals contain non-zero entries.
+                    </p>
+                
+                    <p>
+                        Instead of storing all matrix elements, sparse matrix techniques
+                        store only the non-zero values and their indices. This significantly
+                        reduces memory consumption and computational overhead.
+                    </p>
+                
+                    <p>
+                        In Python, sparse matrices can be efficiently represented using
+                        libraries such as SciPy:
+                    </p>
+                
+                    <div class="equation">
+                        \[
+                        Ax=b
+                        \]
+                    </div>
+                
+                    <p>
+                        where the matrix \(A\) is stored in sparse format and solved using
+                        optimized sparse linear algebra routines.
+                    </p>
+                
+                    <section class="report-section">
+                
+                    <h2>Performance Analysis of Linear System Solvers</h2>
+                
+                    <p>
+                        The Implicit (BTCS) and Crank–Nicolson finite difference schemes
+                        generate a system of linear equations at each time step. The resulting
+                        coefficient matrix is tridiagonal, making specialized numerical
+                        solvers highly effective. In this project, two approaches are
+                        considered:
+                    </p>
+                
+                    <ul>
+                        <li>Thomas Algorithm (Tri-Diagonal Matrix Algorithm)</li>
+                        <li>Sparse Matrix Solver</li>
+                    </ul>
+                
+                    <hr>
+                
+                    <h2>1. Thomas Algorithm (Tri-Diagonal Matrix Algorithm)</h2>
+                
+                    <h3>Introduction</h3>
+                
+                    <p>
+                        The Thomas Algorithm is a simplified form of Gaussian Elimination
+                        specifically designed for tridiagonal systems of linear equations.
+                        Since only three diagonals contain non-zero entries, the algorithm
+                        can solve the system efficiently using forward elimination and
+                        backward substitution.
+                    </p>
+                
+                    <h3>General Tridiagonal System</h3>
+                
+                    <p>
+                        The system obtained from the finite difference discretization can be
+                        written as:
+                    </p>
+                
+                    <div class="equation">
+                        \[
+                        A\mathbf{u}=\mathbf{b}
+                        \]
+                    </div>
+                
+                    <div class="equation">
+                        \[
+                        \begin{bmatrix}
+                        b_1 & c_1 & 0 & 0 & \cdots \\
+                        a_2 & b_2 & c_2 & 0 & \cdots \\
+                        0 & a_3 & b_3 & c_3 & \cdots \\
+                        \vdots & \vdots & \vdots & \vdots & \ddots \\
+                        0 & 0 & \cdots & a_n & b_n
+                        \end{bmatrix}
+                        \begin{bmatrix}
+                        u_1 \\
+                        u_2 \\
+                        u_3 \\
+                        \vdots \\
+                        u_n
+                        \end{bmatrix}
+                        =
+                        \begin{bmatrix}
+                        d_1 \\
+                        d_2 \\
+                        d_3 \\
+                        \vdots \\
+                        d_n
+                        \end{bmatrix}
+                        \]
+                    </div>
+                
+                    <p>
+                        Equivalently,
+                    </p>
+                
+                    <div class="equation">
+                        \[
+                        a_i u_{i-1}
+                        +
+                        b_i u_i
+                        +
+                        c_i u_{i+1}
+                        =
+                        d_i
+                        \]
+                    </div>
+                
+                    <h3>Forward Elimination</h3>
+                
+                    <div class="equation">
+                        \[
+                        c'_1=\frac{c_1}{b_1}
+                        \]
+                    </div>
+                
+                    <div class="equation">
+                        \[
+                        d'_1=\frac{d_1}{b_1}
+                        \]
+                    </div>
+                
+                    <p>
+                        For \(i=2,3,\ldots,n\):
+                    </p>
+                
+                    <div class="equation">
+                        \[
+                        c'_i=
+                        \frac{c_i}
+                        {b_i-a_i c'_{i-1}}
+                        \]
+                    </div>
+                
+                    <div class="equation">
+                        \[
+                        d'_i=
+                        \frac{d_i-a_i d'_{i-1}}
+                        {b_i-a_i c'_{i-1}}
+                        \]
+                    </div>
+                
+                    <p>
+                        This process removes the lower diagonal elements and transforms the
+                        matrix into an upper triangular form.
+                    </p>
+                
+                    <h3>Backward Substitution</h3>
+                
+                    <div class="equation">
+                        \[
+                        u_n=d'_n
+                        \]
+                    </div>
+                
+                    <div class="equation">
+                        \[
+                        u_i=
+                        d'_i-c'_i u_{i+1}
+                        \qquad
+                        (i=n-1,n-2,\ldots,1)
+                        \]
+                    </div>
+                
+                    <h3>Computational Complexity</h3>
+                
+                    <div class="equation">
+                        \[
+                        \text{Time Complexity}=O(n)
+                        \]
+                    </div>
+                
+                    <div class="equation">
+                        \[
+                        \text{Memory Complexity}=O(n)
+                        \]
+                    </div>
+                
+                    <p>
+                        Therefore, the Thomas Algorithm is significantly faster than general
+                        dense matrix solvers and is well suited for finite difference
+                        discretizations of the heat equation.
+                    </p>
+                
+                    <h3>Application to BTCS and Crank–Nicolson Methods</h3>
+                
+                    <p>
+                        For the BTCS scheme:
+                    </p>
+                
+                    <div class="equation">
+                        \[
+                        -\lambda u_{i-1}^{j+1}
+                        +(1+2\lambda)u_i^{j+1}
+                        -\lambda u_{i+1}^{j+1}
+                        =
+                        u_i^j
+                        \]
+                    </div>
+                
+                    <p>
+                        Thus,
+                    </p>
+                
+                    <div class="equation">
+                        \[
+                        a_i=-\lambda,
+                        \qquad
+                        b_i=1+2\lambda,
+                        \qquad
+                        c_i=-\lambda
+                        \]
+                    </div>
+                
+                    <p>
+                        which directly forms a tridiagonal system that can be solved using
+                        the Thomas Algorithm.
+                    </p>
+                
+                    <hr>
+                
+                    <h2>2. Sparse Matrix Solver</h2>
+                
+                    <h3>Introduction</h3>
+                
+                    <p>
+                        In large-scale numerical simulations, the coefficient matrix contains
+                        a very small number of non-zero entries compared to the total number
+                        of elements. Such matrices are known as sparse matrices.
+                    </p>
+                
+                    <p>
+                        Instead of storing every element, sparse matrix methods store only
+                        the non-zero values and their locations, resulting in substantial
+                        savings in memory and computational cost.
+                    </p>
+                
+                    <h3>Example of a Sparse Matrix</h3>
+                
+                    <div class="equation">
+                        \[
+                        A=
+                        \begin{bmatrix}
+                        2 & -1 & 0 & 0 \\
+                        -1 & 2 & -1 & 0 \\
+                        0 & -1 & 2 & -1 \\
+                        0 & 0 & -1 & 2
+                        \end{bmatrix}
+                        \]
+                    </div>
+                
+                    <p>
+                        Only the main diagonal and the two adjacent diagonals contain
+                        non-zero values.
+                    </p>
+                
+                    <h3>Sparse Representation</h3>
+                
+                    <p>
+                        Rather than storing all matrix entries, only the following diagonals
+                        are stored:
+                    </p>
+                
+                    <div class="equation">
+                        \[
+                        \text{Main Diagonal}
+                        =
+                        [2,2,2,2]
+                        \]
+                    </div>
+                
+                    <div class="equation">
+                        \[
+                        \text{Upper Diagonal}
+                        =
+                        [-1,-1,-1]
+                        \]
+                    </div>
+                
+                    <div class="equation">
+                        \[
+                        \text{Lower Diagonal}
+                        =
+                        [-1,-1,-1]
+                        \]
+                    </div>
+                
+                    <p>
+                        This significantly reduces storage requirements for large systems.
+                    </p>
+                
+                    <h3>Mathematical Formulation</h3>
+                
+                    <div class="equation">
+                        \[
+                        A\mathbf{u}
+                        =
+                        \mathbf{b}
+                        \]
+                    </div>
+                
+                    <p>
+                        The matrix \(A\) is stored in sparse format while preserving the
+                        original mathematical problem.
+                    </p>
+                
+                    <h3>Computational Complexity</h3>
+                
+                    <div class="equation">
+                        \[
+                        \text{Dense Solver}
+                        =
+                        O(n^3)
+                        \]
+                    </div>
+                
+                    <div class="equation">
+                        \[
+                        \text{Dense Memory}
+                        =
+                        O(n^2)
+                        \]
+                    </div>
+                
+                    <div class="equation">
+                        \[
+                        \text{Sparse Solver}
+                        \approx
+                        O(n)
+                        \text{ to }
+                        O(n\log n)
+                        \]
+                    </div>
+                
+                    <div class="equation">
+                        \[
+                        \text{Sparse Memory}
+                        =
+                        O(n)
+                        \]
+                    </div>
+                
+                    <p>
+                        Sparse matrix methods become increasingly advantageous as the number
+                        of spatial grid points increases.
+                    </p>
+                
+                    <h3>Relation to Python Scientific Computing</h3>
+                
+                    <p>
+                        In Python, sparse matrices are commonly stored using CSR
+                        (Compressed Sparse Row) or CSC (Compressed Sparse Column) formats.
+                        Libraries such as SciPy provide optimized sparse linear algebra
+                        routines that solve
+                    </p>
+                
+                    <div class="equation">
+                        \[
+                        A\mathbf{u}
+                        =
+                        \mathbf{b}
+                        \]
+                    </div>
+                
+                    <p>
+                        by operating only on the non-zero entries of the matrix. Internally,
+                        these methods employ sparse LU factorization and highly optimized
+                        numerical routines.
+                    </p>
+                
+                    <hr>
+                
+                    <h2>3. Performance Comparison</h2>
+                
+                    <p>
+                        Both the Thomas Algorithm and Sparse Matrix Solver solve the same
+                        system of equations generated by BTCS and Crank–Nicolson methods.
+                        However, their implementations differ significantly.
+                    </p>
+                
+                    <table class="scheme-table">
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th>Thomas Algorithm</th>
+                                <th>Sparse Matrix Solver</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Matrix Type</td>
+                                <td>Tridiagonal Only</td>
+                                <td>General Sparse Matrix</td>
+                            </tr>
+                            <tr>
+                                <td>Time Complexity</td>
+                                <td>O(n)</td>
+                                <td>O(n) – O(n log n)</td>
+                            </tr>
+                            <tr>
+                                <td>Memory Usage</td>
+                                <td>O(n)</td>
+                                <td>O(n)</td>
+                            </tr>
+                            <tr>
+                                <td>Flexibility</td>
+                                <td>Low</td>
+                                <td>High</td>
+                            </tr>
+                            <tr>
+                                <td>Large Scale Problems</td>
+                                <td>Good</td>
+                                <td>Excellent</td>
+                            </tr>
+                            <tr>
+                                <td>Parallelization</td>
+                                <td>Limited</td>
+                                <td>Supported</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+                    <h3>Observed Results</h3>
+                
+                    <p>
+                        Numerical experiments conducted in this project showed that the
+                        Sparse Matrix Solver achieved approximately
+                        <strong>10× faster execution time</strong>
+                        compared to the conventional Thomas Algorithm implementation for
+                        large grid sizes.
+                    </p>
+                
+                    <div class="equation">
+                        \[
+                        T_{\text{sparse}}
+                        \ll
+                        T_{\text{Thomas}}
+                        \]
+                    </div>
+                
+                    <p>
+                        The improvement is mainly due to optimized sparse linear algebra
+                        routines, efficient memory access, reduced storage requirements,
+                        and highly optimized low-level implementations.
+                    </p>
+                
+                    <h3>Conclusion</h3>
+                
+                    <p>
+                        The Thomas Algorithm is an efficient direct solver for tridiagonal
+                        systems arising from finite difference discretizations. However,
+                        sparse matrix techniques provide greater flexibility and superior
+                        performance for large-scale simulations. In this project, the sparse
+                        matrix approach demonstrated significantly reduced execution times
+                        while maintaining the same numerical accuracy, making it the preferred
+                        choice for solving large heat equation problems.
+                    </p>
+                
+                </section>
+
+            
             
         </div>
             <!-- add a line -->
