@@ -370,7 +370,7 @@ if (localStorageValue === "dark") {
     <div class="container">
         <div style="width: 100%; display: flex; justify-content: flex-end">
             <!-- add a Right aligned button -->
-            <a href="projects.html" class="btn">Back to Projects</a>
+            <a href="/research-projects.html" class="btn">Back to Projects</a>
         </div>
 
         <h1 style="text-align: center;">Compact finite difference schemes for solving partial differential equations</h1>
@@ -629,26 +629,43 @@ if (localStorageValue === "dark") {
                 \end{bmatrix}_{(m-1)\times1}
                 $$
                 </div>
-            <h3>Methology</h3>
-            <div class="image-container">
-                <img src="projects/image/image.png" alt="Project Image 1">
-                <p>Fig: Tensor schematic of loss computation of FastVPINNs</p>
-            </div>
 
-            <h3>Results</h3>
-            
+                <h3>Numerical Results</h3>
+                
+                <div>
+                
+                <h2>Example 1</h2>
+                
+                <p>
+                Consider the diffusion equation obtained from Equation (1) by setting
+                \(\beta=\gamma=0\), with \(\alpha=1\), \(L=1\), and \(t>0\).
+                The exact solution for this example is given by
+                </p>
+                
+                $$
+                u(x,t)=e^{-\pi^{2}t}\sin(\pi x)
+                \tag{7}
+                $$
+                
+                <p>
+                The initial and boundary conditions are given by
+                </p>
+                
+                $$
+                \left\{
+                \begin{array}{ll}
+                u(x,0)=\sin(\pi x) & \text{Initial Condition} \\
+                u(0,t)=u(1,t)=0   & \text{Boundary Condition}
+                \end{array}
+                \right.
+                \tag{8}
+                $$
+                
+                </div>
             <div class="image-container">
-                <img src="projects/image/image2.png" alt="Project Image 2">
-                <p>Fig: (a) Time taken for PINNs and FastVPINNs to reach an MAE of 5×10−2 for different frequencies. (b) MAE for PINNs and FastVPINNs for different frequencies</p>
+                <img src="example1-1.gif" alt="Example-1">
+                <p>Fig: (a)Exact and Numerical Solution for Example-1 at $h= \frac{1}{40}$ and $k= h^2$ (b) Behavior of Error for Example-1 with Different h values </p>
             </div>
-
-            <div class="image-container">
-                <img src="projects/image/image3.png" alt="Project Image 3">
-                <p>(a) Predicted solution by FastVPINNs after 20 minutes of training on a 2 × 2 domain.
-                    (b) Pointwise absolute error of FastVPINNs. (c) Predicted solution by hp-VPINNs after 20 minutes
-                    of training on a 8 × 8 domain. (d) Pointwise absolute error of hp-VPINNs.</p>
-            </div>
-            
         
             
             
@@ -656,7 +673,7 @@ if (localStorageValue === "dark") {
 
         <div style="width: 100%; display: flex; justify-content: flex-end">
             <!-- add a Right aligned button -->
-            <a href="projects.html" class="btn">Back to Projects</a>
+            <a href="research-projects.html" class="btn">Back to Projects</a>
         </div>
     </div>
     <script>
