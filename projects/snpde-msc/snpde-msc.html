@@ -591,109 +591,101 @@ if (localStorageValue === "dark") {
                     Consider the following system of nonlinear equations:
                     </p>
                     
-                    <div class="equation">
-                        f₁(x,y) = xy + x² − 3 = 0
-                    </div>
-                    
-                    <div class="equation">
-                        f₂(x,y) = y² − 5x − 9 = 0
-                    </div>
+
+                       $$ f_1(x,y) = xy + x^2 − 3 = 0 $$
+
+
+                       $$ f_(x,y) = y^2 − 5x − 9 = 0 $$
+
                     
                     <p>
                     Define the nonlinear vector function:
                     </p>
                     
-                    <div class="equation">
-                        F(x)=
-                        [
-                        f₁(x,y),
-                        f₂(x,y)
-                        ]ᵀ
-                        =
-                        [
-                        xy+x²−3,
-                        y²−5x−9
-                        ]ᵀ
-                    </div>
+
+                        $$ F(x)= [f_1(x,y),f_2(x,y)]^T = [ xy+x^2−3, y^2−5x−9]^T
+
                     
                     <p>
                     The Jacobian matrix is given by:
                     </p>
                     
-                    <div class="equation">
-                        J(x)=
-                        [
-                        ∂f₁/∂x &nbsp;&nbsp; ∂f₁/∂y <br>
-                        ∂f₂/∂x &nbsp;&nbsp; ∂f₂/∂y
-                        ]
-                        =
-                        [
-                        y+2x &nbsp;&nbsp; x <br>
-                        −5 &nbsp;&nbsp; 2y
-                        ]
-                    </div>
+
+                \[ J(x)= \begin{bmatrix} \dfrac{\partial f_1}{\partial x} & \dfrac{\partial f_1}{\partial y} \\ \dfrac{\partial f_2}{\partial x} & \dfrac{\partial f_2}{\partial y} \end{bmatrix} = \begin{bmatrix} y+2x & x \\ -5 & 2y \end{bmatrix} \]
+
                     
                     <p>
                     The Newton-Raphson iteration formula is:
                     </p>
                     
-                    <div class="equation">
-                        X<sup>(k+1)</sup>
+
+                        \[
+                        J\!\left(X^{(k)}\right)\Delta X^{(k)}
                         =
-                        X<sup>(k)</sup>
-                        −
-                        J(X<sup>(k)</sup>)<sup>−1</sup>
-                        F(X<sup>(k)</sup>)
-                    </div>
+                        -
+                        F\!\left(X^{(k)}\right)
+                        \]
+          
+                        
+                 
+                        \[
+                        X^{(k+1)}
+                        =
+                        X^{(k)}
+                        +
+                        \Delta X^{(k)}
+                        \]
+                
                     
                     <p>
                     Using Python implementation, the approximate solution obtained is:
+                        $$x = 0.7064556018364156, y = 3.5400957627172622 $$
+
+                    <h2>Example 2: Finite Difference Method for PDE</h2>
+                    
+                    <p>
+                    Consider the partial differential equation:
                     </p>
                     
-                    <ul>
-                        <li>x = 0.7064556018364156</li>
-                        <li>y = 3.5400957627172622</li>
-                    </ul>
-
-
-        <h2>Example 2: Finite Difference Method for PDE</h2>
-
-                        <p>
-                        Consider the partial differential equation:
-                        </p>
-                        
-                        <div class="equation">
-                            ∂u/∂t + ∂²u/∂x² = 0
-                        </div>
-                        
-                        <p>
-                        Subject to the boundary and initial conditions:
-                        </p>
-                        
-                        <div class="equation">
-                            u(0,t) = 0
-                        </div>
-                        
-                        <div class="equation">
-                            u(2,t) = 1
-                        </div>
-                        
-                        <div class="equation">
-                            u(x,0) = -0.2 sin(πx/L)
-                        </div>
-                        
-                        <p>
-                        The PDE was discretized using the Finite Difference Method (FDM)
-                        and solved numerically for different mesh sizes.
-                        </p>
-                        
-                        <table border="1" cellpadding="8" cellspacing="0">
-                            <caption><strong>Table 1: Solution of Given PDE</strong></caption>
+                    \[
+                    \frac{\partial u}{\partial t}
+                    +
+                    \frac{\partial^2 u}{\partial x^2}
+                    =0
+                    \]
+                    
+                    <p>
+                    Subject to the boundary and initial conditions:
+                    </p>
+                    
+                    \[
+                    u(0,t)=0
+                    \]
+                    
+                    \[
+                    u(2,t)=1
+                    \]
+                    
+                    \[
+                    u(x,0)=-0.2\sin\left(\frac{\pi x}{L}\right)
+                    \]
+                    
+                    <p>
+                    The PDE was discretized using the Finite Difference Method (FDM) and solved numerically for different mesh sizes.
+                    </p>
+                    
+                    <table border="1" cellpadding="8" cellspacing="0">
+                        <caption>
+                            <strong>Table 1: Solution of the Given PDE</strong>
+                        </caption>
+                        <thead>
                             <tr>
-                                <th>N = M</th>
-                                <th>v</th>
-                                <th>w</th>
+                                <th>\(N=M\)</th>
+                                <th>\(v\)</th>
+                                <th>\(w\)</th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr>
                                 <td>10</td>
                                 <td>0.053817</td>
@@ -714,55 +706,64 @@ if (localStorageValue === "dark") {
                                 <td>0.0126606</td>
                                 <td>1.1561760</td>
                             </tr>
-                        </table>
+                        </tbody>
+                    </table>
 
 
-                    <h2>Example 3: Quasi-Linearization Method</h2>
 
-                            <p>
-                            Consider the nonlinear PDE:
-                            </p>
-                            
-                            <div class="equation">
-                                u<sub>t</sub> = u u<sub>x</sub>
-                            </div>
-                            
-                            <p>
-                            with boundary conditions:
-                            </p>
-                            
-                            <div class="equation">
-                                u(0,t)=2,
-                                u(5,t)=4,
-                                T=0.1,
-                                L=5
-                            </div>
-                            
-                            <p>
-                            The nonlinear term was linearized using the Quasi-Linearization
-                            method and solved numerically on a mesh with:
-                            </p>
-                            
-                            <div class="equation">
-                                N<sub>x</sub> = 5,
-                                N<sub>t</sub> = 5
-                            </div>
-                            
-                            <table border="1" cellpadding="8" cellspacing="0">
-                                <caption><strong>Table 2: Solution Table for Given PDE</strong></caption>
-                            
+
+
+
+
+                        <h2>Example 3: Quasi-Linearization Method</h2>
+                        
+                        <p>
+                        Consider the nonlinear PDE:
+                        </p>
+                        
+                        \[
+                        u_t = u\,u_x
+                        \]
+                        
+                        <p>
+                        with boundary conditions:
+                        </p>
+                        
+                        \[
+                        u(0,t)=2,\qquad
+                        u(5,t)=4,\qquad
+                        T=0.1,\qquad
+                        L=5
+                        \]
+                        
+                        <p>
+                        The nonlinear term was linearized using the Quasi-Linearization method and solved numerically on a mesh with:
+                        </p>
+                        
+                        \[
+                        N_x = 5,\qquad N_t = 5
+                        \]
+                        
+                        <table border="1" cellpadding="8" cellspacing="0">
+                            <caption>
+                                <strong>Table 2: Solution Table for the Given PDE</strong>
+                            </caption>
+                        
+                            <thead>
                                 <tr>
                                     <th></th>
-                                    <th>x₀</th>
-                                    <th>x₁</th>
-                                    <th>x₂</th>
-                                    <th>x₃</th>
-                                    <th>x₄</th>
-                                    <th>x₅</th>
+                                    <th>\(x_0\)</th>
+                                    <th>\(x_1\)</th>
+                                    <th>\(x_2\)</th>
+                                    <th>\(x_3\)</th>
+                                    <th>\(x_4\)</th>
+                                    <th>\(x_5\)</th>
                                 </tr>
-                            
+                            </thead>
+                        
+                            <tbody>
                                 <tr>
-                                    <td>t₀</td>
+                                    <td>\(t_0\)</td>
                                     <td>2</td>
                                     <td>1</td>
                                     <td>1</td>
@@ -770,9 +771,9 @@ if (localStorageValue === "dark") {
                                     <td>1</td>
                                     <td>4</td>
                                 </tr>
-                            
+                        
                                 <tr>
-                                    <td>t₁</td>
+                                    <td>\(t_1\)</td>
                                     <td>2</td>
                                     <td>1.52020202</td>
                                     <td>1</td>
@@ -780,9 +781,9 @@ if (localStorageValue === "dark") {
                                     <td>-0.515</td>
                                     <td>4</td>
                                 </tr>
-                            
+                        
                                 <tr>
-                                    <td>t₂</td>
+                                    <td>\(t_2\)</td>
                                     <td>2</td>
                                     <td>2.29893428</td>
                                     <td>1.26930497</td>
@@ -790,9 +791,9 @@ if (localStorageValue === "dark") {
                                     <td>0.26930497</td>
                                     <td>4</td>
                                 </tr>
-                            
+                        
                                 <tr>
-                                    <td>t₃</td>
+                                    <td>\(t_3\)</td>
                                     <td>2</td>
                                     <td>3.13786316</td>
                                     <td>1.62827342</td>
@@ -800,9 +801,9 @@ if (localStorageValue === "dark") {
                                     <td>-0.03516866</td>
                                     <td>4</td>
                                 </tr>
-                            
+                        
                                 <tr>
-                                    <td>t₄</td>
+                                    <td>\(t_4\)</td>
                                     <td>2</td>
                                     <td>3.68497884</td>
                                     <td>2.06610441</td>
@@ -810,9 +811,9 @@ if (localStorageValue === "dark") {
                                     <td>-0.0113788</td>
                                     <td>4</td>
                                 </tr>
-                            
+                        
                                 <tr>
-                                    <td>t₅</td>
+                                    <td>\(t_5\)</td>
                                     <td>2</td>
                                     <td>1</td>
                                     <td>1</td>
@@ -820,9 +821,10 @@ if (localStorageValue === "dark") {
                                     <td>1</td>
                                     <td>4</td>
                                 </tr>
-                            </table>
-                            
-                            <br>
+                            </tbody>
+                        </table>
+
+
                             
 
             
