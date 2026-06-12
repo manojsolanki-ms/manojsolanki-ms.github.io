@@ -706,9 +706,73 @@ if (localStorageValue === "dark") {
                 </div>
             <div class="image-container">
                 <img src="cfdm-msc/example2-1.gif" alt="Example-2">
-                <p>Fig: Exact and Numerical Solution for Example-1 with different $h$ values $k= h^2$  </p>
+                <p>Fig: Numerical and Exact Solution for Example-1 with different $h$ values $k= h^2$  </p>
             </div>
-            
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h2>Example 4</h2>
+                
+                <p>
+                Consider the advection-diffusion-reaction equation as given below 
+                </p>
+                
+                    $$
+                    \frac{\partial u}{\partial t}(x,t)
+                    +
+                    \frac{\partial u}{\partial x}(x,t)
+                    -
+                    3u(x,t)
+                    =
+                    \frac{\partial^2 u}{\partial x^2}(x,t),
+                    \qquad
+                    (x,t)\in [0,2\pi]\times\left[0,\frac{1}{2}\right].
+                    \tag{12}
+                    $$
+                    
+                    </div>
+                    
+                    <p>
+                    with the initial condition
+                    </p>
+                    
+                    $$
+                    u(x,0)=\sin(x). \tag{13}
+                    $$
+                    
+                    <p>
+                    Boundary condition
+                    </p>
+                    
+                    $$
+                    u(0,t)=e^{2t}\sin(-t),
+                    $$
+                    
+                    and
+                    
+                    $$
+                    u(2\pi,t)=e^{2t}\sin(2\pi-t). \tag{14}
+                    $$
+                </div>
+            <div class="image-container">
+                <img src="cfdm-msc/example4-1.gif" alt="Example-4">
+                <p>Fig: Numerical and Exact Solution for Example-1 with different $h$ values $k= h^2$  </p>
+            </div>
+
+
+
+
+        
             
         </div>
             <!-- add a line -->
