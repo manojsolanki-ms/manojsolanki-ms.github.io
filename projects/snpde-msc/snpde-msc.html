@@ -433,13 +433,13 @@ if (localStorageValue === "dark") {
                         For this project, Burgers' equation was used as a benchmark problem:
                     </p>
                 
-                    <div class="equation">
+
                         \[
                         \frac{\partial u}{\partial t}
                         + u\frac{\partial u}{\partial x}
                         = \nu \frac{\partial^2 u}{\partial x^2}
-                        \]
-                    </div>
+                        \] 
+
                 
                     <p>
                         where \(u\) represents the dependent variable and
@@ -453,41 +453,41 @@ if (localStorageValue === "dark") {
                         difference schemes.
                     </p>
                 
-                    <div class="equation">
+
                         \[
                         \frac{\partial u}{\partial t}
                         \approx
                         \frac{u_i^{n+1}-u_i^n}{\Delta t}
                         \]
-                    </div>
+
                 
-                    <div class="equation">
+
                         \[
                         \frac{\partial u}{\partial x}
                         \approx
                         \frac{u_{i+1}^n-u_{i-1}^n}{2\Delta x}
                         \]
-                    </div>
+
                 
-                    <div class="equation">
+
                         \[
                         \frac{\partial^2u}{\partial x^2}
                         \approx
                         \frac{u_{i+1}^n-2u_i^n+u_{i-1}^n}
                         {\Delta x^2}
                         \]
-                    </div>
+
                 
                     <p>
                         Substituting these approximations into the PDE yields a nonlinear
                         algebraic system:
                     </p>
                 
-                    <div class="equation">
+
                         \[
                         F(U)=0
                         \]
-                    </div>
+
                 
                     <h3>3. Quasi-Linearization</h3>
                 
@@ -496,7 +496,7 @@ if (localStorageValue === "dark") {
                         \(U^{(k)}\) using Taylor series expansion:
                     </p>
                 
-                    <div class="equation">
+
                         \[
                         F(U^{(k+1)})
                         \approx
@@ -507,7 +507,7 @@ if (localStorageValue === "dark") {
                         U^{(k+1)}-U^{(k)}
                         \right)
                         \]
-                    </div>
+
                 
                     <p>
                         where \(J(U^{(k)})\) is the Jacobian matrix of the nonlinear system.
@@ -519,19 +519,19 @@ if (localStorageValue === "dark") {
                         The correction vector \(\Delta U^{(k)}\) was obtained by solving:
                     </p>
                 
-                    <div class="equation">
+  
                         \[
                         J(U^{(k)})\Delta U^{(k)}
                         =
                         -F(U^{(k)})
                         \]
-                    </div>
+
                 
                     <p>
                         The solution was then updated as:
                     </p>
                 
-                    <div class="equation">
+
                         \[
                         U^{(k+1)}
                         =
@@ -539,7 +539,7 @@ if (localStorageValue === "dark") {
                         +
                         \Delta U^{(k)}
                         \]
-                    </div>
+
                 
                     <h3>5. Convergence Criterion</h3>
                 
@@ -547,25 +547,25 @@ if (localStorageValue === "dark") {
                         Iterations were continued until the correction norm satisfied:
                     </p>
                 
-                    <div class="equation">
+
                         \[
                         ||\Delta U^{(k)}||
                         <
                         10^{-6}
                         \]
-                    </div>
+
                 
                     <p>
                         or until the residual norm became sufficiently small:
                     </p>
                 
-                    <div class="equation">
+
                         \[
                         ||F(U^{(k)})||
                         <
                         10^{-6}
                         \]
-                    </div>
+
                 
                     <h3>6. Numerical Implementation</h3>
                 
