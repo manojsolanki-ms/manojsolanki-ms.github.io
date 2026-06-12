@@ -664,9 +664,48 @@ if (localStorageValue === "dark") {
                 </div>
             <div class="image-container">
                 <img src="cfdm-msc/example1-1.gif" alt="Example-1">
-                <p>Fig: (a)Exact and Numerical Solution for Example-1 at $h= \frac{1}{40}$ and $k= h^2$ (b) Behavior of Error for Example-1 with Different h values </p>
+                <p>Fig: (a)Exact and Numerical Solution for Example-1 with different $h$ values $k= h^2$ (b) Behavior of Error for Example-1 with Different h values </p>
             </div>
-        
+
+
+
+
+
+        <h2>Example 2</h2>
+                
+                <p>
+                Consider the advection-diffusion equation obtained from Equation (1) by setting
+                \(\alpha = 0.1, \beta=1, \gamma=0\), with with initial Condition given by
+                </p>
+                
+                $$
+                \phi(x)=\exp(5x)\left[\cos\left(\frac{\pi}{2}x\right)
+                +0.25\sin\left(\frac{\pi}{2}x\right)\right]
+                \tag{9}
+                $$
+                
+                <p>
+                The the exact solution is given by
+                </p>
+                
+                $$
+                u(x,t)=
+                \exp\left(5\left(x-\frac{t}{2}\right)\right)
+                \exp\left(-\frac{\pi^2}{40}t\right)
+                \left[
+                \cos\left(\frac{\pi}{2}x\right)
+                +0.25\sin\left(\frac{\pi}{2}x\right)
+                \right]
+                \tag{8}
+                $$
+                <p>
+                The boundary conditions are obtained from the exact solution. To evaluate the accuracy of our proposed method,we solve this example for $L=1$ at the final time $T=2$
+                </p>
+                </div>
+            <div class="image-container">
+                <img src="cfdm-msc/example2-1.gif" alt="Example-1">
+                <p>Fig: Exact and Numerical Solution for Example-1 with different $h$ values $k= h^2$  </p>
+            </div>
             
             
         </div>
