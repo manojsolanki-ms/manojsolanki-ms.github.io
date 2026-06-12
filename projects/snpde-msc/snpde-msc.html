@@ -410,7 +410,7 @@ if (localStorageValue === "dark") {
 
 
             
-            <h2>Methodology</h2>
+            <h3>Methodology</h3>
 
                     <p>
                         The nonlinear Partial Differential Equation (PDE) was solved using the
@@ -426,7 +426,7 @@ if (localStorageValue === "dark") {
                     </p>
                 
                     <div class="equation">
-                        F(x,t,u,u_x,u_t,u_{xx},...) = 0
+                        $$F(x,t,u,u_x,u_t,u_{xx},...) = 0$$
                     </div>
                 
                     <p>
@@ -585,10 +585,246 @@ if (localStorageValue === "dark") {
                     </p>
                 
     
+        <h2>Example 1: Newton-Raphson Method</h2>
+
+                    <p>
+                    Consider the following system of nonlinear equations:
+                    </p>
+                    
+                    <div class="equation">
+                        f₁(x,y) = xy + x² − 3 = 0
+                    </div>
+                    
+                    <div class="equation">
+                        f₂(x,y) = y² − 5x − 9 = 0
+                    </div>
+                    
+                    <p>
+                    Define the nonlinear vector function:
+                    </p>
+                    
+                    <div class="equation">
+                        F(x)=
+                        [
+                        f₁(x,y),
+                        f₂(x,y)
+                        ]ᵀ
+                        =
+                        [
+                        xy+x²−3,
+                        y²−5x−9
+                        ]ᵀ
+                    </div>
+                    
+                    <p>
+                    The Jacobian matrix is given by:
+                    </p>
+                    
+                    <div class="equation">
+                        J(x)=
+                        [
+                        ∂f₁/∂x &nbsp;&nbsp; ∂f₁/∂y <br>
+                        ∂f₂/∂x &nbsp;&nbsp; ∂f₂/∂y
+                        ]
+                        =
+                        [
+                        y+2x &nbsp;&nbsp; x <br>
+                        −5 &nbsp;&nbsp; 2y
+                        ]
+                    </div>
+                    
+                    <p>
+                    The Newton-Raphson iteration formula is:
+                    </p>
+                    
+                    <div class="equation">
+                        X<sup>(k+1)</sup>
+                        =
+                        X<sup>(k)</sup>
+                        −
+                        J(X<sup>(k)</sup>)<sup>−1</sup>
+                        F(X<sup>(k)</sup>)
+                    </div>
+                    
+                    <p>
+                    Using Python implementation, the approximate solution obtained is:
+                    </p>
+                    
+                    <ul>
+                        <li>x = 0.7064556018364156</li>
+                        <li>y = 3.5400957627172622</li>
+                    </ul>
 
 
+        <h2>Example 2: Finite Difference Method for PDE</h2>
 
-        
+                        <p>
+                        Consider the partial differential equation:
+                        </p>
+                        
+                        <div class="equation">
+                            ∂u/∂t + ∂²u/∂x² = 0
+                        </div>
+                        
+                        <p>
+                        Subject to the boundary and initial conditions:
+                        </p>
+                        
+                        <div class="equation">
+                            u(0,t) = 0
+                        </div>
+                        
+                        <div class="equation">
+                            u(2,t) = 1
+                        </div>
+                        
+                        <div class="equation">
+                            u(x,0) = -0.2 sin(πx/L)
+                        </div>
+                        
+                        <p>
+                        The PDE was discretized using the Finite Difference Method (FDM)
+                        and solved numerically for different mesh sizes.
+                        </p>
+                        
+                        <table border="1" cellpadding="8" cellspacing="0">
+                            <caption><strong>Table 1: Solution of Given PDE</strong></caption>
+                            <tr>
+                                <th>N = M</th>
+                                <th>v</th>
+                                <th>w</th>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>0.053817</td>
+                                <td>1.236107</td>
+                            </tr>
+                            <tr>
+                                <td>20</td>
+                                <td>0.025887</td>
+                                <td>1.184467</td>
+                            </tr>
+                            <tr>
+                                <td>30</td>
+                                <td>0.017080</td>
+                                <td>1.165735</td>
+                            </tr>
+                            <tr>
+                                <td>40</td>
+                                <td>0.0126606</td>
+                                <td>1.1561760</td>
+                            </tr>
+                        </table>
+
+
+                    <h2>Example 3: Quasi-Linearization Method</h2>
+
+                            <p>
+                            Consider the nonlinear PDE:
+                            </p>
+                            
+                            <div class="equation">
+                                u<sub>t</sub> = u u<sub>x</sub>
+                            </div>
+                            
+                            <p>
+                            with boundary conditions:
+                            </p>
+                            
+                            <div class="equation">
+                                u(0,t)=2,
+                                u(5,t)=4,
+                                T=0.1,
+                                L=5
+                            </div>
+                            
+                            <p>
+                            The nonlinear term was linearized using the Quasi-Linearization
+                            method and solved numerically on a mesh with:
+                            </p>
+                            
+                            <div class="equation">
+                                N<sub>x</sub> = 5,
+                                N<sub>t</sub> = 5
+                            </div>
+                            
+                            <table border="1" cellpadding="8" cellspacing="0">
+                                <caption><strong>Table 2: Solution Table for Given PDE</strong></caption>
+                            
+                                <tr>
+                                    <th></th>
+                                    <th>x₀</th>
+                                    <th>x₁</th>
+                                    <th>x₂</th>
+                                    <th>x₃</th>
+                                    <th>x₄</th>
+                                    <th>x₅</th>
+                                </tr>
+                            
+                                <tr>
+                                    <td>t₀</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>4</td>
+                                </tr>
+                            
+                                <tr>
+                                    <td>t₁</td>
+                                    <td>2</td>
+                                    <td>1.52020202</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>-0.515</td>
+                                    <td>4</td>
+                                </tr>
+                            
+                                <tr>
+                                    <td>t₂</td>
+                                    <td>2</td>
+                                    <td>2.29893428</td>
+                                    <td>1.26930497</td>
+                                    <td>1.765075</td>
+                                    <td>0.26930497</td>
+                                    <td>4</td>
+                                </tr>
+                            
+                                <tr>
+                                    <td>t₃</td>
+                                    <td>2</td>
+                                    <td>3.13786316</td>
+                                    <td>1.62827342</td>
+                                    <td>2.64333302</td>
+                                    <td>-0.03516866</td>
+                                    <td>4</td>
+                                </tr>
+                            
+                                <tr>
+                                    <td>t₄</td>
+                                    <td>2</td>
+                                    <td>3.68497884</td>
+                                    <td>2.06610441</td>
+                                    <td>4.81495916</td>
+                                    <td>-0.0113788</td>
+                                    <td>4</td>
+                                </tr>
+                            
+                                <tr>
+                                    <td>t₅</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>4</td>
+                                </tr>
+                            </table>
+                            
+                            <br>
+                            
+
             
         </div>
             <!-- add a line -->
