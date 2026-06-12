@@ -238,6 +238,29 @@
                 font-size: 1.1em;
             }
         }
+
+                .scheme-table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:20px;
+        }
+        
+        .scheme-table th,
+        .scheme-table td{
+            border:1px solid #ddd;
+            padding:12px;
+            text-align:center;
+        }
+        
+        .scheme-table th{
+            background:#f3f4f6;
+        }
+        
+        hr{
+            margin:40px 0;
+        }
+
+        
     </style>
 
 <!-- Add MathJax here -->
@@ -493,7 +516,7 @@ if (localStorageValue === "dark") {
 
 
                     
-                        <h2>Finite Difference Methods for the One-Dimensional Heat Equation</h2>
+                <h3>Finite Difference Methods for the One-Dimensional Heat Equation</h3>
                     
                         <p>
                             Consider the one-dimensional heat equation
@@ -569,11 +592,11 @@ if (localStorageValue === "dark") {
                             \]
                         </div>
                     
-                        <hr>
+
                     
-                        <h2>1. Explicit Finite Difference Scheme (FTCS)</h2>
+                        <h3>1. Explicit Finite Difference Scheme (FTCS)</h3>
                     
-                        <h3>Derivation</h3>
+                        <h4>Derivation</h4>
                     
                         <div class="equation">
                             \[
@@ -608,7 +631,7 @@ if (localStorageValue === "dark") {
                             \]
                         </div>
                     
-                        <h3>Stability Condition</h3>
+                        <h4>Stability Condition</h4>
                     
                         <div class="equation">
                             \[
@@ -630,9 +653,8 @@ if (localStorageValue === "dark") {
                             small time steps for convergence.
                         </p>
                     
-                        <hr>
-                    
-                        <h2>2. Bender–Schmidt Method</h2>
+                                    
+                        <h3>2. Bender–Schmidt Method</h3>
                     
                         <p>
                             The Bender–Schmidt method is a special case of the Explicit
@@ -672,7 +694,7 @@ if (localStorageValue === "dark") {
                             \]
                         </div>
                     
-                        <h3>Characteristics</h3>
+                        <h4>Characteristics</h4>
                     
                         <ul>
                             <li>Special case of FTCS.</li>
@@ -681,7 +703,7 @@ if (localStorageValue === "dark") {
                             <li>Conditionally stable.</li>
                         </ul>
                     
-                        <h3>Stability Condition</h3>
+                        <h4>Stability Condition</h4>
                     
                         <div class="equation">
                             \[
@@ -693,11 +715,11 @@ if (localStorageValue === "dark") {
                             The method remains stable only when this condition is satisfied.
                         </p>
                     
-                        <hr>
+
                     
-                        <h2>3. Implicit Finite Difference Scheme (BTCS / Laasonen Method)</h2>
+                        <h3>3. Implicit Finite Difference Scheme (BTCS / Laasonen Method)</h3>
                     
-                        <h3>Derivation</h3>
+                        <h4>Derivation</h4>
                     
                         <div class="equation">
                             \[
@@ -737,7 +759,7 @@ if (localStorageValue === "dark") {
                             \]
                         </div>
                     
-                        <h3>Matrix Form</h3>
+                        <h4>Matrix Form</h4>
                     
                         <div class="equation">
                             \[
@@ -760,14 +782,14 @@ if (localStorageValue === "dark") {
                     
                         <hr>
                     
-                        <h2>4. Crank–Nicolson Method</h2>
+                        <h3>4. Crank–Nicolson Method</h3>
                     
                         <p>
                             The Crank–Nicolson method is obtained by averaging the Explicit
                             and Implicit finite difference schemes.
                         </p>
                     
-                        <h3>Derivation</h3>
+                        <h4>Derivation</h4>
                     
                         <div class="equation">
                             \[
@@ -813,7 +835,7 @@ if (localStorageValue === "dark") {
                             \]
                         </div>
                     
-                        <h3>Stability</h3>
+                        <h4>Stability</h4>
                     
                         <div class="equation">
                             \[
@@ -828,7 +850,7 @@ if (localStorageValue === "dark") {
                     
                         <hr>
                     
-                        <h2>Comparison of Numerical Schemes</h2>
+                        <h3>Comparison of Numerical Schemes</h3>
                     
                         <table class="scheme-table">
                             <thead>
