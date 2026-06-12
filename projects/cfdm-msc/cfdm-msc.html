@@ -439,11 +439,196 @@ if (localStorageValue === "dark") {
                     </li>
                 </ul>
 
-
-
-
+             <h3>Motivation for Compact Finite Difference Methods</h3>
+            <p>
+            Traditional finite difference schemes approximate spatial derivatives using Taylor series expansions truncated at second order. While simple, this approach requires extremely fine grids to achieve high accuracy, leading to increased computational cost and memory usage. Compact finite difference methods overcome this drawback by implicitly incorporating higher-order derivative information through algebraic manipulation of the governing equation itself. As a result:
+            </p>
             
+            <ul>
+                <li>fourth-order spatial accuracy is achieved,</li>
+                <li>only nearest-neighbor grid points are used,</li>
+                <li>numerical dispersion and artificial diffusion are significantly reduced,</li>
+                <li>
+                    This makes CFDMs particularly suitable for advection-dominated and stiff problems,
+                    where standard methods may produce oscillatory or overly diffusive solutions.
+                </li>
+            </ul>
 
+            <h3>Main Contributions of This Thesis</h3>
+
+            <p>
+            The principal contributions of this dissertation are:
+            </p>
+            
+            <ul>
+                <li>Development of an operator-based fourth-order compact scheme for the diffusion equation.</li>
+                <li>Construction of a general fourth-order compact finite difference scheme applicable to ADR equations.</li>
+                <li>Combination of compact spatial discretization with the Crank–Nicolson time integration.</li>
+                <li>Rigorous Von Neumann stability analysis of the proposed schemes.</li>
+                <li>Extensive numerical validation demonstrating fourth-order spatial convergence.</li>
+                <li>Python-based implementation and comparative analysis with classical schemes.</li>
+            </ul>
+            
+            <h3>Main Scheme and Derivation</h3>
+
+                <div>
+                $$
+                Fu_{i+1}^{j+1}+Gu_i^{j+1}+Hu_{i-1}^{j+1}
+                =
+                \tilde{F}u_{i+1}^{j}
+                +\tilde{G}u_i^{j}
+                +\tilde{H}u_{i-1}^{j}
+                \tag{2}
+                $$
+                
+                <p>Where,</p>
+                
+                $$
+                F=-\frac{(K_1+K_2)}{2}-\frac{(K_3+K_4)}{k},
+                \qquad
+                \tilde{F}=\frac{(K_1+K_2)}{2}-\frac{(K_3+K_4)}{k}
+                $$
+                
+                $$
+                G=\frac{2K_1-\gamma}{2}-\frac{(1-2K_3)}{k},
+                \qquad
+                \tilde{G}=-\frac{2K_1-\gamma}{2}-\frac{(1-2K_3)}{k}
+                $$
+                
+                $$
+                H=-\frac{(K_1-K_2)}{2}-\frac{(K_3-K_4)}{k},
+                \qquad
+                \tilde{H}=\frac{(K_1-K_2)}{2}-\frac{(K_3-K_4)}{k}
+                $$
+                
+                $$
+                K_1=
+                -\left(
+                \frac{\alpha}{h^2}
+                +\frac{\beta^2}{12\alpha}
+                -\frac{\gamma}{12}
+                \right),
+                \qquad
+                K_2=
+                \frac{\beta}{2h}
+                -\frac{\gamma\beta h}{24\alpha},
+                \qquad
+                K_3=\frac{1}{12},
+                \qquad
+                K_4=-\frac{\beta h}{24\alpha}
+                $$
+                
+                <p>
+                For \(i=1,2,\ldots,m-1\) and \(j=0,1,\ldots,n\) we have,
+                </p>
+                
+                $$
+                Fu_2^{j+1}+Gu_1^{j+1}+Hu_0^{j+1}
+                =
+                \tilde{F}u_2^j+\tilde{G}u_1^j+\tilde{H}u_0^j
+                $$
+                
+                $$
+                \vdots
+                $$
+                
+                $$
+                Fu_m^{j+1}+Gu_{m-1}^{j+1}+Hu_{m-2}^{j+1}
+                =
+                \tilde{F}u_m^j+\tilde{G}u_{m-1}^j+\tilde{H}u_{m-2}^j
+                \tag{3}
+                $$
+                
+                <p>
+                with the help of the boundary condition, we get the following two relations
+                </p>
+                
+                $$
+                u^{j+1}(x_0)=\Psi_L(t^{j+1})
+                \tag{4}
+                $$
+                
+                $$
+                u^{j+1}(x_m)=\Psi_R(t^{j+1})
+                \tag{5}
+                $$
+                
+                <p>
+                The resulting equation (3) for \(i=2,3,\ldots,m-1\) yields a system of
+                \(m-1\) unknowns
+                \(u_1^{j+1},u_2^{j+1},\ldots,u_{m-1}^{j+1}\)
+                at the \((j+1)^{th}\) time level for the fully discrete scheme for ADR
+                equation which can be written in matrix form as follows,
+                </p>
+                
+                $$
+                AU^{j+1}=BU^j+C
+                \tag{6}
+                $$
+                
+                <p>where,</p>
+                
+                $$
+                A=
+                \begin{bmatrix}
+                G & F & 0 & 0 & \cdots & 0 & 0 \\
+                H & G & F & 0 & \cdots & 0 & 0 \\
+                0 & H & G & F & \cdots & 0 & 0 \\
+                \vdots & \vdots & \ddots & \ddots & \ddots & \vdots & \vdots \\
+                0 & 0 & \cdots & H & G & F & 0 \\
+                0 & 0 & \cdots & 0 & H & G & F \\
+                0 & 0 & \cdots & 0 & 0 & H & G
+                \end{bmatrix}_{(m-1)\times(m-1)}
+                $$
+                
+                $$
+                B=
+                \begin{bmatrix}
+                \tilde{G} & \tilde{F} & 0 & 0 & \cdots & 0 & 0 \\
+                \tilde{H} & \tilde{G} & \tilde{F} & 0 & \cdots & 0 & 0 \\
+                0 & \tilde{H} & \tilde{G} & \tilde{F} & \cdots & 0 & 0 \\
+                \vdots & \vdots & \ddots & \ddots & \ddots & \vdots & \vdots \\
+                0 & 0 & \cdots & \tilde{H} & \tilde{G} & \tilde{F} & 0 \\
+                0 & 0 & \cdots & 0 & \tilde{H} & \tilde{G} & \tilde{F} \\
+                0 & 0 & \cdots & 0 & 0 & \tilde{H} & \tilde{G}
+                \end{bmatrix}_{(m-1)\times(m-1)}
+                $$
+                
+                $$
+                C=
+                \begin{bmatrix}
+                \tilde{H}u_0^{j}-Hu_0^{j+1} \\
+                0 \\
+                0 \\
+                \vdots \\
+                0 \\
+                0 \\
+                \tilde{F}u_m^{j}-Fu_m^{j+1}
+                \end{bmatrix}_{(m-1)\times 1}
+                $$
+                
+                $$
+                U^{j+1}=
+                \begin{bmatrix}
+                u_1^{j+1} \\
+                u_2^{j+1} \\
+                \vdots \\
+                u_{m-2}^{j+1} \\
+                u_{m-1}^{j+1}
+                \end{bmatrix}_{(m-1)\times1}
+                $$
+                
+                $$
+                U^{j}=
+                \begin{bmatrix}
+                u_1^{j} \\
+                u_2^{j} \\
+                \vdots \\
+                u_{m-2}^{j} \\
+                u_{m-1}^{j}
+                \end{bmatrix}_{(m-1)\times1}
+                $$
+                </div>
             <h3>Methology</h3>
             <div class="image-container">
                 <img src="projects/image/image.png" alt="Project Image 1">
