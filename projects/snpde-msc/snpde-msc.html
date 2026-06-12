@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name=generator content="Hugo 0.92.0"><meta charset=utf-8>
+<meta name="author" content="Manoj Solanki">
+<link rel="canonical" href="https://manojsolanki-ms.github.io">
+<meta name="keywords" content="Manoj Solanki, Numerical Analysis, Solution of Partial differential equation, FEM and CFDM">
+<!-- add favicon -->
+<!-- Multiple sizes for different devices -->
+<link rel="icon" type="image/png" sizes="32x32" href="image/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="16x16" href="image/favicon-32x32.png">
+    
+<meta name="description" content="Manoj Solanki's personal website showcasing teaching and research in Numerical Analysis and Partial Differential Equation using FEM and CFDM">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <base href="../">
+    <meta http-equiv=x-ua-compatible content="ie=edge">
+    <meta http-equiv=accept-ch content="DPR, Viewport-Width, Width">
+    <link rel=icon href=/fav.png type=image/gif>
+    <link rel=preconnect href=https://fonts.googleapis.com>
+    <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+    <link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+    <link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" media=print onload="this.media='all'">
+    <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel=stylesheet>
+    </noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel=stylesheet href=/css/font.css media=all>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ESBYP30VKF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ESBYP30VKF');
+</script>
+    <meta property="og:title" content="Manoj Solanki">
+    <meta property="og:description" content="Portfolio: Manoj Solanki">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://manojsolanki-ms.github.io/"><meta property="og:site_name" content="Manoj Solanki">
+    <meta name=twitter:card content="summary">
+    <meta name=twitter:title content="Manoj Solanki">
+    <meta name=twitter:description content="Portfolio: Manoj solanki">
+    <link rel=stylesheet href=/bootstrap-5/css/bootstrap.min.css media=all><link rel=stylesheet href=/css/header.css media=all>
+    <link rel=stylesheet href=/css/footer.css media=all>
+    <link rel=stylesheet href=/css/theme.css media=all>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>:root{--text-color:#343a40;--text-secondary-color:#6c757d;--text-link-color:#007bff;--background-color:#eaedf0;--secondary-background-color:#64ffda1a;--primary-color:#007bff;--secondary-color:#f8f9fa;--text-color-dark:#e4e6eb;--text-secondary-color-dark:#b0b3b8;--text-link-color-dark:#5465ce;--background-color-dark:#040404;--secondary-background-color-dark:#0c0c0c;--primary-color-dark:#5465ce;--secondary-color-dark:#0c0c0c}body{font-size:1rem;font-weight:400;line-height:1.5;text-align:left}html{background-color:var(--background-color)!important}body::-webkit-scrollbar{height:0;width:8px;background-color:var(--background-color)}::-webkit-scrollbar-track{border-radius:1rem}::-webkit-scrollbar-thumb{border-radius:1rem;background:#b0b0b0;outline:1px solid var(--background-color)}#search-content::-webkit-scrollbar{width:.5em;height:.1em;background-color:var(--background-color)}</style>
+    
+    <meta name=description content="Portfolio: Manoj Solanki">
+    <link rel=stylesheet href=/css/index.css media=all>
+    <link rel=stylesheet href=/css/projects.css media=all>
+    <script defer src=/fontawesome-6/all-6.4.2.js></script>
+    <title>
+    Manoj Solanki
+    </title>
+    <style>
+        :root {
+            --text-color: #343a40;
+            --text-secondary-color: #6c757d;
+            --text-link-color: #007bff;
+            --background-color: #eaedf0;
+            --secondary-background-color: #64ffda1a;
+            --primary-color: #007bff;
+            --secondary-color: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-color);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            margin-top: 30px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: var(--text-color);
+            font-size: 1rem;
+            font-family: 'Alata', sans-serif;
+            opacity: 0.8;
+        }
+
+        img {
+            max-width: 600px;
+            max-height: 500px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+            color: var(--text-color);
+            font-size: 1rem;
+            font-family: 'Alata', sans-serif;
+            opacity: 0.8;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .btn:hover {
+            background-color: var(--text-link-color);
+        }
+
+        /* New styles for centered images */
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            max-width: 100%;
+        }
+
+        .image-container img {
+            margin-bottom: 10px;
+            max-width: 100%;    
+            /* height: auto; */
+        }
+
+        .image-container p {
+            text-align: center;
+            font-style: italic;
+            color: var(--text-secondary-color);
+        }
+
+        .journal-card {
+            display: flex  ;
+            flex-direction: column;
+            align-items: center;
+        
+        border: 1px solid var(--card-border);
+        border-radius: 8px;
+        padding: 15px;
+        margin: 20px 0;
+        box-shadow: 0 2px 4px var(--card-shadow);
+        transition: all 0.3s ease;
+        
+    }
+
+    .journal-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px var(--card-shadow);
+    }
+
+    .journal-card h4 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: var(--primary-color);
+        font-size: 1.1em;
+    }
+
+    .journal-card p {
+        margin: 0;
+        color: var(--card-text);
+        font-size: 0.9em;
+    }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.75em;
+            }
+
+            h3 {
+                font-size: 1.25em;
+            }
+
+            h4 {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+
+<!-- Add MathJax here -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+</head>
+<body class="light">
+<script>
+let localStorageValue = localStorage.getItem("pref-theme");
+if (localStorageValue === "dark") {
+    document.body.classList.add('dark');
+} else {
+    document.body.classList.remove('dark');
+    localStorage.setItem("pref-theme", 'light');
+}
+</script>        <script>var prevScrollPos=window.pageYOffset;window.addEventListener("scroll",function(){let c=document.getElementById("profileHeader"),a=window.pageYOffset,b=!1,d=!0,e=d?prevScrollPos>a:a>0;e?c.classList.add("showHeaderOnTop"):b=!0,a===0&&(b=!0),b&&c.classList.remove("showHeaderOnTop"),prevScrollPos=a})</script>
+<header id=profileHeader>
+       <nav class="pt-3 navbar navbar-expand-lg animate">
+          <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+             <a class="navbar-brand primary-font text-wrap" href="/">
+             <img src=/image/29197370.jpg width=30 height=30 class="d-inline-block align-top">
+             Manoj Solanki
+             </a>
+             <!-- <div>
+    <input id=search autocomplete=off class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k to Search..." aria-label=Search oninput=searchOnChange(event)>
+ </div> -->
+              <button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarContent aria-controls=navbarContent aria-expanded=false aria-label="Toggle navigation">
+                 <svg aria-hidden="true" height="24" viewBox="0 0 16 16" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75.0 011.75 2h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 2.75zm0 5A.75.75.0 011.75 7h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 7.75zM1.75 12a.75.75.0 100 1.5h12.5a.75.75.0 100-1.5H1.75z"/>
+                 </svg>
+              </button>
+              <div class="collapse navbar-collapse text-wrap primary-font" id=navbarContent>
+                 <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item navbar-text d-block d-md-none">
+                       <div class=nav-link>
+                          <input id=search autocomplete=off class="form-control mr-sm-2" placeholder="Ctrl + k to Search..." aria-label=Search oninput=searchOnChange(event)>
+                  </div>
+                   </li>
+                   <li class="nav-item navbar-text">
+                     <a class=nav-link href=/#education aria-label=education>
+                     Education
+                     </a>
+                  </li>
+                   
+                   <li class="nav-item navbar-text">
+                     <a class=nav-link href="/#experience" aria-label=education>
+                     Teaching
+                     </a>
+                  </li>
+                    <li class="nav-item navbar-text">
+                      <a class=nav-link href=/#publications_section aria-label=experience>
+                      Publications
+                      </a>
+                   </li>
+                   <li class="nav-item navbar-text">
+                      <a class=nav-link href=/#projects aria-label=projects>
+                      Projects
+                      </a>
+                   </li>
+                    
+                    <li class="nav-item navbar-text">
+                     <a class=nav-link href=/#certifications aria-label=Certifications>
+                     Certifications
+                     </a>
+                  </li>
+                    <li class="nav-item navbar-text">
+                     <a class=nav-link href=/#conference-workshops aria-label= Conference & Workshops>
+                     Conference & Workshops
+                     </a>
+                  </li>
+                    
+                   <li class="nav-item navbar-text">
+                      <a class=nav-link href=/#achievements aria-label=achievements>
+                      Achievements
+                      </a>
+                   </li>
+
+                   <li class="nav-item navbar-text">
+                      <a class=nav-link href=/#contact aria-label=contact>
+                      Contact
+                      </a>
+                   </li>
+                    <!-- <li class="nav-item navbar-text">
+                       <a class=nav-link href=/blogs title="Blog posts">
+                       Blog
+                       </a>
+                    </li>
+                    <li class="nav-item navbar-text">
+                       <a class=nav-link href=/teaching/useful_links.html title="Blog posts">
+                       links
+                       </a>
+                    </li> -->
+                    <li class="nav-item navbar-text">
+                       <div class=text-center>
+                          <button id=theme-toggle>
+                             <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+                             </svg>
+                             <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"/>
+                                <line x1="12" y1="1" x2="12" y2="3"/>
+                                <line x1="12" y1="21" x2="12" y2="23"/>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                                <line x1="1" y1="12" x2="3" y2="12"/>
+                                <line x1="21" y1="12" x2="23" y2="12"/>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                             </svg>
+                          </button>
+                       </div>
+                    </li>
+                 </ul>
+              </div>
+           </div>
+        </nav>
+     </header>
+
+    <div class="container">
+        <div style="width: 100%; display: flex; justify-content: flex-end">
+            <!-- add a Right aligned button -->
+            <a href="/research-projects.html" class="btn">Back to Projects</a>
+        </div>
+
+        <h1 style="text-align: center;">Compact finite difference schemes for solving partial differential equations</h1>
+
+        <!-- add a line -->
+        <div class="journal-card">
+            <h4>Supervisor : Dr. Harshita Madduri ( NIT Kurukshetra)</h4>
+            <p>The following is a brief summary of the methodology and results of my Masters work at NIT Kurukshetra. Please refer to the manuscript for full details, given at the end.</p>
+            <!-- <div style="display: flex; align-items: center; justify-content: center;">
+                <a href="cfdm-msc/Manoj Solanki Thesis 723410009.pdf" class="btn">PDF</a>
+            <a href="cfdm-msc/Manoj_Solanki__723410009_M_Sc__Project_Presentation_ (1) (2).pdf" class="btn">Presentation PDF</a>
+            </div> -->
+        </div>
+        
+        <div class="project-content">
+
+            <h3>Project Abstract</h3>
+            <p>A higher order numerical approach for solving 1-D parabolic PDEs, such as the Diffusion and Advection-Diffusion-Reaction (ADR) equations, is developed and studied in this work. The proposed approach uses theCrank–Nicolson traditional finite difference method (FDM) for time discretization and a fourth-order compactfinite difference method (CFDM) for spatial discretization. The accuracy and efficiency limits of the explicit,implicit, and Crank-Nicolson finite difference methods (FDM) are highlighted in this we use operator-based and Taylor series techniques, a compact study is created to overcome these issues, producing a solution that uses fewer grid points while achieving higher accuracy. The stability of the scheme is analyzed using Von Neumann ( Fourier analysis). A comparative study of CFDM is conducted through Python implementation on a variety of problems involving diffusion, advection, and reaction with constant coefficients. The results show that CFDM yields more accurate and efficient solutions than traditional methods. The work concludes by outlining future directions, particularly the extension of the scheme to PDEs with variable coefficients, for which initial developments are under way.</p>
+            
+            
+            <h3>Introduction</h3>
+            <p>
+                Partial Differential Equations (PDEs) arise naturally in the mathematical modeling of physical, biological, and engineering phenomena involving spatial and temporal variations. Processes such as heat conduction, mass diffusion, fluid transport, chemical reactions, and population dynamics are commonly governed by parabolic PDEs. Due to the complexity of real-world systems, analytical solutions are often unavailable, making numerical methods an essential tool for practical simulations.
+                </p>
+                
+                <p>
+                Among numerical techniques, finite difference methods (FDMs) are particularly attractive because of their conceptual simplicity, structured formulation, and ease of implementation on uniform grids. Classical methods such as the Forward-Time Central-Space (FTCS), Backward-Time Central-Space (BTCS), and Crank–Nicolson schemes are widely used for solving parabolic problems. However, these methods are typically limited to second-order accuracy in space, which may be insufficient for problems involving sharp gradients or advection-dominated behavior.
+                </p>
+                
+                <p>
+                To address these limitations, compact finite difference methods (CFDMs) have been developed. These methods achieve higher-order spatial accuracy while using compact stencils, thereby improving computational efficiency without increasing stencil width or significantly adding to computational complexity. As a result, CFDMs provide a powerful and accurate alternative for the numerical solution of parabolic partial differential equations encountered in science and engineering applications.
+                </p>
+           <h3>Parabolic Partial Differential Equations</h3>
+                            <p>
+                This thesis focuses on the numerical solution of the one-dimensional parabolic equation of the form
+                </p>
+                
+                <p style="text-align:center;">
+                \[
+                \frac{\partial u}{\partial t}
+                +\beta\frac{\partial u}{\partial x}
+                +\gamma u
+                =
+                \alpha\frac{\partial^2u}{\partial x^2},
+                \qquad
+                x\in(0,L),\; t>0,
+                \tag{1}
+                \]
+                </p>
+                
+                <p>where</p>
+                
+                <ul>
+                    <li><em>u(x,t)</em> represents the unknown scalar field,</li>
+                    <li><em>\(\alpha > 0\)</em> is the diffusion coefficient,</li>
+                    <li><em>\(\beta\)</em> is the advection velocity, and</li>
+                    <li><em>\(\gamma\)</em> is the reaction coefficient.</li>
+                </ul>
+                
+                <ul>
+                    <li>Depending on the values of <em>\(\beta\)</em> and <em>\(\gamma\)</em>, this equation reduces to:</li>
+                    <li>The diffusion equation (<em>\(\beta = 0,\gamma = 0\)</em>),</li>
+                    <li>The advection–diffusion equation (<em>\(\beta \neq 0,\gamma = 0\)</em>),</li>
+                    <li>The advection–diffusion–reaction equation (<em>\(\beta \neq 0,\gamma \neq 0\)</em>),</li>
+                    <li>
+                        These models arise in numerous applications such as heat transfer,
+                        pollutant transport, chemical kinetics, and biological systems.
+                    </li>
+                </ul>
+
+             <h3>Motivation for Compact Finite Difference Methods</h3>
+            <p>
+            Traditional finite difference schemes approximate spatial derivatives using Taylor series expansions truncated at second order. While simple, this approach requires extremely fine grids to achieve high accuracy, leading to increased computational cost and memory usage. Compact finite difference methods overcome this drawback by implicitly incorporating higher-order derivative information through algebraic manipulation of the governing equation itself. As a result:
+            </p>
+            
+            <ul>
+                <li>fourth-order spatial accuracy is achieved,</li>
+                <li>only nearest-neighbor grid points are used,</li>
+                <li>numerical dispersion and artificial diffusion are significantly reduced,</li>
+                <li>
+                    This makes CFDMs particularly suitable for advection-dominated and stiff problems,
+                    where standard methods may produce oscillatory or overly diffusive solutions.
+                </li>
+            </ul>
+
+            <h3>Main Contributions of This Thesis</h3>
+
+            <p>
+            The principal contributions of this dissertation are:
+            </p>
+            
+            <ul>
+                <li>Development of an operator-based fourth-order compact scheme for the diffusion equation.</li>
+                <li>Construction of a general fourth-order compact finite difference scheme applicable to ADR equations.</li>
+                <li>Combination of compact spatial discretization with the Crank–Nicolson time integration.</li>
+                <li>Rigorous Von Neumann stability analysis of the proposed schemes.</li>
+                <li>Extensive numerical validation demonstrating fourth-order spatial convergence.</li>
+                <li>Python-based implementation and comparative analysis with classical schemes.</li>
+            </ul>
+            
+            <h3>Main Scheme and Derivation</h3>
+
+                <div>
+                $$
+                Fu_{i+1}^{j+1}+Gu_i^{j+1}+Hu_{i-1}^{j+1}
+                =
+                \tilde{F}u_{i+1}^{j}
+                +\tilde{G}u_i^{j}
+                +\tilde{H}u_{i-1}^{j}
+                \tag{2}
+                $$
+                
+                <p>Where,</p>
+                
+                $$
+                F=-\frac{(K_1+K_2)}{2}-\frac{(K_3+K_4)}{k},
+                \qquad
+                \tilde{F}=\frac{(K_1+K_2)}{2}-\frac{(K_3+K_4)}{k}
+                $$
+                
+                $$
+                G=\frac{2K_1-\gamma}{2}-\frac{(1-2K_3)}{k},
+                \qquad
+                \tilde{G}=-\frac{2K_1-\gamma}{2}-\frac{(1-2K_3)}{k}
+                $$
+                
+                $$
+                H=-\frac{(K_1-K_2)}{2}-\frac{(K_3-K_4)}{k},
+                \qquad
+                \tilde{H}=\frac{(K_1-K_2)}{2}-\frac{(K_3-K_4)}{k}
+                $$
+                
+                $$
+                K_1=
+                -\left(
+                \frac{\alpha}{h^2}
+                +\frac{\beta^2}{12\alpha}
+                -\frac{\gamma}{12}
+                \right),
+                \qquad
+                K_2=
+                \frac{\beta}{2h}
+                -\frac{\gamma\beta h}{24\alpha},
+                \qquad
+                K_3=\frac{1}{12},
+                \qquad
+                K_4=-\frac{\beta h}{24\alpha}
+                $$
+                
+                <p>
+                For \(i=1,2,\ldots,m-1\) and \(j=0,1,\ldots,n\) we have,
+                </p>
+                
+                $$
+                Fu_2^{j+1}+Gu_1^{j+1}+Hu_0^{j+1}
+                =
+                \tilde{F}u_2^j+\tilde{G}u_1^j+\tilde{H}u_0^j
+                $$
+                
+                $$
+                \vdots
+                $$
+                
+                $$
+                Fu_m^{j+1}+Gu_{m-1}^{j+1}+Hu_{m-2}^{j+1}
+                =
+                \tilde{F}u_m^j+\tilde{G}u_{m-1}^j+\tilde{H}u_{m-2}^j
+                \tag{3}
+                $$
+                
+                <p>
+                with the help of the boundary condition, we get the following two relations
+                </p>
+                
+                $$
+                u^{j+1}(x_0)=\Psi_L(t^{j+1})
+                \tag{4}
+                $$
+                
+                $$
+                u^{j+1}(x_m)=\Psi_R(t^{j+1})
+                \tag{5}
+                $$
+                
+                <p>
+                The resulting equation (3) for \(i=2,3,\ldots,m-1\) yields a system of
+                \(m-1\) unknowns
+                \(u_1^{j+1},u_2^{j+1},\ldots,u_{m-1}^{j+1}\)
+                at the \((j+1)^{th}\) time level for the fully discrete scheme for ADR
+                equation which can be written in matrix form as follows,
+                </p>
+                
+                $$
+                AU^{j+1}=BU^j+C
+                \tag{6}
+                $$
+                
+                <p>where,</p>
+                
+                $$
+                A=
+                \begin{bmatrix}
+                G & F & 0 & 0 & \cdots & 0 & 0 \\
+                H & G & F & 0 & \cdots & 0 & 0 \\
+                0 & H & G & F & \cdots & 0 & 0 \\
+                \vdots & \vdots & \ddots & \ddots & \ddots & \vdots & \vdots \\
+                0 & 0 & \cdots & H & G & F & 0 \\
+                0 & 0 & \cdots & 0 & H & G & F \\
+                0 & 0 & \cdots & 0 & 0 & H & G
+                \end{bmatrix}_{(m-1)\times(m-1)}
+                $$
+                
+                $$
+                B=
+                \begin{bmatrix}
+                \tilde{G} & \tilde{F} & 0 & 0 & \cdots & 0 & 0 \\
+                \tilde{H} & \tilde{G} & \tilde{F} & 0 & \cdots & 0 & 0 \\
+                0 & \tilde{H} & \tilde{G} & \tilde{F} & \cdots & 0 & 0 \\
+                \vdots & \vdots & \ddots & \ddots & \ddots & \vdots & \vdots \\
+                0 & 0 & \cdots & \tilde{H} & \tilde{G} & \tilde{F} & 0 \\
+                0 & 0 & \cdots & 0 & \tilde{H} & \tilde{G} & \tilde{F} \\
+                0 & 0 & \cdots & 0 & 0 & \tilde{H} & \tilde{G}
+                \end{bmatrix}_{(m-1)\times(m-1)}
+                $$
+                
+                $$
+                C=
+                \begin{bmatrix}
+                \tilde{H}u_0^{j}-Hu_0^{j+1} \\
+                0 \\
+                0 \\
+                \vdots \\
+                0 \\
+                0 \\
+                \tilde{F}u_m^{j}-Fu_m^{j+1}
+                \end{bmatrix}_{(m-1)\times 1}
+                $$
+                
+                $$
+                U^{j+1}=
+                \begin{bmatrix}
+                u_1^{j+1} \\
+                u_2^{j+1} \\
+                \vdots \\
+                u_{m-2}^{j+1} \\
+                u_{m-1}^{j+1}
+                \end{bmatrix}_{(m-1)\times1}
+                $$
+                
+                $$
+                U^{j}=
+                \begin{bmatrix}
+                u_1^{j} \\
+                u_2^{j} \\
+                \vdots \\
+                u_{m-2}^{j} \\
+                u_{m-1}^{j}
+                \end{bmatrix}_{(m-1)\times1}
+                $$
+                </div>
+
+                <h3>Numerical Results</h3>
+                
+                <div>
+                
+                <h2>Example 1</h2>
+                
+                <p>
+                Consider the diffusion equation obtained from Equation (1) by setting
+                \(\beta=\gamma=0\), with \(\alpha=1\), \(L=1\), and \(t>0\).
+                The exact solution for this example is given by
+                </p>
+                
+                $$
+                u(x,t)=e^{-\pi^{2}t}\sin(\pi x)
+                \tag{7}
+                $$
+                
+                <p>
+                The initial and boundary conditions are given by
+                </p>
+                
+                $$
+                \left\{
+                \begin{array}{ll}
+                u(x,0)=\sin(\pi x) & \text{Initial Condition} \\
+                u(0,t)=u(1,t)=0   & \text{Boundary Condition}
+                \end{array}
+                \right.
+                \tag{8}
+                $$
+                
+                </div>
+            <div class="image-container">
+                <img src="cfdm-msc/example1-1.gif" alt="Example-1">
+                <p>Fig: (a)Exact and Numerical Solution for Example-1 with different $h$ values $k= h^2$ (b) Behavior of Error for Example-1 with Different h values </p>
+            </div>
+
+
+
+
+            <div>
+        <h2>Example 2</h2>
+                
+                <p>
+                Consider the advection-diffusion equation obtained from Equation (1) by setting
+                \(\alpha = 0.1, \beta=1, \gamma=0\), with initial Condition given by
+                </p>
+                
+                $$
+                \phi(x)=\exp(5x)\left[\cos\left(\frac{\pi}{2}x\right)
+                +0.25\sin\left(\frac{\pi}{2}x\right)\right]
+                \tag{9}
+                $$
+                
+                <p>
+                The the exact solution is given by
+                </p>
+                
+                $$
+                u(x,t)=
+                \exp\left(5\left(x-\frac{t}{2}\right)\right)
+                \exp\left(-\frac{\pi^2}{40}t\right)
+                \left[
+                \cos\left(\frac{\pi}{2}x\right)
+                +0.25\sin\left(\frac{\pi}{2}x\right)
+                \right]
+                \tag{10}
+                $$
+                <p>
+                The boundary conditions are obtained from the exact solution. To evaluate the accuracy of our proposed method,we solve this example for $L=1$ at the final time $T=2$
+                </p>
+                </div>
+            <div class="image-container">
+                <img src="cfdm-msc/example2-1.gif" alt="Example-2">
+                <p>Fig: Numerical and Exact Solution for Example-2 with different $h$ values $k= h^2$  </p>
+            </div>
+
+
+
+            <div>
+        <h2>Example 3</h2>
+                
+                <p>
+                Consider the advection-diffusion equation obtained from Equation (1) by setting
+                \(\alpha = \frac{\beta}{P_e}, \beta=-11, \gamma=0\), with different  $P_e = 10,20,100,1000 $ alogn with initial Condition given by
+                </p>
+                
+                $$
+                u(x,t)=a\exp(bt-\bar{c}x).
+                \tag{9}
+                $$
+                                
+                <p>
+                where
+                </p>
+
+                
+                                    $$
+                    \bar{c}
+                    =
+                    \frac{-\beta+\sqrt{\beta^{2}+4\alpha b}}
+                    {2\alpha}.
+                \tag{12}
+                    $$
+                <p>
+                and the boundary conditions are given as follows:
+                </p>
+                $$
+                u(0,t)=a\exp(bt),
+                \qquad
+                u(1,t)=a\exp(bt-\bar{c}).
+                \tag{13}
+                $$
+                </div>
+            <div class="image-container">
+                <img src="cfdm-msc/example3-1.gif" alt="Example-3">
+                <img src="cfdm-msc/example3-1-1.gif" alt="Example-3">
+                <img src="cfdm-msc/example3-2.gif" alt="Example-3">
+                <p>Fig: Numerical and Exact Solution for Example-3 with different $P_e$ values $k= h^2$  </p>
+            </div>
+
+
+            <div>
+                <h2>Example 4</h2>
+                
+                <p>
+                Consider the advection-diffusion-reaction equation as given below 
+                </p>
+                
+                    $$
+                    \frac{\partial u}{\partial t}(x,t)
+                    +
+                    \frac{\partial u}{\partial x}(x,t)
+                    -
+                    3u(x,t)
+                    =
+                    \frac{\partial^2 u}{\partial x^2}(x,t),
+                    \qquad
+                    (x,t)\in [0,2\pi]\times\left[0,\frac{1}{2}\right].
+                    \tag{14}
+                    $$
+                    
+                    
+                    
+                    <p>
+                    with the initial condition
+                    </p>
+                    
+                    $$
+                    u(x,0)=\sin(x). \tag{15}
+                    $$
+                    
+                    <p>
+                    Boundary condition
+                    </p>
+                    
+                    $$
+                    u(0,t)=e^{2t}\sin(-t),
+                      \qquad
+                    u(2\pi,t)=e^{2t}\sin(2\pi-t). \tag{16}
+                    $$
+                </div>
+            <div class="image-container">
+                <img src="cfdm-msc/example4-1.gif" alt="Example-4">
+                <p>Fig: Numerical and Exact Solution for Example-4 with different $h$ values $k= h^2$  </p>
+            </div>
+
+
+
+
+        
+            
+        </div>
+            <!-- add a line -->
+        <div class="journal-card">
+            <h4>Masters dissertation is available here.</h4>
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <a href="cfdm-msc/Manoj Solanki Thesis 723410009.pdf" class="btn">PDF</a>
+            <a href="cfdm-msc/Manoj_Solanki__723410009_M_Sc__Project_Presentation_ (1) (2).pdf" class="btn">Presentation PDF</a>
+            <a href="https://github.com/manojsolanki-ms/High-Order-Compact-Scheme-for-1D-Heat-and-ADR-Equations/tree/main/Numerical%20Example" class="btn">Github Repository</a>
+            </div>
+        </div>
+
+        <div style="width: 100%; display: flex; justify-content: flex-end">
+            <!-- add a Right aligned button -->
+            <a href="research-projects.html" class="btn">Back to Projects</a>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script src=/bootstrap-5/js/bootstrap.bundle.min.js></script>
+    <script>
+if (localStorage.getItem("pref-theme") === "dark") {
+    document.body.classList.add('dark');
+} else {
+    document.body.classList.remove('dark');
+    localStorage.setItem("pref-theme", 'light');
+}
+</script>    <script>var tooltipTriggerList,tooltipList;document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))}),tooltipTriggerList=[].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]')),tooltipList=tooltipTriggerList.map(function(a){return new bootstrap.Tooltip(a)})</script>
+    <script src=/js/search.js></script>
+    <section id=search-content class=py-2>
+       <div class=container id=search-results></div>
+    </section>
+    <button id="floating-theme-toggle" class="floating-theme-toggle">
+        <svg id="moon-icon" class="theme-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg id="sun-icon" class="theme-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <span class="theme-text"></span>
+    </button>
+  
+    <script>
+     var tooltipTriggerList, tooltipList;
+  
+     document.getElementById("floating-theme-toggle").addEventListener("click", () => {
+         console.log("Toggle change");
+         if (document.body.classList.contains("dark")) {
+             document.body.classList.remove('dark');
+             localStorage.setItem("pref-theme", 'light');
+         } else {
+             document.body.classList.add('dark');
+             localStorage.setItem("pref-theme", 'dark');
+         }
+     });
+  
+     tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+     tooltipList = tooltipTriggerList.map(function(a) {
+         return new bootstrap.Tooltip(a);
+     });
+  </script>
+</body>
+
+</html>
