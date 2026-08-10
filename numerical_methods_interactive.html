@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MATLAB Numerical Methods | Manoj Solanki</title>
+<style>
+:root{
+  --bg:#0b1020; --panel:#121a2d; --panel2:#18233b; --text:#eef3ff;
+  --muted:#9ba8c7; --accent:#7c5cff; --accent2:#22c7a9;
+  --border:#263451; --code:#0a0f1d; --danger:#ff6b7a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:linear-gradient(135deg,#090e1b,#10182b 55%,#0b1020);color:var(--text)}
+button,input{font:inherit}
+a{color:inherit;text-decoration:none}
+.container{width:min(1200px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(9,14,27,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:.3px}.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:18px;align-items:center}
+.nav-links a{color:var(--muted);font-size:.92rem}.nav-links a:hover{color:white}
+.hero{padding:70px 0 45px}
+.badge{display:inline-flex;padding:7px 12px;border:1px solid var(--border);border-radius:999px;color:#cbd5f5;background:#111a30;font-size:.82rem}
+h1{font-size:clamp(2.3rem,6vw,4.8rem);line-height:1.02;margin:18px 0 15px;max-width:850px}
+.gradient{background:linear-gradient(90deg,#fff,#9d8cff,#54e0c5);-webkit-background-clip:text;color:transparent}
+.hero p{max-width:760px;color:var(--muted);font-size:1.08rem;line-height:1.7}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.btn{border:1px solid var(--border);background:var(--panel);color:white;padding:11px 16px;border-radius:10px;cursor:pointer}
+.btn.primary{background:var(--accent);border-color:var(--accent)}.btn:hover{transform:translateY(-1px)}
+.layout{display:grid;grid-template-columns:280px 1fr;gap:22px;align-items:start}
+.sidebar{position:sticky;top:88px;background:rgba(18,26,45,.86);border:1px solid var(--border);border-radius:16px;padding:16px}
+.sidebar h3{margin:5px 0 13px;font-size:.95rem}
+.side-btn{display:block;width:100%;text-align:left;background:transparent;border:0;color:var(--muted);padding:11px;border-radius:9px;cursor:pointer}
+.side-btn.active,.side-btn:hover{background:#202d4a;color:white}
+.search{width:100%;background:#0b1222;border:1px solid var(--border);color:white;padding:10px;border-radius:9px;margin-bottom:10px}
+.content{min-width:0}
+.card{background:rgba(18,26,45,.86);border:1px solid var(--border);border-radius:18px;padding:22px;margin-bottom:18px;box-shadow:0 15px 40px rgba(0,0,0,.12)}
+.card-head{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:15px}
+.card h2{margin:0;font-size:1.35rem}.card p{color:var(--muted);line-height:1.65}
+.tag{font-size:.74rem;color:#bcefe4;border:1px solid #245b52;background:#102d2a;padding:5px 8px;border-radius:999px}
+.code-wrap{position:relative}
+pre{margin:0;background:var(--code);border:1px solid #1c2942;border-radius:12px;overflow:auto;padding:18px;color:#dbe4ff;line-height:1.55;font-size:.88rem}
+.copy{position:absolute;right:10px;top:10px;padding:7px 10px;border:1px solid #34415c;background:#172138;color:white;border-radius:8px;cursor:pointer}
+.result{margin-top:14px;background:#0e1729;border:1px solid #253653;border-radius:12px;padding:15px}
+.result strong{color:#8ee8d4}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:15px}
+.step{padding:14px;background:#111a2d;border:1px solid var(--border);border-radius:12px}
+.step b{display:block;margin-bottom:6px}.step span{color:var(--muted);font-size:.9rem;line-height:1.5}
+.controls{display:flex;gap:9px;flex-wrap:wrap;margin:12px 0}
+select{background:#0c1425;color:white;border:1px solid var(--border);padding:9px;border-radius:9px}
+.hidden{display:none!important}
+.footer{padding:45px 0;color:var(--muted);text-align:center}
+.math{font-family:Georgia,serif;color:#d8e1ff}
+@media(max-width:850px){
+ .layout{grid-template-columns:1fr}.sidebar{position:static}.nav-links{display:none}
+ .steps{grid-template-columns:1fr}.hero{padding-top:45px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#">MS<span>·</span>Numerics</a>
+    <nav class="nav-links">
+      <a href="#methods">Methods</a><a href="#code">Code</a><a href="#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+<section class="hero">
+  <span class="badge">MATLAB • Numerical Linear Algebra</span>
+  <h1>Interactive <span class="gradient">Substitution Methods</span></h1>
+  <p>Explore forward substitution, backward substitution, and permuted triangular systems with MATLAB implementations, equations, and step-by-step explanations.</p>
+  <div class="hero-actions">
+    <button class="btn primary" onclick="document.querySelector('#methods').scrollIntoView()">Explore methods</button>
+    <button class="btn" onclick="showAll()">Show all methods</button>
+  </div>
+</section>
+
+<section id="methods" class="layout">
+<aside class="sidebar">
+  <input class="search" id="search" placeholder="Search methods..." oninput="filterMethods()">
+  <h3>Methods</h3>
+  <button class="side-btn active" data-target="forward" onclick="selectMethod('forward')">01 · Forward substitution</button>
+  <button class="side-btn" data-target="backward" onclick="selectMethod('backward')">02 · Backward substitution</button>
+  <button class="side-btn" data-target="pf" onclick="selectMethod('pf')">03 · Forward permuted</button>
+  <button class="side-btn" data-target="pb" onclick="selectMethod('pb')">04 · Backward permuted</button>
+</aside>
+
+<div class="content" id="code">
+
+<article class="card method forward">
+ <div class="card-head"><h2>Forward Substitution</h2><span class="tag">Lower triangular</span></div>
+ <p>For a lower triangular system <span class="math">Ax=b</span>, each unknown is obtained from top to bottom.</p>
+ <div class="steps">
+  <div class="step"><b>1. Start</b><span>Set <span class="math">x = 0</span> and begin with i = 1.</span></div>
+  <div class="step"><b>2. Sum known terms</b><span>Compute Σ A(i,j)x(j) for j = 1,...,i−1.</span></div>
+  <div class="step"><b>3. Solve x(i)</b><span>Use x(i) = [b(i) − sum]/A(i,i).</span></div>
+ </div>
+ <div class="code-wrap" style="margin-top:15px">
+  <button class="copy" onclick="copyCode(this)">Copy</button>
+<pre><code>n = length(b);
+x = zeros(n,1);
+
+for i = 1:n
+    sum = 0;
+    for j = 1:i-1
+        aij = A(i,j);
+        x_j = x(j);
+        sum = sum + aij*x_j;
+    end
+    x(i) = (b(i) - sum)/A(i,i);
+end
+
+disp(x)</code></pre>
+ </div>
+ <div class="result"><strong>Key idea:</strong> when calculating x(i), all previous x(1),...,x(i−1) are already known.</div>
+</article>
+
+<article class="card method backward hidden">
+ <div class="card-head"><h2>Backward Substitution</h2><span class="tag">Upper triangular</span></div>
+ <p>For an upper triangular system, computation starts at the last equation and proceeds upward.</p>
+ <div class="code-wrap">
+  <button class="copy" onclick="copyCode(this)">Copy</button>
+<pre><code>n = 3;
+x = zeros(n,1);
+
+for i = n:-1:1
+    sum = 0;
+    for j = i+1:n
+        aij = A(i,j);
+        x_j = x(j);
+        sum = sum + aij*x_j;
+    end
+    x(i) = (B(i) - sum)/A(i,i);
+end</code></pre>
+ </div>
+ <div class="result"><strong>Direction:</strong> n → n−1 → ... → 1.</div>
+</article>
+
+<article class="card method pf hidden">
+ <div class="card-head"><h2>Forward Permuted System</h2><span class="tag">Pivot ordering</span></div>
+ <p>The row permutation vector <span class="math">p</span> changes which row is used at each forward-substitution step.</p>
+ <div class="code-wrap">
+  <button class="copy" onclick="copyCode(this)">Copy</button>
+<pre><code>A = [7 3 0;
+     2 5 6;
+     4 0 0];
+
+b = [10; 22; 4];
+p = [3; 1; 2];
+
+n = length(b);
+x = zeros(n,1);
+
+for i = 1:n
+    sum = 0;
+    for j = 1:i-1
+        apj = A(p(i),j);
+        x_j = x(j);
+        sum = sum + apj*x_j;
+    end
+    x(i) = (b(p(i)) - sum)/A(p(i),i);
+end</code></pre>
+ </div>
+ <div class="result"><strong>Permutation:</strong> p = [3; 1; 2] means row 3 is used first, then row 1, then row 2.</div>
+</article>
+
+<article class="card method pb hidden">
+ <div class="card-head"><h2>Backward Permuted System</h2><span class="tag">Pivot ordering</span></div>
+ <p>This combines a row permutation with backward substitution. The loop runs from n down to 1.</p>
+ <div class="code-wrap">
+  <button class="copy" onclick="copyCode(this)">Copy</button>
+<pre><code>n = length(b);
+x = zeros(n,1);
+
+for i = n:-1:1
+    sum = 0;
+    for j = i+1:n
+        apj = A(p(i),j);
+        x_j = x(j);
+        sum = sum + apj*x_j;
+    end
+    x(i) = (b(p(i)) - sum)/A(p(i),i);
+end</code></pre>
+ </div>
+ <div class="result"><strong>Direction:</strong> n → 1 while using the permuted row p(i) at every step.</div>
+</article>
+
+</div>
+</section>
+
+<section class="card" style="margin-top:22px">
+ <div class="card-head"><h2>Quick Method Explorer</h2><span class="tag">Interactive</span></div>
+ <div class="controls">
+  <select id="methodSelect" onchange="selectMethod(this.value)">
+   <option value="forward">Forward substitution</option>
+   <option value="backward">Backward substitution</option>
+   <option value="pf">Forward permuted</option>
+   <option value="pb">Backward permuted</option>
+  </select>
+  <button class="btn" onclick="toggleSteps()">Toggle explanation</button>
+ </div>
+ <div id="liveExplanation" class="result">
+   Select a method to see its computational direction and main formula.
+ </div>
+</section>
+
+<section id="about" class="card">
+ <h2>About this page</h2>
+ <p>This page is designed as a reusable section for a mathematics / numerical analysis website. It presents MATLAB algorithms in a cleaner, interactive format instead of showing the raw auto-generated MATLAB HTML.</p>
+ <p style="font-size:.9rem">Source material includes the MATLAB-generated document containing forward substitution, backward substitution, forward permuted, and backward permuted systems. fileciteturn0file0L13-L20 fileciteturn0file0L36-L48</p>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">© 2026 Manoj Solanki · Numerical Analysis & Scientific Computing</div>
+</footer>
+
+<script>
+const explanations={
+ forward:"Forward substitution solves a lower triangular system from the first row to the last: i = 1 → n.",
+ backward:"Backward substitution solves an upper triangular system from the last row to the first: i = n → 1.",
+ pf:"Forward permuted substitution uses row p(i) at step i and proceeds from i = 1 → n.",
+ pb:"Backward permuted substitution uses row p(i) at step i and proceeds from i = n → 1."
+};
+
+function selectMethod(id){
+ document.querySelectorAll('.method').forEach(x=>x.classList.add('hidden'));
+ const target=document.querySelector('.method.'+id);
+ if(target) target.classList.remove('hidden');
+ document.querySelectorAll('.side-btn').forEach(x=>x.classList.toggle('active',x.dataset.target===id));
+ document.getElementById('methodSelect').value=id;
+ document.getElementById('liveExplanation').innerHTML='<strong>'+id.toUpperCase()+':</strong> '+explanations[id];
+}
+
+function showAll(){
+ document.querySelectorAll('.method').forEach(x=>x.classList.remove('hidden'));
+ document.querySelectorAll('.side-btn').forEach(x=>x.classList.remove('active'));
+ document.getElementById('liveExplanation').innerHTML='<strong>All methods:</strong> Compare the four algorithms side by side.';
+}
+
+function copyCode(btn){
+ const code=btn.parentElement.querySelector('code').innerText;
+ navigator.clipboard.writeText(code).then(()=>{
+   const old=btn.innerText; btn.innerText='Copied!';
+   setTimeout(()=>btn.innerText=old,1200);
+ });
+}
+
+function filterMethods(){
+ const q=document.getElementById('search').value.toLowerCase();
+ document.querySelectorAll('.method').forEach(card=>{
+   const match=card.innerText.toLowerCase().includes(q);
+   card.classList.toggle('hidden',!match);
+ });
+}
+
+function toggleSteps(){
+ document.querySelectorAll('.steps').forEach(x=>x.classList.toggle('hidden'));
+}
+selectMethod('forward');
+</script>
+</body>
+</html>
